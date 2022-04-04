@@ -1,0 +1,89 @@
+.tbl-box {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  .ui-tr {
+    display: table-row;
+    // th {
+    //   height: 5.7rem;
+    //   font-size: 1.5rem;
+    //   font-weight: 900;
+    //   line-height: 5.7rem;
+    //   text-align: left;
+    //   padding: 0 1.5rem;
+    // }
+    &.tbl-head {
+      .ui-td {
+        font-weight: 900;
+        &.tbl- {
+          &title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-align: center;
+          }
+          &date {
+            font-size: 1.5rem;
+          }
+          &writer {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+    .ui-td {
+      display: table-cell;
+      height: 7.7rem;
+      font-size: 1.5rem;
+      line-height: 7.7rem;
+      border-top: 0.1rem solid #b2b3b2;
+      padding: 0 1.5rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.tbl- {
+        &title {
+          width: 58%;
+          font-weight: 400;
+        }
+        &date {
+          width: 10%;
+          font-size: 1.3rem;
+        }
+        &writer {
+          width: 14%;
+          font-size: 1.3rem;
+        }
+        &space {
+          width: 17%;
+          font-size: 1.3rem;
+          
+        }
+      }
+    }
+    &:last-child {
+      td {
+        border-bottom: 0.1rem solid #b2b3b2;
+      }
+    }
+  }
+}
+
+.table-area {
+  border-top: 0.2rem solid #000000;
+}
+.pagenation {
+  text-align: center;
+  padding: 7.7rem 0 8.3rem;
+  a {
+    display: inline-block;
+    width: 2.4rem;
+    height: 2.4rem;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    &.on {
+      color: #55bbb3;
+      border: 0.1rem solid #55bbb3;
+    }
+  }
+}

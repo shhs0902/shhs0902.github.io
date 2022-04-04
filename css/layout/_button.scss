@@ -1,0 +1,162 @@
+.btn-group {
+  @include clearFix;
+  .btn {
+    float: left;
+  }
+  &.btn-group-login {
+    .btn {
+      &.big {
+        width: 100%;
+        height: 5.9rem;
+        float: none;
+      }
+    }
+  }
+}
+.btn {
+  display: block;
+  width: 11rem;
+  height: 4.2rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+  line-height: 4.2rem;
+  text-align: center;
+  border-radius: 10rem;
+  &-join {
+    @include bgGreen;
+    font-weight: 700;
+    &.big {
+      @include bgWhite;
+      color: #55bbb3;
+      border: 0.1rem solid #55bbb3;
+      margin-left: 0;
+    }
+  }
+  &-login {
+    @include bgWhite;
+    font-weight: 700;
+    color: #989898;
+    border: 0.1rem solid #989898;
+    margin-left: 2.9rem;
+    &.big {
+      @include bgGreen;
+      color: #ffffff;
+      border: 0;
+      margin-left: 0;
+    }
+  }
+  &-view {
+    width: 26rem;
+    height: 7rem;
+    line-height: 7rem;
+    font-weight: 900;
+    color: #000000;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 25px rgba(149, 157, 170, 0.3);
+    margin: 5.5rem auto 0;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+      @include bgGreen;
+      color: #ffffff;
+    }
+    &.small {
+      width: 9.8rem;
+      height: 3.4rem;
+      line-height: 3.2rem;
+      color: #ffffff;
+      background-color: transparent;
+      box-shadow: none;
+      border: 0.1rem solid #ffffff;
+      margin: 2.5rem 0 0 0;
+      &:hover {
+        @include bgGreen;
+        border: 0.1rem solid #55bbb3;
+      }
+    }
+  }
+  &-alarm {
+    position: relative;
+    width: 3rem;
+    height: 3rem;
+    background: url('../img/header_bell.png') no-repeat;
+    &.on {
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0.3rem;
+        right: 0.1rem;
+        display: block;
+        width: 1rem;
+        height: 1rem;
+        border-radius: 100%;
+        background-color: #d53030;
+      }
+    }
+   }
+  &-user {
+    width: 3rem;
+    height: 3rem;
+    background: url('../img/header_user.png') no-repeat;
+  }
+  &-hbg {
+    position: relative;
+    width: 2.6rem;
+    height: 2.6rem;
+    transition: all 0.3s ease-in;
+    span {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 0.4rem;
+      border-radius: 10rem;
+      background-color: #000000;
+      transition: all 0.3s ease-in;
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 1.1rem;
+      }
+      &:nth-child(3) {
+        top: 1.1rem;
+      }
+      &:last-child {
+        bottom: 0;
+      }
+    }
+    &.on {
+      // transform: rotate(180deg);
+      span {
+        &:first-child {
+          opacity: 0;
+        }
+        &:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+        &:last-child {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &-ipform {
+    @include bgGreen;
+    width: 14rem;
+    height: 5.9rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 5.9rem;
+    color: #ffffff;
+    border-radius: 0.5rem;
+  }
+  &-close {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+    font-size: 4rem;
+  }
+}
