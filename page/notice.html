@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>공지사항</title>
+    <link rel="stylesheet" href="../css/vender/swiper-bundle.css" />
+    <link rel="stylesheet" href="../css/ui.css" />
+    <script src="../js/vender/swiper-bundle.js"></script>
+    <script src="../js/ui.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="container">
+          <div class="cont-left">
+            <h1 class="logo">logo</h1>
+            <div class="btn-group">
+              <a href="#none" class="btn btn-join">회원가입</a>
+              <a href="#none" class="btn btn-login">로그인</a>
+            </div>
+          </div>
+          <div class="cont-right">
+            <div class="search-area">
+              <div class="form-area">
+                <input type="text" placeholder="내용을 입력해주세요." />
+              </div>
+            </div>
+            <a href="#none" class="header-icon btn-alarm on"></a>
+            <a href="#none" class="header-icon btn-user"></a>
+            <a href="#none" class="header-icon btn-hbg">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <div class="app-contents">
+        <div class="contents-area">
+          <div class="notice-area">
+            <div class="container">
+              <div class="title">공지사항</div>
+              <div class="desc">티포유의 다양한 소식을 전해드려요</div>
+              <div class="table-area">
+                <div class="tbl-box">
+                  <div class="ui-tr tbl-head">
+                    <div class="ui-td tbl-title">제목</div>
+                    <div class="ui-td tbl-date">작성일</div>
+                    <div class="ui-td tbl-space"></div>
+                  </div>
+                  <!-- //tr-->
+                  <div class="ui-tr">
+                    <div class="ui-td tbl-title">
+                      <span class="category-icon">공지사항</span>
+                      질병휴직 사용시 병가, 연가 사용 문의
+                    </div>
+                    <div class="ui-td tbl-date">2022.03.16</div>
+                    <div class="ui-td tbl-space">
+                      <span class="ic-hits">320</span>
+                      <span class="ic-like">200</span>
+                      <span class="ic-comment">10</span>
+                    </div>
+                  </div>
+                  <!-- //tr-->
+                  <div class="ui-tr">
+                    <div class="ui-td tbl-title">
+                      <span class="category-icon">공지사항</span>
+                      샘플텍스트 입니다 이곳에 제목이 나옵니다 길게 썼을때 어떤
+                      느낌인지 알고싶어서 길게 써보았습니다
+                    </div>
+                    <div class="ui-td tbl-date">2022.03.16</div>
+                    <div class="ui-td tbl-space">
+                      <span class="ic-hits">320</span>
+                      <span class="ic-like">200</span>
+                      <span class="ic-comment">10</span>
+                    </div>
+                  </div>
+                  <!-- //tr-->
+                </div>
+                <!-- <table>
+                  <thead>
+                    <tr>
+                      <th style="text-align: center; min-width: 32rem">제목</th>
+                      <th>작성자</th>
+                      <th>작성일</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        질병휴직 사용시 병가,연가 사용 문의
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트 입니다 이곳에 제목이 나옵니다 길게 썼을때
+                        어떤 느낌인지 알고싶어서 길게 써보았습니다
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <span class="category-icon">공지사항</span>
+                        샘플텍스트
+                      </td>
+                      <td>테스트닉네임입니다</td>
+                      <td>2202.03.16</td>
+                      <td>
+                        <div class="con-right">
+                          <span class="ic-hits">320</span>
+                          <span class="ic-like">200</span>
+                          <span class="ic-comment">10</span>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table> -->
+              </div>
+              <div class="pagenation">
+                <a href="#none" class="on">1</a>
+                <a href="#none">2</a>
+                <a href="#none">3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- //contents-area -->
+      </div>
+      <!-- //app-contents -->
+
+      <footer class="app-footer">
+        <div class="container">
+          <div class="cont-left">
+            <h1 class="logo">Logo</h1>
+            <div class="footer-info">
+              <span>대표자: 김용서</span>
+              <span>고유번호: 206-82-78403</span>
+            </div>
+            <div class="footer-info">
+              <address>
+                서울특별시 영등포구 국제금융로6길 26(여의도동 35) 한국노총빌딩
+                12층
+              </address>
+            </div>
+            <div class="footer-info">
+              <span>전화번호: 02-522-8130</span>
+              <span>팩스번호: 02-522-8131</span>
+            </div>
+          </div>
+          <div class="cont-right">
+            <h1 class="footer-ci">교사노동조합연맹</h1>
+            <div class="footer-info">
+              <span>이용약관 | 개인정보취급방침</span>
+            </div>
+            <div class="footer-info">
+              <span class="copyright"
+                >Copyright ©티포유. All right reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+  </body>
+</html>
