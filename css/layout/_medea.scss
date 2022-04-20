@@ -1,2 +1,220 @@
-@media screen {
+@media (max-width: 1023px) {
+  
+  .app-header .container,
+  .app .container,
+  .app-footer .container {
+    padding: 0 3.6%;
+  }
+  .app .main-menu,
+  .app-contents .visual,
+  .app-header .container .cont-left h1 + .btn-group,
+  .app-header .container .cont-right .search-area,
+  .app-header .container .cont-right .header-icon.btn-alarm,
+  .app-header .container .cont-right .header-icon.btn-user {
+    display: none;
+  }
+  .app .main-menu + .menu-list-group {
+    padding-top: 5rem;
+  }
+  .table .ui-tr.tbl-head {
+    display: none;
+  }
+  .table .ui-tr {
+    display: block;
+    border-top: 0.1rem solid #b2b3b2;
+    padding: 2rem 1.5rem;
+
+  }
+  .table .ui-tr .ui-td {
+    display: block;
+    height: auto;
+    line-height: inherit;
+    border: 0;
+    margin-top: 1rem;
+    padding-left: 0;
+
+  }
+  .table .ui-tr .ui-td.tbl-title {
+    width: 100%;
+    font-weight: 400;
+    margin-top: 0;
+  }
+  .table .ui-tr .ui-td.tbl-date {
+    display: inline-block;
+    width: auto;
+    font-size: 1.3rem;
+  }
+  .table .ui-tr .ui-td.tbl-writer {
+    display: inline-block;
+    width: auto;
+  }
+  .table .ui-tr .ui-td.tbl-space {
+    display: inline-block;
+    width: auto;
+  }
+
+  .app-contents .menu-list-group .list-item {
+    padding-top: 0;
+  }
+  .app-contents .menu-list-group .list-item li {
+    display: block;
+    border-top: 0.1rem solid #b2b3b2;
+    padding: 2rem 0;
+  }
+  .app-contents .menu-list-group .list-item li:first-child {
+    border-top: 0;
+  }
+  .app-contents .menu-list-group .list-item li + li {
+    margin-top: 0;
+  }
+  .app-contents .menu-list-group .list-item li .con-left {
+    display: block;
+    width: auto;
+  }
+
+  .app-contents .menu-list-group .list-item li .con-right {
+    width: auto;
+    margin-top: 1rem;
+  }
+
+  .ly-form .check-area {
+    display: block;
+    padding: 2rem 0;
+  }
+  .ly-form .check-area .form-depth {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+
+  .app-contents .contents-area .map-area {
+    padding-top: 4rem;
+  }
+  .app-contents .contents-area .map-area .map-box .map-desc {
+    display: block;
+  }
+  .app-contents .contents-area .map-area .map-box .map-desc::before {
+    content: none;
+  }
+  .app-contents .contents-area .map-area .map-box .map-desc .cont-left .contact-area {
+    display: block;
+  }
+  .app-contents .contents-area .map-area .map-box .map-desc .cont-left {
+    padding: 0 1.2rem;
+  }
+  .app-contents .contents-area .map-area .map-box .map-desc .cont-right {
+    padding: 0 1.2rem;
+  }
+  .app-contents .contents-area .map-area .map-box .map-desc .desc {
+    line-height: 1.4;
+    margin: 0 0 2.4rem;
+  }
+  .app-contents .contents-area .title + .desc {
+    padding-bottom: 3rem;
+  }
+
+  .app-contents .contents-area .map-area .map-box {
+    padding-top: 2.5rem;
+  }
+
+  .table-type01 table tr td .tip {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 710px) {
+  .ly-form .check-area .form-depth {
+    display: block;
+  }
+
+  .ly-form .form-area input {
+    height: 4.2rem;
+    padding: 0 0.7rem;
+  }
+  .ly-form .check-area .form-depth .form-area + .form-area {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+  .ly-form .form-ty-submit .form-area + * {
+    margin-left: 1rem;
+  }
+
+  .check-gorup {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1rem;
+  }
+  .ly-form .check-area .check-gorup:before {
+    content: "";
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    width: 0.1rem;
+    height: 6.5rem;
+    background-color: #b2b3b2;
+    transform: translateX(-50%);
+  }
+
+  .ly-form .check-area .form-depth + .form-depth {
+    margin-top: 0;
+    margin-left: 2rem;
+  }
+  
+
+  .ly-form .check-area .form-depth.depth02 {
+    display: block;
+  }
+
+  .btn-ipform {
+    height: 4.2rem;
+    line-height: 4.2rem;
+  }
+
+  .app-contents .contents-area .title {
+    font-size: 2.5rem;
+  }
+  .app-contents .contents-area .map-area .map-box .map-desc + .map {
+    height: 25rem;
+    margin-top: 3rem;
+  }
+  .ly-form .check-area.login {
+    display: block;
+  }
+  .ly-form .check-area.login .btn-group {
+    margin-top: 1rem;
+  }
+
+  .table-type01 table tr th {
+    padding: 0 1.8rem 0 1rem;
+  }
+  .app-contents .contents-area.my-page .tab-area {
+    padding: 0;
+  }
+  .table-type01 table tr td .form-area {
+    width: auto;
+  }
+  .table-type01 table tr td {
+    padding: 1.2rem 0 1.2rem 1.8rem;
+  }
+  .table-type01 table tr td .form-group .form-area + .btn {
+    width: auto;
+  }
+  .app-contents .contents-area.my-page .table-area + .submit {
+    width: 100%;
+  }
+  .table-type01 table tr td .form-group {
+    display: block;
+  }
+  .table-type01 table tr td .form-group .form-area + .btn {
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+  .table-type01 table tr td .form-group + .form-group {
+    margin-top: 1.5rem;
+  }
 }

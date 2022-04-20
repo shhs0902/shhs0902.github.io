@@ -15,13 +15,14 @@
 }
 .btn {
   display: block;
-  width: 11rem;
+  min-width: 11rem;
   height: 4.2rem;
   font-size: 1.3rem;
   color: #ffffff;
   line-height: 4.2rem;
   text-align: center;
   border-radius: 10rem;
+  padding: 0 2.5rem;
   &-join {
     @include bgGreen;
     font-weight: 700;
@@ -46,7 +47,7 @@
     }
   }
   &-view {
-    width: 26rem;
+    max-width: 26rem;
     height: 7rem;
     line-height: 7rem;
     font-weight: 900;
@@ -78,7 +79,7 @@
     position: relative;
     width: 3rem;
     height: 3rem;
-    background: url('../img/header_bell.png') no-repeat;
+    background: url('../img/icon/header_bell.png') no-repeat;
     &.on {
       &:after {
         content: '';
@@ -96,7 +97,7 @@
   &-user {
     width: 3rem;
     height: 3rem;
-    background: url('../img/header_user.png') no-repeat;
+    background: url('../img/icon/header_user.png') no-repeat;
   }
   &-hbg {
     position: relative;
@@ -158,5 +159,37 @@
     top: 2rem;
     right: 0;
     font-size: 4rem;
+  }
+  &-tem-storage {
+    height: 4.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #7c8594;
+    line-height: 4.5rem;
+    background-color: #f7f8fa;
+    border-radius: 1rem;
+  }
+  &-regist {
+    height: 4.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #39c6cc;
+    line-height: 4.5rem;
+    background-color: rgba(57, 198, 204, 0.3);;
+    border-radius: 1rem;
+    margin-left: 1.3rem;
+  }
+  &-more {
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+  &-certify {
+    background-color: #7c8594;
+  }
+  &-pop-close {
+    display: block;
+    width: 1.8rem;
+    height: 1.8rem;
+    background: url("../img/icon/menu_close_btn.png") no-repeat right top / 1.8rem 1.8rem;
   }
 }

@@ -4,20 +4,11 @@
   const ONSTRING = "on";
   const REMSTRING = "rem";
 
-  // function headerFixHandler() {
-  //   const header = document.querySelector("header");
+  const tabBtn = document.querySelectorAll(".tab-btn");
+  const tabContent = document.querySelectorAll(".tab-cont");
 
-  //   let scrollPos = window.scrollY;
-  //   console.log(scrollPos);
-  //   if(scrollPos > 50) {
-  //     header.style.position = "fixed";
-  //   }
-  // }
-  // window.addEventListener("scroll", function(){
-  //   headerFixHandler();
-  // });
+  const phoneInput = document.querySelector("#phone");
 
-  
   const nav = document.querySelector("nav");
 
   // 햄버거 버튼(전체 페이지 공통)
@@ -63,48 +54,126 @@
 
       const container = document.querySelector("#cont-02 .container");
 
-      conRig.style.width = (winW - (conLefW + conPoLeft + 17)) * 0.1 + REMSTRING;
+      conRig.style.width = (winW - (conLefW + conPoLeft + 50)) * 0.1 + REMSTRING;
       container.style.height = (slide.getBoundingClientRect().height) * 0.1 + REMSTRING;
     });
   }
-
+  
   // tab
-  function tabEventHandler() {
-    const tabBtn = document.querySelectorAll(".tab-btn");
-    const tabContent = document.querySelectorAll(".tab-cont");
+  function tabEventHandler(btn, idx) {
     if(!tabBtn) {
       return;
     }
+      [].forEach.call(tabBtn, function(item, x){
+        item.classList.remove(ONSTRING);
+        tabContent[x].classList.remove(ONSTRING);
+      });
+      
+      tabContent[idx].classList.add(ONSTRING);
+  
+      btn.classList.add(ONSTRING);
+  }
 
+  function loopHandler() {
     [].forEach.call(tabBtn, function(btn, idx){
-
       btn.addEventListener("click", function(e){
         e.preventDefault();
-
-        const a = btn.getAttribute("href");
-        const b = a.replace("#", "");
-
-        [].forEach.call(tabBtn, function(item, x){
-          item.classList.remove(ONSTRING);
-          tabContent[x].classList.remove(ONSTRING);
-
-        });
-        document.getElementById(b).classList.add(ONSTRING);
-
-        this.classList.add(ONSTRING);
-        
+        tabEventHandler(btn, idx);
       });
     });
   }
 
-  window.addEventListener("resize", function () {
-    slideContainerWidthCalc();
-  });
+  // 외부 페이지 탭 이동
+  function locationHandler() {
+    const url = location.href;
+    const target = String(url.match(/\#[\w\-\w]+/g));
+    const currentHash = location.hash;
+    if(currentHash === target) {
+      [].forEach.call(tabBtn, function(item, ix){
+        const tagUrl = item.getAttribute("href");
+        item.classList.remove(ONSTRING);
+        tabContent[ix].style.display = "none";
 
-  document.addEventListener("DOMContentLoaded", function () {
+        if(tagUrl === target) {
+          item.classList.add(ONSTRING);
+        }
+
+        const newTarget = target.replace("#", "");
+        document.getElementById(newTarget).style.display = "block";
+      });
+    }
+  }
+
+  // 회원가입 전화번호 010 자동입력
+  function autoTextInputHandler() {
+    if(!phoneInput) {
+      return false;
+    }
+    
+    phoneInput.addEventListener("click", function(e){
+      if(this.value === "") {
+        this.value = "010";
+      }
+    });
+  }
+
+  // "-" 자동 입력
+  const autoHypenPhone = function(str){
+    str = str.replace(/[^0-9]/g, '');
+    let tmp = '';
+    if( str.length < 4){
+        return str;
+    }else if(str.length < 7){
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3);
+        return tmp;
+    }else if(str.length < 11){
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3, 3);
+        tmp += '-';
+        tmp += str.substr(6);
+        return tmp;
+    }else{              
+        tmp += str.substr(0, 3);
+        tmp += '-';
+        tmp += str.substr(3, 4);
+        tmp += '-';
+        tmp += str.substr(7);
+        return tmp;
+    }
+  }
+
+  
+  
+
+  function init() {
     hbgBtnEvHandler();
     gnbMenuClose();
     slideContainerWidthCalc();
-    tabEventHandler();
+    loopHandler();
+    locationHandler();
+    autoTextInputHandler();
+    if(phoneInput) {
+      phoneInput.onkeyup = function(){
+        this.value = autoHypenPhone( this.value ) ;  
+      }
+    }
+    window.addEventListener("resize", function () {
+      slideContainerWidthCalc();
+    });
+  }
+
+  
+
+  document.addEventListener("DOMContentLoaded", function () {
+    init();
+
   });
 }(window));
+
+function popupClose() {
+  const popUp = document.querySelector(".pop-wrap");
+  popUp.classList.remove("active");
+}

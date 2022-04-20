@@ -17,7 +17,7 @@ select {
 .search-area {
   input {
     &[type*='text'] {
-      background: url('../img/input_searc_btn.png') no-repeat 1.6rem center /
+      background: url('../img/icon/input_searc_btn.png') no-repeat 1.6rem center /
         2.2rem 2.2rem;
       padding-left: 4.5rem;
     }
@@ -27,11 +27,24 @@ select {
   }
 }
 .ly-form {
-  width: 54rem;
+  max-width: 54rem;
   margin: 0 auto;
   & + .ly-form {
     border-top: 0.1rem solid #000000;
     margin-top: 1.8rem;
+  }
+  .row-multiple {
+    .row-group {
+      display: none;
+      margin-bottom: 1.8rem;
+      &.on {
+        display: block;
+      }
+      & + .row-group {
+        margin-top: 0;
+
+      }
+    }
   }
   .row-group {
     & + .row-group {
@@ -73,10 +86,13 @@ select {
   }
 
   .check-area {
+    position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     padding: 2rem;
     &.login {
+      display: flex;
+    align-items: center;
       justify-content: space-between;
       margin-top: 1.8rem;
       padding: 0;
@@ -199,15 +215,28 @@ select {
     .title {
       font-size: 1.8rem;
       font-weight: 700;
-      & + .form-area {
-        margin-left: 2.8rem;
+    }
+    .form-depth {
+      display: flex;
+      align-items: center;
+      margin-left: 2.8rem;
+      .form-area {
+        & + .form-area {
+          margin-left: 1.8rem;
+        }
+        
+      }
+      & + .form-depth {
+        margin-top: 2.8rem;
+      }
+      &.depth02 {
+        display: none;
+        &.on {
+          display: flex;
+        }
       }
     }
-    .form-area {
-      & + .form-area {
-        margin-left: 1.8rem;
-      }
-    }
+  
   }
   .btn-group {
     &.btn-group-login {

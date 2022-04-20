@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>T4U</title>
+    <link rel="stylesheet" href="../css/vender/swiper-bundle.css" />
+    <link rel="stylesheet" href="../css/ui.css" />
+    <script src="../js/vender/swiper-bundle.js"></script>
+    <script src="../js/ui.js" defer></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="app-header">
+        <div class="container">
+          <div class="cont-left">
+            <h1><a href="../index.html" class="logo"></a></h1>
+            <div class="btn-group">
+              <a href="join.html" class="btn btn-join">회원가입</a>
+              <a href="login.html" class="btn btn-login">로그인</a>
+            </div>
+          </div>
+          <div class="cont-right">
+            <div class="search-area">
+              <div class="form-area">
+                <input type="text" placeholder="내용을 입력해주세요." />
+              </div>
+            </div>
+            <a href="#none" class="header-icon btn-alarm on"></a>
+            <a href="#none" class="header-icon btn-user"></a>
+            <a href="#none" class="header-icon btn-hbg">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </a>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <div class="app-contents">
+        <div class="contents-area my-page pad-t16">
+          <!-- <div class="notice-area"> -->
+          <div class="container">
+            <div class="title">회원정보</div>
+            <div class="desc under-line">
+              티포유 프로필과 회원정보를 수정 하실 수 있습니다.
+            </div>
+            <div class="tab-area">
+              <div class="tab-btn-area">
+                <a href="#tab-01" class="tab-btn on">비밀번호변경</a>
+                <a href="#tab-02" class="tab-btn">내 ID 찾기</a>
+                <a href="#tab-03" class="tab-btn">임시 비밀번호 받기</a>
+                <a href="#tab-04" class="tab-btn">닉네임 변경</a>
+              </div>
+              <div class="tab-contents-area">
+                <div class="tab-cont on" id="tab-01 ">
+                  <div class="table-area">
+                    <div class="table table-type01">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>사용자 ID</th>
+                            <td>test 01</td>
+                          </tr>
+                          <tr>
+                            <th>이름</th>
+                            <td>홍길동</td>
+                          </tr>
+                          <tr>
+                            <th>비밀번호 변경</th>
+                            <td>
+                              <div class="form-area">
+                                <input
+                                  type="text"
+                                  placeholder="현재 비밀번호"
+                                />
+                              </div>
+                              <div class="form-area">
+                                <input type="text" placeholder="새 비밀번호" />
+                              </div>
+                              <div class="form-area">
+                                <input
+                                  type="text"
+                                  placeholder="새 비밀번호 확인"
+                                />
+                              </div>
+                              <div class="tip">
+                                <div class="title">
+                                  비밀번호 변경 시 유의사항
+                                </div>
+                                <ul>
+                                  <li>
+                                    8자 이상, 영문/숫자/특수문자 중 2가지 이상
+                                    입력해주세요.
+                                  </li>
+                                  <li>
+                                    연속된 3자 이상의 같은 문자는 제한합니다.
+                                  </li>
+                                  <li>
+                                    ID와 같은 비밀번호는 사용할 수 없습니다.
+                                  </li>
+                                </ul>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>휴대폰 인증</th>
+                            <td>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="010제외 뒤 8자리만"
+                                    id="phone"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray"
+                                  >인증번호 전송</a
+                                >
+                              </div>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="인증번호 입력"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray">인증확인</a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <a href="#none" class="btn btn-ipform submit">변경 저장</a>
+                </div>
+                <!-- //tab-contents01 -->
+                <div class="tab-cont" id="tab-02">
+                  <div class="table-area">
+                    <div class="table table-type01">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>사용자 ID</th>
+                            <td>
+                              <div class="form-area">
+                                <input type="text" value="홍길동" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>이메일</th>
+                            <td>
+                              <div class="form-area">
+                                <input type="text" placeholder="이메일" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>비밀번호</th>
+                            <td>
+                              <div class="form-area">
+                                <input
+                                  type="text"
+                                  placeholder="현재 비밀번호"
+                                />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>휴대폰 인증</th>
+                            <td>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="010제외 뒤 8자리만"
+                                    id="phone"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray">인증확인</a>
+                              </div>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="인증번호 입력"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray">인증확인</a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- //tab-contents02 -->
+                <div class="tab-cont" id="tab-03">
+                  <div class="table-area">
+                    <div class="table table-type01">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>사용자 ID</th>
+                            <td>
+                              <div class="form-area">
+                                <input type="text" value="test 01" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>이름</th>
+                            <td>
+                              <div class="form-area">
+                                <input type="text" value="홍길동" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>휴대폰 인증</th>
+                            <td>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="010제외 뒤 8자리만"
+                                    id="phone"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray">인증확인</a>
+                              </div>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="인증번호 입력"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray">인증확인</a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- //tab-contents03 -->
+                <div class="tab-cont" id="tab-04">
+                  <div class="table-area">
+                    <div class="table table-type01">
+                      <table>
+                        <tbody>
+                          <tr>
+                            <th>사용자 ID</th>
+                            <td>
+                              <div class="form-area">
+                                <input type="text" value="test 01" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>이름</th>
+                            <td>
+                              <div class="form-area">
+                                <input type="text" value="홍길동" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>비밀번호</th>
+                            <td>
+                              <div class="form-area">
+                                <input
+                                  type="text"
+                                  placeholder="현재 비밀번호"
+                                />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>닉네임 변경</th>
+                            <td>
+                              <div class="form-area">
+                                <input type="text" placeholder="현재 닉네임" />
+                              </div>
+                              <div class="form-area">
+                                <input type="text" placeholder="새 닉네임" />
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <th>휴대폰 인증</th>
+                            <td>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="010제외 뒤 8자리만"
+                                    id="phone"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray">인증확인</a>
+                              </div>
+                              <div class="form-group">
+                                <div class="form-area">
+                                  <input
+                                    type="text"
+                                    placeholder="인증번호 입력"
+                                  />
+                                </div>
+                                <a href="#none" class="btn bg-gray">인증확인</a>
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <!-- //tab-contents04 -->
+
+                <!-- //tab-contents05 -->
+              </div>
+            </div>
+          </div>
+          <!-- </div> -->
+        </div>
+        <!-- //contents-area -->
+      </div>
+      <!-- //app-contents -->
+
+      <footer class="app-footer">
+        <div class="container">
+          <div class="cont-left">
+            <h1 class="logo">Logo</h1>
+            <div class="footer-info">
+              <span>대표자: 김용서</span>
+              <span>고유번호: 206-82-78403</span>
+            </div>
+            <div class="footer-info">
+              <address>
+                서울특별시 영등포구 국제금융로6길 26(여의도동 35) 한국노총빌딩
+                12층
+              </address>
+            </div>
+            <div class="footer-info">
+              <span>전화번호: 02-522-8130</span>
+              <span>팩스번호: 02-522-8131</span>
+            </div>
+          </div>
+          <div class="cont-right">
+            <h1 class="footer-ci">교사노동조합연맹</h1>
+            <div class="footer-info">
+              <span>이용약관 | 개인정보취급방침</span>
+            </div>
+            <div class="footer-info">
+              <span class="copyright"
+                >Copyright ©티포유. All right reserved.</span
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+  </body>
+</html>

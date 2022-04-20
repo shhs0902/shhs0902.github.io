@@ -1,26 +1,27 @@
 // var
 $app: app;
-
+$main-green: #55bbb3;
+$white: #ffffff;
 // class
 .flex {
   display: flex;
   justify-content: center;
 }
-// from (시작: 이상) ~ to (종료: 미만)
-// from (시작: 이상) ~ through (종료: 이하)
 
-@for $i from 1 through 80 {
-  .mg-t#{$i} {
-    margin-top: $i + px;
-  }
+.under-line {
+  border-bottom: 0.2rem solid #000000;
+}
+
+.btn.bg-gray {
+  background-color: #7c8594;
 }
 
 
-
-// @include 사용법
-// 태그명 {
-//   @include mixin변수;
-// }
+@for $i from 1 through 20 {
+  .pad-t#{$i} {
+    padding-top: $i + rem;
+  }
+}
 
 // mixin
 @mixin clearFix {
@@ -29,12 +30,6 @@ $app: app;
     display: block;
     clear: both;
   }
-}
-
-@mixin flex {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
 }
 
 @mixin bgGreen {

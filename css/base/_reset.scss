@@ -147,6 +147,9 @@ a {
   color: #000;
   text-decoration: none;
 }
+a:link {
+  outline: none;
+}
 
 html {
   width: 100%;
