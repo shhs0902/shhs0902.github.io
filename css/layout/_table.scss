@@ -2,6 +2,7 @@
   display: table;
   table-layout: fixed;
   width: 100%;
+  border-bottom: 0.1rem solid #b2b3b2;
   .ui-tr {
     display: table-row;
 
@@ -65,11 +66,7 @@
         }
       }
     }
-    &:last-child {
-      .ui-td {
-        border-bottom: 0.1rem solid #b2b3b2;
-      }
-    }
+    
   }
   &-type01 {
     table {
