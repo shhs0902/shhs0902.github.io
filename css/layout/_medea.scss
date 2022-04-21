@@ -1,5 +1,4 @@
-@media (max-width: 1023px) {
-  
+@media (max-width: 1172px) {
   .app-header .container,
   .app .container,
   .app-footer .container {
@@ -23,7 +22,6 @@
     display: block;
     border-top: 0.1rem solid #b2b3b2;
     padding: 2rem 1.5rem;
-
   }
   .table .ui-tr .ui-td {
     display: block;
@@ -32,7 +30,6 @@
     border: 0;
     margin-top: 1rem;
     padding-left: 0;
-
   }
   .table .ui-tr .ui-td.tbl-title {
     width: 100%;
@@ -86,7 +83,6 @@
     margin-top: 1rem;
   }
 
-
   .app-contents .contents-area .map-area {
     padding-top: 4rem;
   }
@@ -96,7 +92,13 @@
   .app-contents .contents-area .map-area .map-box .map-desc::before {
     content: none;
   }
-  .app-contents .contents-area .map-area .map-box .map-desc .cont-left .contact-area {
+  .app-contents
+    .contents-area
+    .map-area
+    .map-box
+    .map-desc
+    .cont-left
+    .contact-area {
     display: block;
   }
   .app-contents .contents-area .map-area .map-box .map-desc .cont-left {
@@ -125,7 +127,7 @@
   }
 }
 
-@media (max-width: 710px) {
+@media (max-width: 765px) {
   .ly-form .check-area .form-depth {
     display: block;
   }
@@ -163,7 +165,6 @@
     margin-top: 0;
     margin-left: 2rem;
   }
-  
 
   .ly-form .check-area .form-depth.depth02 {
     display: block;

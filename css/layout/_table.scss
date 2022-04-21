@@ -4,28 +4,28 @@
   width: 100%;
   .ui-tr {
     display: table-row;
-    // th {
-    //   height: 5.7rem;
-    //   font-size: 1.5rem;
-    //   font-weight: 900;
-    //   line-height: 5.7rem;
-    //   text-align: left;
-    //   padding: 0 1.5rem;
-    // }
+
     &.tbl-head {
-      .ui-td {
+      .ui-th {
+        display: table-cell;
+        height: 5.6rem;
+        line-height: 5.6rem;
         font-weight: 900;
         border-top: 0;
+        padding: 0 1rem;
         &.tbl- {
           &title {
+            width: 58%;
             font-size: 1.5rem;
             font-weight: 900;
             text-align: center;
           }
           &date {
+            width: 10%;
             font-size: 1.5rem;
           }
           &writer {
+            width: 14%;
             font-size: 1.5rem;
           }
         }
@@ -35,35 +35,38 @@
       display: table-cell;
       height: 7.7rem;
       font-size: 1.5rem;
-      line-height: 7.7rem;
+      line-height: 7.5rem;
       border-top: 0.1rem solid #b2b3b2;
-      padding: 0 1.5rem;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      padding: 0 1rem;
+
       &.tbl- {
         &title {
-          width: 58%;
+          display: flex;
+          align-items: center;
           font-weight: 400;
+          a {
+            display: block;
+            width: calc(100% - 8.1rem);
+            height: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
         &date {
-          width: 10%;
           font-size: 1.3rem;
         }
         &writer {
-          width: 14%;
           font-size: 1.3rem;
         }
         &space {
           width: 17%;
           font-size: 1.3rem;
-          
         }
       }
     }
- 
     &:last-child {
-      td {
+      .ui-td {
         border-bottom: 0.1rem solid #b2b3b2;
       }
     }
@@ -75,7 +78,7 @@
         th {
           width: 18.4%;
           min-width: 10rem;
-          line-height: 6.8rem;
+          line-height: 5.4rem;
           font-size: 1.3rem;
           font-weight: 700;
           color: #7c8594;
@@ -83,7 +86,6 @@
           border-top: 0.1rem solid #b2b3b2;
           background-color: #f7f8fa;
           padding: 0 1.8rem;
-          
         }
         td {
           width: 81.6%;
@@ -91,7 +93,7 @@
           font-size: 1.3rem;
           font-weight: 700;
           border-top: 0.1rem solid #b2b3b2;
-          padding: 1.6% 2.4rem;
+          padding: 1.2rem 1.7rem;
           .form-area {
             width: 24.5rem;
             input {
@@ -122,8 +124,8 @@
           }
           .tip {
             position: absolute;
-            top: 1.2rem;
-            right: 0;
+            top: 1.4rem;
+            right: 19.5%;
             .title {
               font-size: 1.3rem;
               font-weight: 700;
@@ -131,7 +133,7 @@
               text-align: left;
             }
             ul {
-              margin-top: 1rem;
+              margin-top: 1.2rem;
               li {
                 font-size: 1.3rem;
                 font-weight: 400;
@@ -152,7 +154,6 @@
       }
     }
   }
-
 }
 
 .table-area {
@@ -160,7 +161,7 @@
 }
 .pagenation {
   text-align: center;
-  padding: 7.7rem 0 8.3rem;
+  padding: 7.7rem 0 0;
   a {
     display: inline-block;
     width: 2.4rem;
@@ -169,8 +170,8 @@
     font-weight: 700;
     line-height: 2.4rem;
     &.on {
-      color: #55bbb3;
-      border: 0.1rem solid #55bbb3;
+      color: #39c6cc;
+      border: 0.1rem solid #39c6cc;
     }
   }
 }

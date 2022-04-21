@@ -25,22 +25,24 @@
   padding: 0 2.5rem;
   &-join {
     @include bgGreen;
-    font-weight: 700;
     &.big {
-      @include bgWhite;
-      color: #55bbb3;
-      border: 0.1rem solid #55bbb3;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #39c6cc;
+      border: 0.2rem solid #39c6cc;
+      background-color: transparent;
       margin-left: 0;
     }
   }
   &-login {
     @include bgWhite;
-    font-weight: 700;
     color: #989898;
     border: 0.1rem solid #989898;
-    margin-left: 2.9rem;
+    margin-left: 1.2rem;
     &.big {
       @include bgGreen;
+      font-size: 1.8rem;
+      font-weight: 700;
       color: #ffffff;
       border: 0;
       margin-left: 0;
@@ -71,7 +73,7 @@
       margin: 2.5rem 0 0 0;
       &:hover {
         @include bgGreen;
-        border: 0.1rem solid #55bbb3;
+        border: 0.1rem solid #39c6cc;
       }
     }
   }
@@ -79,10 +81,10 @@
     position: relative;
     width: 3rem;
     height: 3rem;
-    background: url('../img/icon/header_bell.png') no-repeat;
+    background: url("../img/icon/header_bell.png") no-repeat;
     &.on {
       &:after {
-        content: '';
+        content: "";
         position: absolute;
         top: 0.3rem;
         right: 0.1rem;
@@ -93,11 +95,11 @@
         background-color: #d53030;
       }
     }
-   }
+  }
   &-user {
     width: 3rem;
     height: 3rem;
-    background: url('../img/icon/header_user.png') no-repeat;
+    background: url("../img/icon/header_user.png") no-repeat;
   }
   &-hbg {
     position: relative;
@@ -158,7 +160,11 @@
     position: absolute;
     top: 2rem;
     right: 0;
+    display: block;
+    width: 2.6rem;
+    height: 2.6rem;
     font-size: 4rem;
+    background: url("../img/icon/menu_close_btn.png") no-repeat right 0;
   }
   &-tem-storage {
     height: 4.5rem;
@@ -175,9 +181,16 @@
     font-weight: 700;
     color: #39c6cc;
     line-height: 4.5rem;
-    background-color: rgba(57, 198, 204, 0.3);;
+    background-color: rgba(57, 198, 204, 0.3);
     border-radius: 1rem;
     margin-left: 1.3rem;
+    &.small {
+      width: 7.2rem;
+      height: 3.5rem;
+      font-size: 1.5rem;
+      line-height: 3.5rem;
+      padding: 0 2.2rem;
+    }
   }
   &-more {
     font-size: 1.5rem;
@@ -190,6 +203,14 @@
     display: block;
     width: 1.8rem;
     height: 1.8rem;
-    background: url("../img/icon/menu_close_btn.png") no-repeat right top / 1.8rem 1.8rem;
+    background: url("../img/icon/menu_close_btn.png") no-repeat right top /
+      1.8rem 1.8rem;
+  }
+  &-submit {
+    height: 5.9rem;
+    line-height: 5.6rem;
+    color: $main-green;
+    border: 0.2rem solid $main-green;
+    border-radius: 10rem;
   }
 }

@@ -1,6 +1,6 @@
 // var
 $app: app;
-$main-green: #55bbb3;
+$main-green: #39c6cc;
 $white: #ffffff;
 // class
 .flex {
@@ -16,7 +16,6 @@ $white: #ffffff;
   background-color: #7c8594;
 }
 
-
 @for $i from 1 through 20 {
   .pad-t#{$i} {
     padding-top: $i + rem;
@@ -26,7 +25,7 @@ $white: #ffffff;
 // mixin
 @mixin clearFix {
   &:after {
-    content: '';
+    content: "";
     display: block;
     clear: both;
   }
