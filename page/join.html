@@ -40,6 +40,31 @@
       </header>
       <!-- //header -->
 
+      <nav>
+        <ul class="gnb-list">
+          <li>
+            <a href="#none">정보마당</a>
+            <ul class="sub-gnb-list">
+              <li><a href="#none">수업나눔</a></li>
+              <li><a href="#none">교권/법률</a></li>
+              <li><a href="#none">생활교육</a></li>
+              <li><a href="#none">학교업무</a></li>
+              <li><a href="#none">심리상담</a></li>
+            </ul>
+          </li>
+          <li><a href="#none">나눔마당</a></li>
+          <li><a href="#none">담임업무</a></li>
+          <li><a href="#none">학생/학부모</a></li>
+        </ul>
+        <ul class="gnb-list">
+          <li><a href="#none">오시는길</a></li>
+          <li><a href="#none">공지사항</a></li>
+        </ul>
+        <a href="#none" class="btn-close"></a>
+      </nav>
+      <div class="dimmer"></div>
+      <!-- //nav -->
+
       <div class="app-contents">
         <div class="contents-area">
           <div class="container form-container">
@@ -50,6 +75,7 @@
                 <div class="row-group">
                   <div class="form-area">
                     <input type="text" placeholder="사용자 ID" />
+                    <span class="txt-info">4자이상 입력하세요</span>
                   </div>
                 </div>
                 <!-- //row-group -->
@@ -59,6 +85,7 @@
                   <div class="form-group">
                     <div class="form-area">
                       <input type="password" placeholder="패스워드" />
+                      <span class="txt-info">4자이상 입력하세요</span>
                     </div>
                     <div class="form-area">
                       <input type="password" placeholder="패스워드 확인" />
@@ -80,6 +107,7 @@
                   <div class="form-ty-submit">
                     <div class="form-area">
                       <input type="text" placeholder="닉네임" />
+                      <span class="txt-info">8자이내 추천</span>
                     </div>
                     <a href="#none" class="btn btn-ipform">중복확인</a>
                   </div>
@@ -92,9 +120,9 @@
               <div class="ly-form">
                 <!-- check-area -->
                 <div class="check-area">
-                  <span class="title">회원구분</span>
-                  <div class="check-gorup">
-                    <div class="form-depth deapth01">
+                  <div class="check-gorup" data-type="type01">
+                    <div class="form-depth" data-type="type01">
+                      <span class="title">회원구분</span>
                       <!-- form-area -->
                       <div class="form-area">
                         <input type="radio" name="choice01" id="check01" />
@@ -122,7 +150,9 @@
                       <!-- //form-area -->
                     </div>
 
-                    <div class="form-depth depth02">
+                    <div class="form-depth depth01" data-type="type02">
+                      <span class="title">전문분야</span>
+
                       <!-- form-area -->
                       <div class="form-area">
                         <input type="radio" name="choice02" id="check04" />
@@ -150,7 +180,7 @@
 
                 <div class="row-multiple">
                   <!-- row-group -->
-                  <div class="row-group on">
+                  <div class="row-group on" data-type="type01">
                     <div class="form-ty-submit">
                       <div class="form-area" style="width: 28rem">
                         <input type="text" placeholder="학교명 (기관)" />
@@ -164,12 +194,16 @@
                   <!-- //row-group -->
 
                   <!-- row-group -->
-                  <div class="row-group type01">
+                  <div class="row-group" data-type="type02">
                     <div class="form-ty-submit">
                       <div class="form-area">
-                        <input type="file" placeholder="인증서류" />
+                        <div class="file-add">
+                          <input class="upload-name" placeholder="인증서류" />
+                          <label for="file">업로드</label>
+                          <input type="file" id="file" />
+                        </div>
                       </div>
-                      <a href="#none" class="btn btn-ipform">학교찾기</a>
+                      <!-- <a href="#none" class="btn btn-ipform">학교찾기</a> -->
                     </div>
                   </div>
                   <!-- //row-group -->
@@ -203,6 +237,7 @@
                         id="phone"
                         maxlength="13"
                       />
+                      <span class="txt-info">휴대폰 번호 뒤 8자리만</span>
                     </div>
                     <a href="#none" class="btn btn-ipform bg-gray"
                       >인증번호 전송</a
@@ -227,20 +262,21 @@
                   <div class="form-area">
                     <input type="checkbox" id="terms-check" />
                     <label for="terms-check"
-                      ><a href="terms_of_use.html">이용약관</a>에
-                      동의합니다.</label
+                      ><a href="#none" onclick="popupOpen(pop01);">이용약관</a
+                      >에 동의합니다.</label
                     >
                   </div>
                   <div class="form-area">
                     <input type="checkbox" id="privacy-check" />
                     <label for="privacy-check"
-                      ><a href="#none">개인정보 수집 및 이용</a>에
-                      동의합니다.</label
+                      ><a href="#none" onclick="popupOpen(pop02);"
+                        >개인정보 수집 및 이용</a
+                      >에 동의합니다.</label
                     >
                   </div>
                 </div>
                 <!-- //check-area -->
-                <a href="#none" class="btn btn-submit">등록하기</a>
+                <a href="#none" class="btn btn-submit">가입하기</a>
               </div>
               <!-- //ly-form -->
             </div>
@@ -285,6 +321,80 @@
         </div>
       </footer>
       <!-- //footer -->
+
+      <!-- 이용약관 동의 팝업 -->
+      <div class="popup-wrap type01" id="pop01">
+        <div class="popup-area" style="width: 100rem">
+          <div class="popup-head">
+            <h2>이용약관 동의</h2>
+            <a
+              href="#none"
+              class="btn btn-pop-close"
+              onclick="popupClose(pop01);"
+            ></a>
+          </div>
+          <div class="popup-contents">
+            <!-- <div class="row-group"> -->
+            <div class="row-list">
+              <h3>제 1조 (목적)</h3>
+              <ul class="list-item">
+                <li>
+                  이 약관은 티포유가 제공하는 홈페이지 서비스의 이용조건 및
+                  절차, 기타 필요한 사항을 규정함을 목적으로 합니다.
+                </li>
+              </ul>
+            </div>
+
+            <div class="row-list">
+              <h3>제 2조 (약관의 효력과 변경)</h3>
+              <ul class="list-item">
+                <li>1. 이 약관은 이용자에게 공지함으로써 효력을 발생합니다.</li>
+                <li>
+                  2. 이 약관의 내용은 서비스 화면 내에 게시하며 약관의 변경
+                  사항이 있을 경우 티포유의 온라인 공지사항을 통해 공지합니다.
+                </li>
+              </ul>
+            </div>
+            <!-- </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 개인정보 동의 팝업 -->
+      <div class="popup-wrap type01" id="pop02">
+        <div class="dimmer">
+          <div class="popup-area" style="width: 100rem">
+            <div class="popup-head">
+              <h2>개인정보수집 및 이용</h2>
+              <a
+                href="#none"
+                class="btn btn-pop-close"
+                onclick="popupClose(pop02);"
+              ></a>
+            </div>
+            <div class="popup-contents type01">
+              <!-- <div class="row-group"> -->
+              <div class="row-list">
+                <div class="desc">제 1조 (목적)</div>
+              </div>
+
+              <div class="row-list">
+                <h3>제 2조 (약관의 효력과 변경)</h3>
+                <ul class="list-item">
+                  <li>
+                    1. 이 약관은 이용자에게 공지함으로써 효력을 발생합니다.
+                  </li>
+                  <li>
+                    2. 이 약관의 내용은 서비스 화면 내에 게시하며 약관의 변경
+                    사항이 있을 경우 티포유의 온라인 공지사항을 통해 공지합니다.
+                  </li>
+                </ul>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- //app -->
   </body>
