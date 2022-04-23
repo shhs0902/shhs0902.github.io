@@ -1,7 +1,7 @@
 input {
   width: 100%;
   height: 4.2rem;
-  border: 0.2rem solid #000000;
+  border: 0.3rem solid #000000;
   border-radius: 10rem;
   padding: 0 2rem;
   &:focus {
@@ -43,6 +43,30 @@ select {
       & + .row-group {
         margin-top: 0;
       }
+      .form-area {
+        width: 100%;
+        .file-add {
+          width: 100%;
+          height: 5.9rem;
+          margin-top: 1rem;
+          .upload-name {
+            display: inline-block;
+            width: calc(100% - 15.8rem);
+            height: 100%;
+            border: 0.1rem solid #989898;
+            border-radius: 0.5rem;
+          }
+          label {
+            width: 14rem;
+            line-height: 5.9rem;
+            margin-left: 1.8rem;
+          }
+          & + .file-add {
+            margin-left: 2rem;
+          }
+        }
+      }
+      
     }
   }
   .row-group {
@@ -64,11 +88,27 @@ select {
       }
     }
     &area {
+      position: relative;
       input {
         height: 5.9rem;
         border: 0.1rem solid #989898;
         border-radius: 0.5rem;
         padding: 0 2.1rem;
+        &:focus {
+          & + .txt-info {
+            opacity: 0;
+          }
+        }
+      }
+      .txt-info {
+        position: absolute;
+        top: 50%;
+        right: 2.1rem;
+        transform: translateY(-50%);
+        font-size: 1.5rem;
+        color: $main-green;
+        opacity: 1;
+        transition: opacity 0.2s ease-in;
       }
     }
   }
@@ -108,8 +148,8 @@ select {
               &::before {
                 content: "";
                 position: absolute;
-                left: 0.5rem;
-                top: 0.3rem;
+                left: 0.6rem;
+                top: 0.4rem;
                 display: block;
                 width: 0.25rem;
                 height: 0.7rem;
@@ -219,11 +259,13 @@ select {
     .title {
       font-size: 1.8rem;
       font-weight: 700;
+      & + .form-area {
+        margin-left: 2.8rem;
+      }
     }
     .form-depth {
       display: flex;
       align-items: center;
-      margin-left: 2.8rem;
       .form-area {
         & + .form-area {
           margin-left: 1.8rem;
@@ -232,12 +274,13 @@ select {
       & + .form-depth {
         margin-top: 2.8rem;
       }
-      &.depth02 {
+      &.depth01 {
         display: none;
         &.on {
           display: flex;
         }
       }
+      
     }
   }
   .btn-group {

@@ -76,7 +76,6 @@
 
   .ly-form .check-area {
     display: block;
-    padding: 2rem 0;
   }
   .ly-form .check-area .form-depth {
     margin-left: 0;
@@ -125,50 +124,55 @@
     left: 0;
     padding-top: 2rem;
   }
+ 
 }
 
 @media (max-width: 765px) {
-  .ly-form .check-area .form-depth {
-    display: block;
+  nav {
+    width: 100%;
+    right: -100%;
   }
+  // .ly-form .check-area .form-depth {
+  //   display: block;
+  // }
 
-  .ly-form .form-area input {
+  .ly-form .form-area input,
+  .ly-form .row-multiple .row-group .form-area .file-add .upload-name  {
     height: 4.2rem;
     padding: 0 0.7rem;
   }
-  .ly-form .check-area .form-depth .form-area + .form-area {
-    margin-left: 0;
-    margin-top: 1rem;
-  }
+  // .ly-form .check-area .form-depth .form-area + .form-area {
+  //   margin-left: 0;
+  //   margin-top: 1rem;
+  // }
   .ly-form .form-ty-submit .form-area + * {
     margin-left: 1rem;
   }
-
-  .check-gorup {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-top: 1rem;
-  }
-  .ly-form .check-area .check-gorup:before {
-    content: "";
-    position: absolute;
-    bottom: 2rem;
-    left: 50%;
-    width: 0.1rem;
-    height: 6.5rem;
-    background-color: #b2b3b2;
-    transform: translateX(-50%);
+  .ly-form .form-area .txt-info {
+    display: none;
   }
 
-  .ly-form .check-area .form-depth + .form-depth {
-    margin-top: 0;
-    margin-left: 2rem;
-  }
+  // .check-gorup {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   padding-top: 1rem;
+  // }
+  // .ly-form .check-area .check-gorup:before {
+  //   content: "";
+  //   position: absolute;
+  //   bottom: 2rem;
+  //   left: 50%;
+  //   width: 0.1rem;
+  //   height: 6.5rem;
+  //   background-color: #b2b3b2;
+  //   transform: translateX(-50%);
+  // }
 
-  .ly-form .check-area .form-depth.depth02 {
-    display: block;
-  }
+  // .ly-form .check-area .form-depth + .form-depth {
+  //   margin-top: 0;
+  //   margin-left: 2rem;
+  // }
 
   .btn-ipform {
     height: 4.2rem;
