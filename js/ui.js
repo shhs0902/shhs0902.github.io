@@ -1,14 +1,15 @@
 (function () {
-  // 텍스트 변수
   const ONSTRING = "on";
   const REMSTRING = "rem";
 
   const tabBtn = document.querySelectorAll(".tab-btn");
   const tabContent = document.querySelectorAll(".tab-cont");
-
   const phoneInput = document.querySelector("#phone");
-
   const nav = document.querySelector("nav");
+  const targetItem = document.querySelectorAll(".item-depth01");
+  const main = document.querySelector(".app-contents");
+  const type = main.querySelectorAll(".main-type");
+  const checkInput = document.querySelectorAll(".ly-form .check-area input");
 
   // 햄버거 버튼(전체 페이지 공통)
   function hbgBtnEvHandler() {
@@ -74,15 +75,6 @@
     btn.classList.add(ONSTRING);
   }
 
-  function loopHandler() {
-    [].forEach.call(tabBtn, function (btn, idx) {
-      btn.addEventListener("click", function (e) {
-        e.preventDefault();
-        tabEventHandler(btn, idx);
-      });
-    });
-  }
-
   // 외부 페이지 탭 이동
   function locationHandler() {
     const url = location.href;
@@ -146,13 +138,115 @@
     }
   };
 
+  // 게시판 글쓰기 메뉴 드롭다운
+  function boardMenuDropDown(item, idx) {
+    item.addEventListener("click", function(){
+      [].forEach.call(targetItem, function(c,z){    
+        c.classList.remove(ONSTRING);
+        c.nextElementSibling.style.height = 0;
+      });
+      
+      this.classList.add(ONSTRING);
+
+      const menu = item.nextElementSibling.querySelectorAll("li");
+      [].forEach.call(menu, function(a, b){    
+        const menuH = a.children[0].offsetHeight; 
+        
+        item.nextElementSibling.style.height = (menuH * menu.length + 16) + "px";
+      });
+    });
+  }
+
+  function mainContentUser(item, idx) {
+    const mainData = main.getAttribute("data-user");
+    const itemData = item.getAttribute("data-user");
+
+    if(mainData === itemData) {
+      item.classList.add(ONSTRING);
+    }
+  }
+
+  // 파일첨부 파일명 
+  function fileAddInput() {
+    const file = document.querySelector("#file");
+    const name = document.querySelector(".upload-name");
+    if(!file) {
+      return;
+    }
+    file.addEventListener("change", function(){
+      const fileName = file.value;
+      name.value = fileName;
+    });
+  }
+
+  // 회원가입
+  function checkTypeHandler(input, i) {
+    const checkPoint = document.querySelector(".check-point");
+    const check = document.querySelector(".check-gorup");
+    const depth01 = document.querySelector(".form-depth.depth01");
+    const multiple = document.querySelector(".row-multiple");
+    const rowGroup = multiple.querySelectorAll(".row-group");
+
+    input.addEventListener("click", function(){
+      if(checkPoint.checked === true) {
+        depth01.classList.add(ONSTRING);
+        check.setAttribute("data-type", "type02");
+        [].forEach.call(rowGroup, function(item, idx){
+          const itemData = item.getAttribute("data-type");
+          item.classList.remove(ONSTRING);
+          if(itemData === "type02") {
+            item.classList.add(ONSTRING);
+          }
+        });
+      }else if(checkPoint.checked === false) {
+        depth01.classList.remove(ONSTRING);
+        check.setAttribute("data-type", "type01");
+      }
+    });
+  }
+  const like = document.querySelectorAll(".txt-like.toggle");
+
+  // 좋아요
+  function feildLikeCheck(like, idx){
+      like.classList.toggle(ONSTRING);
+  }
+
+  function loopHandler() {
+    [].forEach.call(tabBtn, function (btn, idx) {
+      btn.addEventListener("click", function (e) {
+        e.preventDefault();
+        tabEventHandler(btn, idx);
+      });
+    });
+
+    [].forEach.call(targetItem, function(item, idx){
+        boardMenuDropDown(item, idx);
+    });
+
+    [].forEach.call(type, function(item, idx){
+      mainContentUser(item, idx);
+    });
+
+    [].forEach.call(checkInput, function(input, i){
+      checkTypeHandler(input, i);
+    });
+
+    [].forEach.call(like, function(like, idx){
+      like.addEventListener("click", function(){
+        feildLikeCheck(like, idx);
+      });
+    });
+  }
+
+
   function init() {
+    loopHandler();
     hbgBtnEvHandler();
     gnbMenuClose();
     slideContainerWidthCalc();
-    loopHandler();
     locationHandler();
     autoTextInputHandler();
+    fileAddInput();
     if (phoneInput) {
       phoneInput.onkeyup = function () {
         this.value = autoHypenPhone(this.value);
@@ -168,7 +262,9 @@
   });
 })(window);
 
-function popupClose() {
-  const popUp = document.querySelector(".pop-wrap");
-  popUp.classList.remove("active");
+function popupOpen(pop_id) {
+  pop_id.classList.add("active");
+}
+function popupClose(pop_id) {
+  pop_id.classList.remove("active");
 }
