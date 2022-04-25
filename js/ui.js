@@ -2,6 +2,7 @@
   const ONSTRING = "on";
   const REMSTRING = "rem";
 
+  const closeBtn = document.querySelector(".btn-close");
   const tabBtn = document.querySelectorAll(".tab-btn");
   const tabContent = document.querySelectorAll(".tab-cont");
   const phoneInput = document.querySelector("#phone");
@@ -10,6 +11,8 @@
   const main = document.querySelector(".app-contents");
   const type = main.querySelectorAll(".main-type");
   const checkInput = document.querySelectorAll(".ly-form .check-area input");
+  const like = document.querySelectorAll(".txt-like.toggle");
+
 
   // 햄버거 버튼(전체 페이지 공통)
   function hbgBtnEvHandler() {
@@ -17,20 +20,22 @@
 
     hbgBtn.addEventListener("click", function () {
       nav.classList.add(ONSTRING);
+      nav.style.right = 0;
     });
   }
 
   // gnb 메뉴 닫기(전체 페이지 공통)
   function gnbMenuClose() {
-    const closeBtn = document.querySelector(".btn-close");
     if (!closeBtn) {
       return;
     }
+    nav.style.right = -(nav.offsetWidth) + "px";
 
-    closeBtn.addEventListener("click", function () {
-      nav.classList.remove(ONSTRING);
-    });
+    nav.classList.remove(ONSTRING);
+
   }
+
+
 
   // 컨텐츠 슬라이드 width/height
   function slideContainerWidthCalc() {
@@ -54,7 +59,7 @@
       const container = document.querySelector("#cont-02 .container");
 
       conRig.style.width =
-        (winW - (conLefW + conPoLeft + 50)) * 0.1 + REMSTRING;
+        (winW - (conLefW + conPoLeft - 120)) * 0.1 + REMSTRING;
       container.style.height =
         slide.getBoundingClientRect().height * 0.1 + REMSTRING;
     });
@@ -80,19 +85,22 @@
     const url = location.href;
     const target = String(url.match(/\#[\w\-\w]+/g));
     const currentHash = location.hash;
+
+
     if (currentHash === target) {
       [].forEach.call(tabBtn, function (item, ix) {
         const tagUrl = item.getAttribute("href");
         item.classList.remove(ONSTRING);
         tabContent[ix].classList.remove(ONSTRING);
 
+
         if (tagUrl === target) {
           item.classList.add(ONSTRING);
         }
 
         const newTarget = target.replace("#", "");
+          
         document.getElementById(newTarget).classList.add(ONSTRING);
-        
       });
     }
   }
@@ -142,17 +150,18 @@
   function boardMenuDropDown(item, idx) {
     item.addEventListener("click", function(){
       [].forEach.call(targetItem, function(c,z){    
-        c.classList.remove(ONSTRING);
-        c.nextElementSibling.style.height = 0;
+        c.nextElementSibling.style.height = 0 + "px";
       });
-      
-      this.classList.add(ONSTRING);
 
       const menu = item.nextElementSibling.querySelectorAll("li");
       [].forEach.call(menu, function(a, b){    
         const menuH = a.children[0].offsetHeight; 
         
-        item.nextElementSibling.style.height = (menuH * menu.length + 16) + "px";
+        if(item.nextElementSibling.offsetHeight === 0) {
+          item.nextElementSibling.style.height = (menuH * menu.length + 16) + "px";
+        }else {
+          item.nextElementSibling.style.height = 0;
+        }
       });
     });
   }
@@ -184,27 +193,41 @@
     const checkPoint = document.querySelector(".check-point");
     const check = document.querySelector(".check-gorup");
     const depth01 = document.querySelector(".form-depth.depth01");
-    const multiple = document.querySelector(".row-multiple");
-    const rowGroup = multiple.querySelectorAll(".row-group");
+    const rowGroup = document.querySelectorAll(".row-multiple .row-group");
 
     input.addEventListener("click", function(){
       if(checkPoint.checked === true) {
         depth01.classList.add(ONSTRING);
         check.setAttribute("data-type", "type02");
-        [].forEach.call(rowGroup, function(item, idx){
-          const itemData = item.getAttribute("data-type");
-          item.classList.remove(ONSTRING);
-          if(itemData === "type02") {
-            item.classList.add(ONSTRING);
-          }
-        });
+
+        checkDataType(check, rowGroup);
+
       }else if(checkPoint.checked === false) {
         depth01.classList.remove(ONSTRING);
         check.setAttribute("data-type", "type01");
+
+        checkDataType(check, rowGroup);
       }
     });
   }
-  const like = document.querySelectorAll(".txt-like.toggle");
+
+  function checkDataType(check, rowGroup) {
+    [].map.call(rowGroup, function(item, i){
+      item.classList.remove(ONSTRING);
+
+      const arrAy = [];
+      arrAy.push(item);
+
+      const result = arrAy.find(function(x){
+        return x.dataset.type === check.dataset.type;
+      });
+
+      if(result !== undefined) {
+        result.classList.add(ONSTRING);
+      }
+    });
+  }
+  
 
   // 좋아요
   function feildLikeCheck(like, idx){
@@ -226,12 +249,13 @@
     [].forEach.call(type, function(item, idx){
       mainContentUser(item, idx);
     });
-
+  
     [].forEach.call(checkInput, function(input, i){
       checkTypeHandler(input, i);
     });
-
+  
     [].forEach.call(like, function(like, idx){
+ 
       like.addEventListener("click", function(){
         feildLikeCheck(like, idx);
       });
@@ -252,9 +276,16 @@
         this.value = autoHypenPhone(this.value);
       };
     }
+
+    closeBtn.addEventListener("click", () => gnbMenuClose());
+
     window.addEventListener("resize", function () {
       slideContainerWidthCalc();
+      nav.style.right = -(nav.offsetWidth) + "px";
+
     });
+
+   
   }
 
   document.addEventListener("DOMContentLoaded", function () {
