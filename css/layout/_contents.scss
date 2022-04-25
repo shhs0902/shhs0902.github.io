@@ -566,7 +566,7 @@
             margin-top: 7.8rem;
             .cont-box {
               position: relative;
-              width: 54rem;
+              width: calc(50% - 1rem);
               height: 37rem;
               color: #ffffff;
               border-radius: 1.5rem;
@@ -645,7 +645,7 @@
             overflow: hidden;
             .slide {
               position: relative;
-              max-width: 28rem;
+              // max-width: 28rem;
               height: 36.7rem;
               color: #ffffff;
               border-radius: 1.5rem;

@@ -2,19 +2,16 @@
   .app-header .container,
   .app .container,
   .app-footer .container {
-    padding: 0 3.6%;
+    padding: 0 6%;
   }
-  .app .main-menu,
-  .app-contents .visual,
-  .app-header .container .cont-left h1 + .btn-group,
-  .app-header .container .cont-right .search-area,
-  .app-header .container .cont-right .header-icon.btn-alarm,
-  .app-header .container .cont-right .header-icon.btn-user {
-    display: none;
+
+
+
+ 
+  .app.main .app-contents .visual {
+    display: block;
   }
-  .app .main-menu + .menu-list-group {
-    padding-top: 5rem;
-  }
+
   .table .ui-tr.tbl-head {
     display: none;
   }
@@ -22,6 +19,9 @@
     display: block;
     border-top: 0.1rem solid #b2b3b2;
     padding: 2rem 1.5rem;
+  }
+  .table .ui-tr:nth-child(2) {
+    border-top: 0;
   }
   .table .ui-tr .ui-td {
     display: block;
@@ -78,9 +78,14 @@
     display: block;
   }
   .ly-form .check-area .form-depth {
+    display: block;
     margin-left: 0;
-    margin-top: 1rem;
+    // margin-top: 1rem;
   }
+  .ly-form .check-area .form-depth + .form-depth {
+    margin-top: 2rem;
+  }
+
 
   .app-contents .contents-area .map-area {
     padding-top: 4rem;
@@ -124,21 +129,79 @@
     left: 0;
     padding-top: 2rem;
   }
+  .app-contents .slide-container + .swiper-button-next {
+    right: 6%;
+  }
+  .app-contents .slide-container + .swiper-button-next + .swiper-button-prev {
+    left: 6%;
+  }
+
+  .app-contents .sect-contents#cont-01 .contents-box-area {
+    display: block;
+  }
+
+  .app-contents .sect-contents#cont-01 .contents-box-area .cont-box {
+    width: calc(100% - 4rem);
+    height: 43rem;
+  }
+  .app-contents .sect-contents#cont-01 .contents-box-area .cont-box + .cont-box {
+    margin-left: 4rem;
+    margin-top: 2rem;
+  }
+
+  .app .side-menu {
+    display: none;
+  }
+
+  .app-contents .visual.sub-visual .container .visual-txt {
+    left: 6%;
+  }
  
 }
 
-@media (max-width: 765px) {
-  nav {
-    width: 100%;
-    right: -100%;
+@media (max-width: 830px) {
+
+  .app .main-menu,
+  .app-contents .visual {
+    display: none;
   }
+  .app-header .container .cont-left h1 + .btn-group,
+  .app-header .container .cont-right .search-area,
+  .app-header .container .cont-right .header-icon.btn-alarm,
+  .app-header .container .cont-right .header-icon.btn-user {
+    display: none;
+  }
+  .app-contents .sect-contents#cont-06 .container {
+    padding-right: 0;
+  }
+
+  .app-contents .visual + .contents-area {
+    padding-top: 5rem;
+  }
+  .app .main-menu + .menu-list-group {
+    padding-top: 5rem;
+  }
+  .app-contents .contents-area .board-area {
+    padding-top: 5rem;
+  }
+
+  .app .main-menu + .tab-area {
+    padding-top: 5rem;
+  }
+  // .app-contents .sect-contents#cont-01 .contents-box-area {
+  //   display: block;
+  // }
+  // .app-contents .sect-contents#cont-01 .contents-box-area .cont-box {
+  //   height: 43rem;
+  // }
+
   // .ly-form .check-area .form-depth {
   //   display: block;
   // }
 
   .ly-form .form-area input,
   .ly-form .row-multiple .row-group .form-area .file-add .upload-name  {
-    height: 4.2rem;
+    height: 5rem;
     padding: 0 0.7rem;
   }
   // .ly-form .check-area .form-depth .form-area + .form-area {
@@ -151,6 +214,7 @@
   .ly-form .form-area .txt-info {
     display: none;
   }
+
 
   // .check-gorup {
   //   display: flex;
@@ -175,10 +239,33 @@
   // }
 
   .btn-ipform {
-    height: 4.2rem;
-    line-height: 4.2rem;
+    height: 5rem;
+    line-height: 5rem;
   }
+  .app-contents .file-add label {
+    height: 5rem;
+  }
+  .ly-form .check-area {
+    padding-left: 0;
+  }
+  .app-contents .ly-form .check-area .title, {
+    display: block;
+    font-size: 1.8rem;
+  }
+  .app-contents .ly-form .check-area .form-depth.on {
+    display: block;
+  }
+  .app-contents .ly-form .check-area .form-depth .form-area {
+    display: inline-block;
+    margin-top: 1rem;
+  } 
 
+  .ly-form .check-area .title + .form-area {
+    margin-left: 0;
+  }
+  .ly-form .row-multiple .row-group .form-area .file-add label {
+    line-height: 5rem;
+  }
   .app-contents .contents-area .title {
     font-size: 2.5rem;
   }
@@ -222,4 +309,52 @@
   .table-type01 table tr td .form-group + .form-group {
     margin-top: 1.5rem;
   }
+
+  
+  .app-contents .sect-contents#cont-02 .cont-right {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    transform: translateY(0);
+  }
+  .app-contents .sect-contents#cont-02 .container {
+    height: auto !important;
+  }
+  .app-contents .sect-contents#cont-02 .cont-right .slide {
+    max-width: 100%;
+  }
+
+
+  .app.main .visual {
+    height: 47.4rem;
+    padding: 4.8rem 0 1.4rem;
+  }
+  .app-contents .visual .visual-txt {
+    top: 0;
+    left: 0;
+    transform: translateY(0);
+  }
+  .app-contents .slide-container + .swiper-button-next,
+  .app-contents .slide-container + .swiper-button-next + .swiper-button-prev {
+    display: none;
+  }
+  .app.main .visual .container {
+    padding: 0 6%;
+  }
+
+
+}
+
+@media (max-width: 501px) {
+
+  nav {
+    width: 100%;
+    // right: -100%;
+  }
+  .app-contents .slide-container .swiper-wrapper .slide.main-slide01 {
+    background-position: center bottom;
+    background-size: 30.8rem 23.3rem;
+  }
+  
 }
