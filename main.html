@@ -44,13 +44,13 @@
       <nav>
         <ul class="gnb-list">
           <li>
-            <a href="#none">정보마당</a>
+            <a href="page/information.html">정보마당</a>
             <ul class="sub-gnb-list">
-              <li><a href="#none">수업나눔</a></li>
-              <li><a href="#none">교권/법률</a></li>
-              <li><a href="#none">생활교육</a></li>
-              <li><a href="#none">학교업무</a></li>
-              <li><a href="#none">심리상담</a></li>
+              <li><a href="page/class_board.html">수업나눔</a></li>
+              <li><a href="page/class_board.html#tab-02">교권/법률</a></li>
+              <li><a href="page/class_board.html#tab-03">생활교육</a></li>
+              <li><a href="page/class_board.html#tab-04">학교업무</a></li>
+              <li><a href="page/class_board.html#tab-05">심리상담</a></li>
             </ul>
           </li>
           <li><a href="#none">나눔마당</a></li>
@@ -140,8 +140,9 @@
                       교사에게는 수업과 관련된 정보나눔과 학교업무,
                       갈등문제와<br />
                       관련된 법률적 문제 해결 및 심리상담을 통한 힐링프로그램<br />
-                      콘텐츠를 진행하고 학교 행정업무를 간소화할 수 있는<br />
-                      기능을 제공합니다.
+                      콘텐츠를 진행하고 학교 행정업무를 간소화할 수 있는
+                      기능을<br />
+                      제공합니다.
                     </div>
                   </div>
 
@@ -151,10 +152,11 @@
                   >
                     <div class="title">For Students & Prants</div>
                     <div class="desc">
-                      학생과 학부모에게는 온라인을 통하여 교사와의 소통을<br />
-                      원활히 하며, 체험학습 신청 및 보고서 제출 기능을<br />
-                      지원하고 여러 분야의 전문가들로 하여금 지식과 경험의<br />
-                      도움을 주는 콘텐츠를 제공하고 있습니다.
+                      학생과 학부모에게는 온라인을 통하여 교사와의 소통을
+                      원활히<br />
+                      하며, 체험학습 신청 및 보고서 제출 기능을 지원하고 여러<br />
+                      분야의 전문가들로 하여금 지식과 경험의 도움을 주는<br />
+                      콘텐츠를 제공하고 있습니다.
                     </div>
                   </div>
                 </div>
@@ -614,14 +616,16 @@
 
     <script>
       var swiper = new Swiper('.slide-container', {
-        loop: true,
+        observer: true,
+        observeParents: true,
+        loop: false,
         navigation: {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
       });
       var swiper = new Swiper('.slide-container01', {
-        slidesPerView: 4,
+        slidesPerView: 1,
         spaceBetween: 20,
         observer: true,
         observeParents: true,
@@ -633,16 +637,35 @@
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
+        breakpoints: {
+          // 360: {
+          //   slidesPerView: 2,
+          // },
+          625: {
+            slidesPerView: 2,
+          },
+          1920: {
+            slidesPerView: 4,
+          },
+        },
       });
 
       var swiper = new Swiper('.slide-container02', {
-        slidesPerView: 4,
+        slidesPerView: 'auto',
         spaceBetween: 20,
         observer: true,
         observeParents: true,
         pagination: {
           el: '.swiper-pagination02',
           clickable: true,
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+          },
+          1172: {
+            slidesPerView: 4,
+          },
         },
       });
     </script>
