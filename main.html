@@ -137,11 +137,9 @@
                   >
                     <div class="title">For Teacher</div>
                     <div class="desc">
-                      교사에게는 수업과 관련된 정보나눔과 학교업무,
-                      갈등문제와<br />
-                      관련된 법률적 문제 해결 및 심리상담을 통한 힐링프로그램<br />
-                      콘텐츠를 진행하고 학교 행정업무를 간소화할 수 있는
-                      기능을<br />
+                      교사에게는 수업과 관련된 정보나눔과 학교업무, 갈등문제와
+                      관련된 법률적 문제 해결 및 심리상담을 통한 힐링프로그램
+                      콘텐츠를 진행하고 학교 행정업무를 간소화할 수 있는 기능을
                       제공합니다.
                     </div>
                   </div>
@@ -152,10 +150,9 @@
                   >
                     <div class="title">For Students & Prants</div>
                     <div class="desc">
-                      학생과 학부모에게는 온라인을 통하여 교사와의 소통을
-                      원활히<br />
-                      하며, 체험학습 신청 및 보고서 제출 기능을 지원하고 여러<br />
-                      분야의 전문가들로 하여금 지식과 경험의 도움을 주는<br />
+                      학생과 학부모에게는 온라인을 통하여 교사와의 소통을 원활히
+                      하며, 체험학습 신청 및 보고서 제출 기능을 지원하고 여러
+                      분야의 전문가들로 하여금 지식과 경험의 도움을 주는
                       콘텐츠를 제공하고 있습니다.
                     </div>
                   </div>
@@ -595,7 +592,40 @@
           </div>
         </div>
       </footer>
-      <!-- //footer -->
+
+      <footer class="app-footer mobile">
+        <div class="footer-info flex">
+          <a href="page/login.html">로그인</a
+          ><a href="page/join.html">회원가입</a
+          ><a href="javascript:void(0)" onclick="popupOpen(pop02)">이용약관</a
+          ><a href="javascript:void(0)" onclick="popupOpen(pop03)"
+            >개인정보취급방침</a
+          >
+        </div>
+        <div class="footer-info">
+          <div class="footer-drop">티포유 사업자정보</div>
+        </div>
+        <div class="footer-info company">
+          <div class="info-row">티포유 대표이사 : 김용서</div>
+          <div class="info-row">사업자등록번호 : 206-82-78403</div>
+          <div class="info-row">
+            <p class="p-num">전화번호 : <span>02-522-8130</span></p>
+            <p class="f-num">팩스번호 : <span>02-522-8131</span></p>
+          </div>
+          <address>
+            서울특별시 영등포구 국제금융로6길 26<br />(여의도동 35) 한국노총빌딩
+            12층
+          </address>
+          <a href="../index.html" class="logo"></a>
+          <a href="#none" class="footer-ci"></a>
+          <div class="footer-info">
+            <span class="copyright"
+              >Copyright ©티포유. All right reserved.</span
+            >
+          </div>
+        </div>
+      </footer>
+      <!-- //footer mobile -->
 
       <div class="side-menu">
         <a href="#none" class="menu-01">자료실</a>
@@ -604,12 +634,86 @@
       </div>
     </div>
 
-    <div class="pop-wrap active">
+    <!-- 로그인 얼럿 -->
+    <div class="popup-wrap active" id="pop01">
+      <div class="popup-area" style="width: 50rem">
+        <a
+          href="javascript:void(0)"
+          class="btn btn-pop-close"
+          onclick="popupClose(pop01);"
+        ></a>
+        <div class="popup-contents">로그인 후 이용해 주세요.</div>
+      </div>
+    </div>
+
+    <!-- 이용약관 동의 팝업 -->
+    <div class="popup-wrap type01" id="pop02">
+      <div class="popup-area" style="width: 80%">
+        <div class="popup-head">
+          <h2>이용약관 동의</h2>
+          <a
+            href="#none"
+            class="btn btn-pop-close"
+            onclick="popupClose(pop02);"
+          ></a>
+        </div>
+        <div class="popup-contents">
+          <!-- <div class="row-group"> -->
+          <div class="row-list">
+            <h3>제 1조 (목적)</h3>
+            <ul class="list-item">
+              <li>
+                이 약관은 티포유가 제공하는 홈페이지 서비스의 이용조건 및 절차,
+                기타 필요한 사항을 규정함을 목적으로 합니다.
+              </li>
+            </ul>
+          </div>
+
+          <div class="row-list">
+            <h3>제 2조 (약관의 효력과 변경)</h3>
+            <ul class="list-item">
+              <li>1. 이 약관은 이용자에게 공지함으로써 효력을 발생합니다.</li>
+              <li>
+                2. 이 약관의 내용은 서비스 화면 내에 게시하며 약관의 변경 사항이
+                있을 경우 티포유의 온라인 공지사항을 통해 공지합니다.
+              </li>
+            </ul>
+          </div>
+          <!-- </div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- 개인정보 동의 팝업 -->
+    <div class="popup-wrap type01" id="pop03">
       <div class="dimmer">
-        <div class="popup-area">
-          <p class="desc">로그인후 이용해주세요.</p>
-          <a href="#none" class="btn btn-login">Login</a>
-          <a href="#none" class="btn btn-pop-close" onclick="popupClose();"></a>
+        <div class="popup-area" style="width: 80%">
+          <div class="popup-head">
+            <h2>개인정보수집 및 이용</h2>
+            <a
+              href="#none"
+              class="btn btn-pop-close"
+              onclick="popupClose(pop03);"
+            ></a>
+          </div>
+          <div class="popup-contents type01">
+            <!-- <div class="row-group"> -->
+            <div class="row-list">
+              <div class="desc">제 1조 (목적)</div>
+            </div>
+
+            <div class="row-list">
+              <h3>제 2조 (약관의 효력과 변경)</h3>
+              <ul class="list-item">
+                <li>1. 이 약관은 이용자에게 공지함으로써 효력을 발생합니다.</li>
+                <li>
+                  2. 이 약관의 내용은 서비스 화면 내에 게시하며 약관의 변경
+                  사항이 있을 경우 티포유의 온라인 공지사항을 통해 공지합니다.
+                </li>
+              </ul>
+            </div>
+            <!-- </div> -->
+          </div>
         </div>
       </div>
     </div>
@@ -625,7 +729,7 @@
         },
       });
       var swiper = new Swiper('.slide-container01', {
-        slidesPerView: 1,
+        slidesPerView: 'auto',
         spaceBetween: 20,
         observer: true,
         observeParents: true,
@@ -638,14 +742,13 @@
           prevEl: '.swiper-button-prev',
         },
         breakpoints: {
-          // 360: {
-          //   slidesPerView: 2,
-          // },
-          625: {
-            slidesPerView: 2,
+          1407: {
+            slidesPerView: 3,
+            spaceBetween: 20,
           },
-          1920: {
+          1700: {
             slidesPerView: 4,
+            spaceBetween: 20,
           },
         },
       });
