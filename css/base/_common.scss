@@ -4,7 +4,7 @@ $main-green: #39c6cc;
 $white: #ffffff;
 // class
 .flex {
-  display: flex;
+  display: flex !important;
   justify-content: center;
 }
 
