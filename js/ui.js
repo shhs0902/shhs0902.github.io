@@ -30,9 +30,7 @@
       return;
     }
     nav.style.right = -(nav.offsetWidth) + "px";
-
     nav.classList.remove(ONSTRING);
-
   }
 
 
@@ -53,15 +51,14 @@
     [].forEach.call(slides, function (slide) {
       const conRect = conLef.getBoundingClientRect();
       const conLefW = conRect.width;
-      const conPoLeft = conRect.left;
+      const conPoLeft = conRect.right;
       const winW = window.innerWidth;
 
       const container = document.querySelector("#cont-02 .container");
-
       conRig.style.width =
-        (winW - (conLefW + conPoLeft - 120)) * 0.1 + REMSTRING;
+        (winW - (conLefW + conPoLeft)) + "px";
       container.style.height =
-        slide.getBoundingClientRect().height * 0.1 + REMSTRING;
+        slide.getBoundingClientRect().height + "px";
     });
   }
 
@@ -81,29 +78,29 @@
   }
 
   // 외부 페이지 탭 이동
-  function locationHandler() {
-    const url = location.href;
-    const target = String(url.match(/\#[\w\-\w]+/g));
-    const currentHash = location.hash;
+  // function locationHandler() {
+  //   const url = location.href;
+  //   const target = String(url.match(/\#[\w\-\w]+/g));
+  //   const currentHash = location.hash;
 
 
-    if (currentHash === target) {
-      [].forEach.call(tabBtn, function (item, ix) {
-        const tagUrl = item.getAttribute("href");
-        item.classList.remove(ONSTRING);
-        tabContent[ix].classList.remove(ONSTRING);
+  //   if (currentHash === target) {
+  //     [].forEach.call(tabBtn, function (item, ix) {
+  //       const tagUrl = item.getAttribute("href");
+  //       item.classList.remove(ONSTRING);
+  //       tabContent[ix].classList.remove(ONSTRING);
 
 
-        if (tagUrl === target) {
-          item.classList.add(ONSTRING);
-        }
+  //       if (tagUrl === target) {
+  //         item.classList.add(ONSTRING);
+  //       }
 
-        const newTarget = target.replace("#", "");
+  //       const newTarget = target.replace("#", "");
           
-        document.getElementById(newTarget).classList.add(ONSTRING);
-      });
-    }
-  }
+  //       document.getElementById(newTarget).classList.add(ONSTRING);
+  //     });
+  //   }
+  // }
 
   // 회원가입 전화번호 010 자동입력
   function autoTextInputHandler() {
@@ -262,13 +259,12 @@
     });
   }
 
-
   function init() {
     loopHandler();
     hbgBtnEvHandler();
     gnbMenuClose();
     slideContainerWidthCalc();
-    locationHandler();
+    // locationHandler();
     autoTextInputHandler();
     fileAddInput();
     if (phoneInput) {
@@ -282,7 +278,6 @@
     window.addEventListener("resize", function () {
       slideContainerWidthCalc();
       nav.style.right = -(nav.offsetWidth) + "px";
-
     });
 
    
