@@ -6,10 +6,10 @@
       // height: 42.6rem;
       &.main-slide {
         &01 {
-          background: url("../img/bg/visual_01.png") no-repeat right bottom / 53%;
+          background: url("../img/bg/visual_01.png") no-repeat 0 0 / 100%;
         }
         &02 {
-          background: url("../img/bg/visual_02.png") no-repeat right bottom;
+          background: url("../img/bg/visual_02.png") no-repeat 0 0 / 100%;
         }
       }
     }
