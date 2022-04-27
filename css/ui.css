@@ -2057,6 +2057,10 @@ select {
   margin-left: 2rem;
 }
 
+.ly-form .row-multiple .row-group .form-area.resize {
+  width: 31rem !important;
+}
+
 .ly-form .row-group + .row-group {
   margin-top: 1.8rem;
 }
@@ -3019,6 +3023,9 @@ textarea {
   }
   .app-contents .ly-form .check-area .form-depth {
     display: block;
+  }
+  .ly-form .check-area .form-depth.depth01 {
+    display: none;
   }
   .app-contents .ly-form .check-area .form-depth.on {
     display: block;

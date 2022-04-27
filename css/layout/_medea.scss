@@ -304,6 +304,9 @@
   .app-contents .ly-form .check-area .form-depth {
     display: block;
   }
+  .ly-form .check-area .form-depth.depth01 {
+    display: none;
+  }
   .app-contents .ly-form .check-area .form-depth.on {
     display: block;
   }
