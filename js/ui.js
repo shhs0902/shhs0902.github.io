@@ -1,6 +1,5 @@
 (function () {
   const ONSTRING = "on";
-  const REMSTRING = "rem";
 
   const closeBtn = document.querySelector(".btn-close");
   const tabBtn = document.querySelectorAll(".tab-btn");
@@ -12,6 +11,8 @@
   const type = main.querySelectorAll(".main-type");
   const checkInput = document.querySelectorAll(".ly-form .check-area input");
   const like = document.querySelectorAll(".txt-like.toggle");
+  const gnbLi = document.querySelectorAll(".gnb-list > li");
+  const dimmer = document.querySelector(".dimmer");
 
 
   // 햄버거 버튼(전체 페이지 공통)
@@ -33,7 +34,28 @@
     nav.classList.remove(ONSTRING);
   }
 
+  // gnb 메뉴 리스트 
+  function gnbMenuListShowHide(item, idx) {
+    const gnbLiH = item.offsetHeight;
 
+    item.addEventListener("click", function(){
+      const subGnb = item.querySelector(".sub-gnb-list");
+      const subGnbH = subGnb.offsetHeight;
+
+      if(subGnb) {
+        if(item.offsetHeight === gnbLiH) {
+          console.log(item.offsetHeight)
+          item.style.height = gnbLiH + subGnbH + "px";
+          item.classList.add(ONSTRING);
+          dimmer.classList.add("active");
+        }else {
+          item.style.height = gnbLiH + "px";
+          item.classList.remove(ONSTRING);
+          dimmer.classList.remove("active");
+        }
+      }
+    });
+  }
 
   // 컨텐츠 슬라이드 width/height
   function slideContainerWidthCalc() {
@@ -83,13 +105,11 @@
   //   const target = String(url.match(/\#[\w\-\w]+/g));
   //   const currentHash = location.hash;
 
-
   //   if (currentHash === target) {
   //     [].forEach.call(tabBtn, function (item, ix) {
   //       const tagUrl = item.getAttribute("href");
   //       item.classList.remove(ONSTRING);
   //       tabContent[ix].classList.remove(ONSTRING);
-
 
   //       if (tagUrl === target) {
   //         item.classList.add(ONSTRING);
@@ -102,6 +122,8 @@
   //   }
   // }
 
+  
+  
   // 회원가입 전화번호 010 자동입력
   function autoTextInputHandler() {
     if (!phoneInput) {
@@ -163,6 +185,7 @@
     });
   }
 
+  // 사용자 메뉴 컨트롤
   function mainContentUser(item, idx) {
     const mainData = main.getAttribute("data-user");
     const itemData = item.getAttribute("data-user");
@@ -208,6 +231,7 @@
     });
   }
 
+  // 회원가입 인풋 트리거
   function checkDataType(check, rowGroup) {
     [].map.call(rowGroup, function(item, i){
       item.classList.remove(ONSTRING);
@@ -224,7 +248,6 @@
       }
     });
   }
-  
 
   // 좋아요
   function feildLikeCheck(like, idx){
@@ -257,6 +280,11 @@
         feildLikeCheck(like, idx);
       });
     });
+
+    [].forEach.call(gnbLi, function(item, idx){ 
+      gnbMenuListShowHide(item, idx)
+    });
+
   }
 
   function init() {
@@ -288,9 +316,13 @@
   });
 })(window);
 
+
+// 팝업 열기
 function popupOpen(pop_id) {
   pop_id.classList.add("active");
 }
+
+// 팝업 닫기
 function popupClose(pop_id) {
   pop_id.classList.remove("active");
 }
