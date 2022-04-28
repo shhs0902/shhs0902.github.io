@@ -97,6 +97,7 @@
     tabContent[idx].classList.add(ONSTRING);
 
     btn.classList.add(ONSTRING);
+
   }
 
   // 외부 페이지 탭 이동
