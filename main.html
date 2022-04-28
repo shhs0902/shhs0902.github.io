@@ -375,33 +375,33 @@
                   티포유를 통해 교사와 학생/학무모간의 소통이<br />
                   원활해지며, 각종 신청서, 보고서 제출이 쉬워집니다!
                 </p>
-                <div class="list-item list-type01">
-                  <ul>
-                    <li>
+                <div class="list-item list-type01 swiper slide-container04">
+                  <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
                       <a href="#none">
                         <img src="img/bg/p_s_attend.png" alt="결석계제출" />
                       </a>
                       <span class="title">결석계제출</span>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                       <a href="#none">
                         <img src="img/bg/p_s_exper.png" alt="체험학습" />
                       </a>
                       <span class="title">체험학습</span>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                       <a href="#none">
                         <img src="img/bg/p_s_alarm.png" alt="알림확인" />
                       </a>
                       <span class="title">알림확인</span>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                       <a href="#none">
                         <img src="img/bg/p_s_sig.png" alt="출결서명" />
                       </a>
                       <span class="title">출결서명</span>
                     </li>
-                    <li>
+                    <li class="swiper-slide">
                       <a href="#none">
                         <img src="img/bg/p_s_q_a.png" alt="소통 Q&A" />
                       </a>
@@ -785,7 +785,6 @@
           },
         },
       });
-
       var swiper = new Swiper('.slide-container02', {
         slidesPerView: 'auto',
         spaceBetween: 20,
@@ -803,6 +802,41 @@
             slidesPerView: 4,
           },
         },
+      });
+
+      var windowW = window.innerWidth;
+      var swiper = undefined;
+
+      function initSlide() {
+        if (windowW < 1172 && swiper === undefined) {
+          swiper = new Swiper('.slide-container04', {
+            slidesPerView: 'auto',
+            spaceBetween: 0,
+            observer: true,
+            observeParents: true,
+            breakpoints: {
+              878: {
+                slidesPerView: 3,
+                spaceBetween: 0,
+                observer: true,
+                observeParents: true,
+              },
+              // 1172: {
+              //   slidesPerView: 4,
+              // },
+            },
+          });
+        } else if (windowW >= 1172 && swiper !== undefined) {
+          swiper.destroy();
+          swiper = undefined;
+        }
+      }
+
+      initSlide();
+
+      window.addEventListener('resize', function () {
+        windowW = window.innerWidth;
+        initSlide();
       });
     </script>
   </body>
