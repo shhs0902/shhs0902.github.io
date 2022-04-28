@@ -149,7 +149,7 @@
       &.sub-visual {
         background-color: #fcb414;
         .container {
-          background: url("../img/bg/sub_visual.png") no-repeat right bottom;
+          background: url("../img/bg/sub_visual.png") no-repeat right bottom / cover;
           .visual-txt {
             left: 0;
             font-size: 4rem;
@@ -160,7 +160,7 @@
       .visual-txt {
         position: absolute;
         top: 50%;
-        left: 9rem;
+        left: 0;
         font-weight: 700;
         color: #ffffff;
         transform: translateY(-50%);
@@ -265,6 +265,7 @@
         .table-area {
           border-top: 0;
           & + .submit {
+           
             height: 4.4rem;
             line-height: 4.4rem;
             margin-left: auto;
@@ -307,6 +308,7 @@
           }
           .title {
             font-size: 2.5rem;
+            line-height: 2.875rem;
           }
           .user-nick {
             font-size: 1.3rem;
@@ -328,7 +330,7 @@
           margin-top: 1.7rem;
           p {
             font-size: 1.5rem;
-            line-height: 1.875rem;
+            line-height: 2.875rem;
             padding-bottom: 6.1rem;
           }
         }
@@ -875,7 +877,7 @@
                 a {
                   display: block;
                   width: 18.9rem;
-                  height: 18.9rem;
+                  // height: 18.9rem;
                   border-radius: 100%;
                   padding: 0;
                   & + .title {

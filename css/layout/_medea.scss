@@ -5,16 +5,27 @@
     padding: 0 6%;
   }
 
+  .app-contents .visual.sub-visual .container {
+    background-position: right 8rem bottom;
+  }
   .app.main .app-contents .visual {
     display: block;
   }
 
+  .app .slide-container .swiper-wrapper .slide.main-slide01,
+  .app .slide-container .swiper-wrapper .slide.main-slide02 {
+    background-position: right 15rem bottom;
+  }
+  .app-contents .visual .visual-txt {
+    left: 9rem;
+  }
 
-  // .app-contents .slide-container .swiper-wrapper .slide.main-slide01,
-  // .app-contents .slide-container .swiper-wrapper .slide.main-slide02 {
-  //   background-size: 93%;
-  //   background-position: right 9.1rem top 0;
-  // }
+  .app .slide-container + .swiper-button-next {
+    right: 6.4rem;
+  }
+  .app .slide-container + .swiper-button-next + .swiper-button-prev {
+    left: 6.4rem;
+  }
 
   .table .ui-tr.tbl-head {
     display: none;
@@ -56,6 +67,7 @@
 
   .app-contents .menu-list-group .list-item {
     padding-top: 0;
+    padding-bottom: 0;
   }
   .app-contents .menu-list-group .list-item li {
     display: block;
@@ -81,8 +93,6 @@
   .ly-form .check-area {
     display: block;
   }
-
-
 
   .app-contents .contents-area .map-area {
     padding-top: 4rem;
@@ -131,8 +141,6 @@
     display: none;
   }
 
-
-
   .app-contents .sect-contents#cont-01 .contents-box-area .cont-box {
     width: calc(100% - 4rem);
     height: 43rem;
@@ -150,10 +158,6 @@
     left: 6%;
   }
   
-
-  // .app-contents .sect-contents .list-item ul li:nth-child(2n) {
-  //   border-left: 0.1rem solid rgba(255, 255, 255, 0.3);
-  // }
   .app-contents .sect-contents#cont-02 .cont-right {
     position: relative;
     top: 0;
@@ -170,6 +174,21 @@
   .app-contents .sect-contents#cont-03 .list-item ul li a {
     min-width: 24.4rem;
     padding: 0;
+  }
+
+  .app .app-contents .sect-contents .list-item.list-type01 ul li a {
+    width: 100%;
+  }
+
+  // .app-contents .sect-contents .list-item ul {
+  //   display: block;
+  //   text-align: center;
+  // }
+  // .app-contents .sect-contents .list-item.list-type01 ul li {
+  //   margin-right: 0;
+  // }
+  .app .app-contents .sect-contents .list-item ul li a {
+   width: 100%;
   }
 
 }
@@ -190,12 +209,13 @@
   .app-contents .sect-contents .list-item ul li + li {
     border: 0;
   }
+
 }
 
 @media (max-width: 775px) {
 
   .app-contents .contents-area {
-    padding: 6.5rem 0 0;
+    padding: 5.5rem 0 0;
   }
   .app-contents .contents-area.my-page {
     padding-bottom: 6rem;
@@ -225,26 +245,25 @@
     padding: 4.8rem 0 1.4rem;
   }
   .app-contents .visual .visual-txt {
-    top: 0;
-    left: 0.1rem;
-    transform: translateY(0);
+    // top: 0;
+    // left: 0.1rem;
+    // transform: translateY(0);
   }
-  .app-contents .slide-container .swiper-wrapper .slide.main-slide01 {
-    background-position: right bottom;
-    background-image: url("../img/bg/visual_01_m.png");
-    background-size: 61%;
-  }
+  .app-contents .slide-container .swiper-wrapper .slide.main-slide01,
   .app-contents .slide-container .swiper-wrapper .slide.main-slide02 {
-    background-position: right bottom;
-    background-image: url("../img/bg/visual_02_m.png");
-    background-size: 61%;
+    background-position: center bottom;
+    // background-image: url("../img/bg/visual_01_m.png");
+    // background-size: 61%;
   }
+  // .app-contents .slide-container .swiper-wrapper .slide.main-slide02 {
+  //   background-position: right bottom;
+  //   background-image: url("../img/bg/visual_02_m.png");
+    // background-size: 61%;
+  // }
   .app-contents .slide-container + .swiper-button-next,
   .app-contents .slide-container + .swiper-button-next + .swiper-button-prev {
     display: none;
   }
-
-
 
   .app-contents .sect-contents#cont-06 .container {
     padding-right: 0;
@@ -261,7 +280,7 @@
   }
 
   .app-contents .visual + .contents-area {
-    padding: 5rem 0 0;
+    padding: 4.5rem 0 0;
   }
   .app .main-menu + .menu-list-group {
     padding-top: 1.5rem;
@@ -292,7 +311,7 @@
     line-height: 5rem;
   }
   .app-contents .file-add label {
-    height: 5rem;
+    height: 4.9rem;
   }
   .ly-form .check-area {
     padding-left: 0;
@@ -336,9 +355,6 @@
     line-height: 4.8rem;
   }
 
-  // .ly-form .form-ty-submit {
-  //   display: block;
-  // }
   .ly-form .form-ty-submit .form-area {
     width: calc(100% - 11.8rem);
   }
@@ -350,13 +366,6 @@
     width: 10rem;
   }
   
-  // .ly-form .check-area.login {
-  //   display: block;
-  // }
-  // .ly-form .check-area.login .btn-group {
-  //   margin-top: 1rem;
-  // }
-
   .table-type01 table tr th {
     padding: 0 1.8rem 0 1rem;
   }
@@ -369,23 +378,20 @@
   .table-type01 table tr td {
     padding: 1.2rem 0 1.2rem 1.8rem;
   }
-  .table-type01 table tr td .form-group .form-area + .btn {
-    width: auto;
-  }
-  .app-contents .contents-area.my-page .table-area + .submit {
-    width: 100%;
-  }
+
   .table-type01 table tr td .form-group {
     display: block;
   }
   .table-type01 table tr td .form-group .form-area + .btn {
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-left: 0;
+    margin-top: 1rem;
+    margin-left: auto;
   }
 
   .table-type01 table tr td .form-group + .form-group {
     margin-top: 1.5rem;
+  }
+  .pagenation {
+    padding-top: 3rem;
   }
 
   .app-contents .sect-contents#cont-03 .list-item ul li a {
@@ -473,17 +479,21 @@
 
   nav {
     width: 100%;
-    // right: -100%;
   }
   nav + .dimmer,
   nav.on + .dimmer {
     display: none;
   }
 
+  .app-contents .visual .visual-txt {
+    top: 0;
+    left: 0.1rem;
+    transform: translateY(0);
+  }
+
   .app-contents .sect-contents {
     padding: 9rem 0 0;
   }
-
 
   .app-contents .visual .visual-txt .title {
     font-size: 2.5rem;
@@ -534,6 +544,37 @@
     content: none;
   }
 
+  .slide-container .tab-btn-area {
+    border-radius: 0;
+  }
+  .slide-container .tab-btn-area .tab-btn {
+    width: auto;
+    padding: 0 5rem;
+  }
+  .app .slide-container .tab-btn-area .tab-btn {
+    flex-shrink: 0;
+  }
 
+  .my-page .title {
+    padding: 0 6%;
+  }
+  .app .my-page .title + .desc {
+    padding: 3rem 6%;
+  }
+  .table-type01 table tr td {
+    padding: 1.2rem 1.8rem;
+  }
+  .app-contents .contents-area.my-page .table-area + .submit {
+    position: relative;
+    right: 1.8rem;
+  }
 
+  .app .app-contents .sect-contents#cont-02 .cont-right .slide {
+    max-width: 27.4rem;
+  }
+
+  // .app .app-contents .sect-contents .list-item.list-type01 ul li a {
+  //   width: 24.9rem;
+  // }
+ 
 }

@@ -150,7 +150,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'SUIT', sans-serif;
+  font-family: '맑은 고딕','Malgun Gothic', sans-serif;
   font-weight: 700;
 }
 
@@ -165,10 +165,11 @@ a:link {
 
 html {
   width: 100%;
-  font-family: 'SUIT', sans-serif;
+  font-family: '맑은 고딕','Malgun Gothic', sans-serif;
   font-size: 50%;
   font-weight: 400;
   line-height: 1.5;
+  letter-spacing: -0.15rem;
 }
 
 body {
@@ -402,6 +403,10 @@ nav .gnb-list > li.on .icon-drop {
 
 .app .container.form-container .ly-form-group {
   height: 100%;
+}
+
+.app .container.form-container .btn-ipform {
+  font-size: 1.5rem;
 }
 
 .app header input:focus::-webkit-input-placeholder {
@@ -642,7 +647,7 @@ nav .gnb-list > li.on .icon-drop {
 }
 
 .app-contents .visual.sub-visual .container {
-  background: url("../img/bg/sub_visual.png") no-repeat right bottom;
+  background: url("../img/bg/sub_visual.png") no-repeat right bottom/cover;
 }
 
 .app-contents .visual.sub-visual .container .visual-txt {
@@ -654,7 +659,7 @@ nav .gnb-list > li.on .icon-drop {
 .app-contents .visual .visual-txt {
   position: absolute;
   top: 50%;
-  left: 9rem;
+  left: 0;
   font-weight: 700;
   color: #ffffff;
   -webkit-transform: translateY(-50%);
@@ -838,6 +843,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-contents .contents-area .board-area .board-title .title {
   font-size: 2.5rem;
+  line-height: 2.875rem;
 }
 
 .app-contents .contents-area .board-area .board-title .user-nick {
@@ -868,7 +874,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-contents .contents-area .board-area .board-txt-view p {
   font-size: 1.5rem;
-  line-height: 1.875rem;
+  line-height: 2.875rem;
   padding-bottom: 6.1rem;
 }
 
@@ -1397,7 +1403,6 @@ nav .gnb-list > li.on .icon-drop {
 .app-contents .sect-contents .list-item.list-type01 ul li a {
   display: block;
   width: 18.9rem;
-  height: 18.9rem;
   border-radius: 100%;
   padding: 0;
 }
@@ -2469,6 +2474,7 @@ textarea {
   font-weight: 700;
   color: #7c8594;
   text-align: left;
+  padding-left: 0;
 }
 
 .table-type01 table tr td .tip ul {
@@ -2476,6 +2482,7 @@ textarea {
 }
 
 .table-type01 table tr td .tip ul li {
+  position: relative;
   font-size: 1.3rem;
   font-weight: 400;
   padding-left: 1.2rem;
@@ -2483,6 +2490,19 @@ textarea {
 
 .table-type01 table tr td .tip ul li + li {
   margin-top: 0.9rem;
+}
+
+.table-type01 table tr td .tip ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 100%;
+  background-color: #7c8594;
 }
 
 .table-type01 table tr:last-child th,
@@ -2688,9 +2708,9 @@ textarea {
   background-color: #39c6cc;
   width: 14rem;
   height: 5.9rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
+  font-weight: 700;
   line-height: 5.9rem;
-  letter-spacing: 0.05rem;
   color: #ffffff;
   border-radius: 0.5rem;
 }
@@ -2765,8 +2785,24 @@ textarea {
   .app-footer .container {
     padding: 0 6%;
   }
+  .app-contents .visual.sub-visual .container {
+    background-position: right 8rem bottom;
+  }
   .app.main .app-contents .visual {
     display: block;
+  }
+  .app .slide-container .swiper-wrapper .slide.main-slide01,
+  .app .slide-container .swiper-wrapper .slide.main-slide02 {
+    background-position: right 15rem bottom;
+  }
+  .app-contents .visual .visual-txt {
+    left: 9rem;
+  }
+  .app .slide-container + .swiper-button-next {
+    right: 6.4rem;
+  }
+  .app .slide-container + .swiper-button-next + .swiper-button-prev {
+    left: 6.4rem;
   }
   .table .ui-tr.tbl-head {
     display: none;
@@ -2807,6 +2843,7 @@ textarea {
   }
   .app-contents .menu-list-group .list-item {
     padding-top: 0;
+    padding-bottom: 0;
   }
   .app-contents .menu-list-group .list-item li {
     display: block;
@@ -2905,6 +2942,12 @@ textarea {
     min-width: 24.4rem;
     padding: 0;
   }
+  .app .app-contents .sect-contents .list-item.list-type01 ul li a {
+    width: 100%;
+  }
+  .app .app-contents .sect-contents .list-item ul li a {
+    width: 100%;
+  }
 }
 
 @media (max-width: 878px) {
@@ -2926,7 +2969,7 @@ textarea {
 
 @media (max-width: 775px) {
   .app-contents .contents-area {
-    padding: 6.5rem 0 0;
+    padding: 5.5rem 0 0;
   }
   .app-contents .contents-area.my-page {
     padding-bottom: 6rem;
@@ -2952,21 +2995,9 @@ textarea {
     height: 47.4rem;
     padding: 4.8rem 0 1.4rem;
   }
-  .app-contents .visual .visual-txt {
-    top: 0;
-    left: 0.1rem;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  .app-contents .slide-container .swiper-wrapper .slide.main-slide01 {
-    background-position: right bottom;
-    background-image: url("../img/bg/visual_01_m.png");
-    background-size: 61%;
-  }
+  .app-contents .slide-container .swiper-wrapper .slide.main-slide01,
   .app-contents .slide-container .swiper-wrapper .slide.main-slide02 {
-    background-position: right bottom;
-    background-image: url("../img/bg/visual_02_m.png");
-    background-size: 61%;
+    background-position: center bottom;
   }
   .app-contents .slide-container + .swiper-button-next,
   .app-contents .slide-container + .swiper-button-next + .swiper-button-prev {
@@ -2985,7 +3016,7 @@ textarea {
     padding-bottom: 0;
   }
   .app-contents .visual + .contents-area {
-    padding: 5rem 0 0;
+    padding: 4.5rem 0 0;
   }
   .app .main-menu + .menu-list-group {
     padding-top: 1.5rem;
@@ -3012,7 +3043,7 @@ textarea {
     line-height: 5rem;
   }
   .app-contents .file-add label {
-    height: 5rem;
+    height: 4.9rem;
   }
   .ly-form .check-area {
     padding-left: 0;
@@ -3076,22 +3107,18 @@ textarea {
   .table-type01 table tr td {
     padding: 1.2rem 0 1.2rem 1.8rem;
   }
-  .table-type01 table tr td .form-group .form-area + .btn {
-    width: auto;
-  }
-  .app-contents .contents-area.my-page .table-area + .submit {
-    width: 100%;
-  }
   .table-type01 table tr td .form-group {
     display: block;
   }
   .table-type01 table tr td .form-group .form-area + .btn {
-    width: 100%;
-    margin-top: 0.5rem;
-    margin-left: 0;
+    margin-top: 1rem;
+    margin-left: auto;
   }
   .table-type01 table tr td .form-group + .form-group {
     margin-top: 1.5rem;
+  }
+  .pagenation {
+    padding-top: 3rem;
   }
   .app-contents .sect-contents#cont-03 .list-item ul li a {
     padding-left: 15%;
@@ -3176,6 +3203,12 @@ textarea {
   nav.on + .dimmer {
     display: none;
   }
+  .app-contents .visual .visual-txt {
+    top: 0;
+    left: 0.1rem;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
   .app-contents .sect-contents {
     padding: 9rem 0 0;
   }
@@ -3224,6 +3257,33 @@ textarea {
   .app-contents .sect-contents .list-item ul::after {
     content: none;
   }
+  .slide-container .tab-btn-area {
+    border-radius: 0;
+  }
+  .slide-container .tab-btn-area .tab-btn {
+    width: auto;
+    padding: 0 5rem;
+  }
+  .app .slide-container .tab-btn-area .tab-btn {
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
+  .my-page .title {
+    padding: 0 6%;
+  }
+  .app .my-page .title + .desc {
+    padding: 3rem 6%;
+  }
+  .table-type01 table tr td {
+    padding: 1.2rem 1.8rem;
+  }
+  .app-contents .contents-area.my-page .table-area + .submit {
+    position: relative;
+    right: 1.8rem;
+  }
+  .app .app-contents .sect-contents#cont-02 .cont-right .slide {
+    max-width: 27.4rem;
+  }
 }
 
 .tab-area .title {
@@ -3234,9 +3294,6 @@ textarea {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   position: relative;
   top: 0;
   left: 0;
@@ -3278,6 +3335,11 @@ textarea {
   border-bottom-right-radius: 1.5rem;
 }
 
+.tab-btn-area .tab-btn.swiper-slide {
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+}
+
 .tab-contents-area {
   padding-top: 5.2rem;
 }
@@ -3307,11 +3369,11 @@ textarea {
 }
 
 .slide-container .swiper-wrapper .slide.main-slide01 {
-  background: url("../img/bg/visual_01.png") no-repeat 0 0/100%;
+  background: url("../img/bg/visual_01.png") no-repeat right bottom/100%;
 }
 
 .slide-container .swiper-wrapper .slide.main-slide02 {
-  background: url("../img/bg/visual_02.png") no-repeat 0 0/100%;
+  background: url("../img/bg/visual_02.png") no-repeat right bottom/100%;
 }
 
 .slide-container + .swiper-button-next {
