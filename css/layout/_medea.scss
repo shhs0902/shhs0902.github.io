@@ -184,9 +184,9 @@
   //   display: block;
   //   text-align: center;
   // }
-  // .app-contents .sect-contents .list-item.list-type01 ul li {
-  //   margin-right: 0;
-  // }
+  .app-contents .sect-contents .list-item.list-type01 ul li {
+    max-width: 18.7rem;
+  }
   .app .app-contents .sect-contents .list-item ul li a {
    width: 100%;
   }
@@ -208,6 +208,10 @@
   }
   .app-contents .sect-contents .list-item ul li + li {
     border: 0;
+  }
+  .app .app-contents .sect-contents#cont-01 .desc {
+    font-size: 1.8rem;
+    line-height: 2.55rem;
   }
 
 }

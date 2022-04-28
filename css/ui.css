@@ -1101,7 +1101,7 @@ nav .gnb-list > li.on .icon-drop {
 .app-contents .sect-contents#cont-01 .desc {
   font-size: 2.2rem;
   font-weight: 700;
-  line-height: 2.75rem;
+  line-height: 3.2rem;
 }
 
 .app-contents .sect-contents#cont-01 .contents-box-area {
@@ -1397,6 +1397,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-contents .sect-contents .list-item.list-type01 ul li {
   width: auto;
+  max-width: 18.9rem;
   margin-right: 4rem;
 }
 
@@ -2945,6 +2946,9 @@ textarea {
   .app .app-contents .sect-contents .list-item.list-type01 ul li a {
     width: 100%;
   }
+  .app-contents .sect-contents .list-item.list-type01 ul li {
+    max-width: 18.7rem;
+  }
   .app .app-contents .sect-contents .list-item ul li a {
     width: 100%;
   }
@@ -2964,6 +2968,10 @@ textarea {
   }
   .app-contents .sect-contents .list-item ul li + li {
     border: 0;
+  }
+  .app .app-contents .sect-contents#cont-01 .desc {
+    font-size: 1.8rem;
+    line-height: 2.55rem;
   }
 }
 
