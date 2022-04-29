@@ -13,6 +13,7 @@
   const like = document.querySelectorAll(".txt-like.toggle");
   const gnbLi = document.querySelectorAll(".gnb-list > li");
   const dimmer = document.querySelector(".dimmer");
+  const footerDrop = document.querySelector(".footer-drop");
 
 
   // 햄버거 버튼(전체 페이지 공통)
@@ -255,7 +256,17 @@
       like.classList.toggle(ONSTRING);
   }
 
+  // footer drop
+  function footerDropHandler() {
+    footerDrop.addEventListener("click", function(){
+      footerDrop.classList.toggle(ONSTRING);
+    });
+    
+  } 
+
   function loopHandler() {
+    
+    // 탭
     [].forEach.call(tabBtn, function (btn, idx) {
       btn.addEventListener("click", function (e) {
         e.preventDefault();
@@ -263,18 +274,22 @@
       });
     });
 
+    // 게시판 글쓰기 메뉴 
     [].forEach.call(targetItem, function(item, idx){
         boardMenuDropDown(item, idx);
     });
 
+    // 메인 사용자(로그인 후) 메뉴
     [].forEach.call(type, function(item, idx){
       mainContentUser(item, idx);
     });
   
+    // 회원가입 체크 영역 show/hide
     [].forEach.call(checkInput, function(input, i){
       checkTypeHandler(input, i);
     });
   
+    // 좋아요 클릭
     [].forEach.call(like, function(like, idx){
  
       like.addEventListener("click", function(){
@@ -282,6 +297,7 @@
       });
     });
 
+    // gnb
     [].forEach.call(gnbLi, function(item, idx){ 
       gnbMenuListShowHide(item, idx)
     });
@@ -296,6 +312,8 @@
     // locationHandler();
     autoTextInputHandler();
     fileAddInput();
+    footerDropHandler();
+
     if (phoneInput) {
       phoneInput.onkeyup = function () {
         this.value = autoHypenPhone(this.value);
