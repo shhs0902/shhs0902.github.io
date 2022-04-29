@@ -192,7 +192,7 @@
         & + .desc {
           font-size: 1.8rem;
           font-weight: 700;
-          padding: 3rem 0 6.6rem 0;
+          padding: 2rem 0 6.6rem 0;
         }
       }
       &.map-area {
@@ -1466,6 +1466,7 @@
     left: 50%;
     width: 39rem;
     height: 17rem;
+    min-width: 31rem;
     text-align: center;
     border-radius: 2rem;
     padding: 3rem;
@@ -1478,6 +1479,11 @@
       text-align: center;
       margin-top: 2rem;
     }
+    .popup-contents {
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding-top: 2rem
+    }
     .btn-login {
       @include bgGreen;
       color: #ffffff;
@@ -1489,6 +1495,16 @@
       right: 3rem;
       top: 3rem;
       border-radius: 0;
+    }
+    .btn-login {
+      width: 18rem;
+      margin: 2.2rem auto 0;
+      line-height: 4rem;
+
+    }
+    .btn-close {
+      right: 2rem;
+      top: 2rem;
     }
   }
   &.active {

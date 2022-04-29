@@ -828,6 +828,9 @@ label {
   .app .container.tab {
     padding: 0;
   }
+  .app .app-contents .contents-area.my-page .title + .desc {
+    padding-left: 6%;
+  }
   .app .tab-area.container {
     padding: 0;
   }
@@ -1293,7 +1296,7 @@ nav .gnb-list > li.on .icon-drop {
 .app-contents .contents-area .title + .desc {
   font-size: 1.8rem;
   font-weight: 700;
-  padding: 3rem 0 6.6rem 0;
+  padding: 2rem 0 6.6rem 0;
 }
 
 .app-contents .contents-area.map-area .map-box {
@@ -2646,6 +2649,7 @@ nav .gnb-list > li.on .icon-drop {
   left: 50%;
   width: 39rem;
   height: 17rem;
+  min-width: 31rem;
   text-align: center;
   border-radius: 2rem;
   padding: 3rem;
@@ -2662,6 +2666,12 @@ nav .gnb-list > li.on .icon-drop {
   margin-top: 2rem;
 }
 
+.popup-wrap .popup-area .popup-contents {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-top: 2rem;
+}
+
 .popup-wrap .popup-area .btn-login {
   background-color: #39c6cc;
   color: #ffffff;
@@ -2674,6 +2684,17 @@ nav .gnb-list > li.on .icon-drop {
   right: 3rem;
   top: 3rem;
   border-radius: 0;
+}
+
+.popup-wrap .popup-area .btn-login {
+  width: 18rem;
+  margin: 2.2rem auto 0;
+  line-height: 4rem;
+}
+
+.popup-wrap .popup-area .btn-close {
+  right: 2rem;
+  top: 2rem;
 }
 
 .popup-wrap.active {
@@ -3472,7 +3493,7 @@ textarea {
   width: 2.6rem;
   height: 2.6rem;
   font-size: 4rem;
-  background: url("../img/icon/menu_close_btn.png") no-repeat right 0/100%;
+  background: url("../img/icon/menu_close_btn.png") no-repeat right 0/2.6rem 2.6rem;
 }
 
 .btn-tem-storage {

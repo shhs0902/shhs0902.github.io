@@ -240,6 +240,7 @@
   .app .app-contents .contents-area.my-page {
     padding-bottom: 6rem;
   }
+
   .app .main-menu,
   .app .app-contents .visual {
     display: none;
@@ -573,6 +574,9 @@
   .app .my-page .container,
   .app .container.tab {
     padding: 0;
+  }
+  .app .app-contents .contents-area.my-page .title + .desc {
+    padding-left: 6%;
   }
   .app .tab-area.container {
     padding: 0;
