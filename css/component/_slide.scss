@@ -14,19 +14,20 @@
       }
     }
   }
-  & + .swiper-button- {
-    &next {
-      right: 0;
+   
+}
+.swiper-button- {
+  &next {
+    right: 12.5%;
+    width: 4.2rem;
+    background: url("../img/icon/main_v_btn.png") no-repeat 0 0 / 4.2rem
+      4.2rem;
+    & + .swiper-button-prev {
+      left: 12.5%;
       width: 4.2rem;
       background: url("../img/icon/main_v_btn.png") no-repeat 0 0 / 4.2rem
         4.2rem;
-      & + .swiper-button-prev {
-        left: 0;
-        width: 4.2rem;
-        background: url("../img/icon/main_v_btn.png") no-repeat 0 0 / 4.2rem
-          4.2rem;
-        transform: rotate(180deg);
-      }
+      transform: rotate(180deg);
     }
   }
 }
@@ -35,7 +36,9 @@
   left: 3.2rem;
   bottom: -4.7rem;
 }
-.list-item .swiper-pagination02 {
+.list-item .swiper-pagination02,
+.list-item .swiper-pagination03,
+.list-item .swiper-pagination04 {
   position: absolute;
   left: 0;
   bottom: -5.4rem;

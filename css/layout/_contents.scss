@@ -196,10 +196,8 @@
         }
       }
       &.map-area {
-        // padding-top: 16rem;
         .map-box {
           position: relative;
-          // border-top: 0.2rem solid #000000;
           padding-top: 4.8rem;
           .map-desc {
             position: relative;
@@ -209,7 +207,7 @@
             .cont- {
               &left {
                 width: 100%;
-                padding: 0 3rem;
+                padding-right: 3rem;
                 border-right: 0.1rem solid #b2b3b2;
                 .contact-area {
                   display: flex;
@@ -227,7 +225,7 @@
               }
               &right {
                 width: 100%;
-                padding: 0 3rem;
+                padding-left: 3rem;
               }
             }
             .title {
@@ -584,7 +582,7 @@
               }
               .desc {
                 font-size: 1.8rem;
-                line-height: 3.25rem;
+                line-height: 2.3rem;
                 margin-top: 2.5rem;
               }
               & + .cont-box {
@@ -903,6 +901,7 @@
             overflow: hidden;
             ul {
               li {
+                position: relative;
                 width: 26.2rem;
                 border-radius: 15px;
                 // margin-left: 0.8rem;
@@ -944,7 +943,6 @@
                   }
                 }
                 &:hover {
-                  border-radius: 1.5rem;
                   box-shadow: 0px 0px 25px rgba(149, 157, 170, 0.3);
                 }
               }
@@ -1064,6 +1062,7 @@
         height: 100%;
         color: #989898;
         border: 0.2rem solid #e1e1e1;
+        border-right: 0;
         border-radius: 0;
       }
       label {
@@ -1133,6 +1132,7 @@
         display: block;
       }
       .footer-info {
+        position: relative;
         &.flex {
           width: 100%;
           a {
@@ -1159,31 +1159,38 @@
           }
         }
         & + .footer-info {
-          margin-top: 3.6rem;
+          padding-top: 3.6rem;
         }
-        &.company {
-          visibility: hidden;
-          height: 0;
-          .info-row {
-            & + .info-row {
-              margin-top: 1rem;
-            }
-            p {
-              display: inline-block;
-            }
-
-          }
-          address {
-            margin-top: 0.8rem;
-            font-style: normal;
-            line-height: 1.7rem;
-          }
-        }
+        
         .footer-drop {
           height: 3.9rem;
           line-height: 3.8rem;
           border: 0.1rem solid #989898;
           cursor: pointer;
+          & + .footer-company {
+            display: none;
+            margin-top: 3rem;
+            transition: all 0.4s ease-in-out;
+            .info-row {
+              & + .info-row {
+                padding-top: 1rem;
+              }
+              p {
+                display: inline-block;
+              }
+  
+            }
+            address {
+              padding-top: 0.8rem;
+              font-style: normal;
+              line-height: 1.7rem;
+            }
+          }
+          &.on {
+            & + .footer-company {
+              display: block;
+            }
+          }
         }
         .copyright {
           display: block;
@@ -1199,8 +1206,47 @@
         background-position: center;
       }
     }
+   
   }
-
+  .footer-bar {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 6rem;
+    background-color: #f2f2f2;
+    z-index: 999;
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      &.f- {
+        &home {
+          background: url("../../img/icon/f_home.png") no-repeat center center / 2.3rem 2.6rem;
+         
+        }
+        &search {
+           background: url("../../img/icon/f_search.png") no-repeat center center / 2.5rem 2.5rem;
+         
+        }
+        &alram {
+           background: url("../../img/icon/f_alram.png") no-repeat center center / 2.5rem 2.5rem;
+         
+        }
+        &my {
+           background: url("../../img/icon/f_my.png") no-repeat center center / 2.5rem 2.5rem;
+         
+        }
+        &write {
+           background: url("../../img/icon/f_write.png") no-repeat center center / 2.7rem 2.7rem;
+         
+        }
+      }
+    }
+   
+  }
   .side-menu {
     position: fixed;
     right: 0;
@@ -1272,16 +1318,17 @@
     }
   }
   .txt-like {
-    background: url("../img/icon/tbl_like.png") no-repeat 0 0 / 1.1rem 1rem;
+    background: url("../img/icon/heart.png") no-repeat 0 center / 1.4rem 1.3rem;
     cursor: pointer;
     &.on {
-      background: url("../img/icon/heart_on.png") no-repeat 0 0 / 1.4rem 1.3rem;
+      background-image: url("../img/icon/heart_on.png");
     }
-    // &type01 {
-    //   &on {
-    //     background-image: url("../img/icon/tbl_like.png");
-    //   }
-    // }
+    &.type01 {
+      background: url("../img/icon/heart_sm.png") no-repeat 0 center / 1.1rem 1rem;
+      &.on {
+        background-image: url("../img/icon/heart_sm_on.png");
+      }
+    }
   }
 }
 .dimmer {
@@ -1319,6 +1366,7 @@
     .popup- {
       &area {
         height: calc(100% - 20rem);
+        text-align: left;
         padding: 0;
       }
       &head {
@@ -1331,25 +1379,41 @@
 
         h2 {
           font-size: 1.8rem;
-          font-weight: 400;
+          font-weight: bold;
         }
       }
       &contents {
         height: calc(100% - 7.5rem);
-        padding: 3rem;
+        padding: 1.8rem;
         background-color: #ffffff;
         overflow-y: auto;
         .row- {
           &list {
             h3 {
               font-size: 1.5rem;
+              font-weight: bold;
+            }
+            .desc {
+              font-size: 1.4rem;
+              text-align: left;
+              line-height: 1.9rem;
             }
             ul {
               margin-top: 1rem;
+              p {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+              }
               li {
-                font-size: 1.3rem;
+                font-size: 1.4rem;
+                line-height: 1.9rem;
                 & + li {
                   margin-top: 0.4rem;
+                }
+                .depth01 {
+                  padding-left: 0.5rem;
+                  margin-top: 0.5rem;
                 }
               }
             }
