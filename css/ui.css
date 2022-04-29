@@ -151,7 +151,7 @@ h4,
 h5,
 h6 {
   font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 a {
@@ -167,9 +167,9 @@ html {
   width: 100%;
   font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
   font-size: 50%;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.05rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
 }
 
 body {
@@ -1364,7 +1364,7 @@ nav .gnb-list > li.on .icon-drop {
 .app-contents .sect-contents .list-item ul li a {
   display: block;
   color: #ffffff;
-  padding: 3.2rem 7rem 5rem;
+  padding: 3.2rem 6rem 5rem;
 }
 
 .app-contents .sect-contents .list-item ul li a .title {
@@ -2012,10 +2012,6 @@ nav .gnb-list > li.on .icon-drop {
   margin-top: 2rem;
 }
 
-.popup-wrap.type01 .popup-contents.type01 .desc {
-  font-size: 1.3rem;
-}
-
 .popup-wrap .popup-area {
   position: absolute;
   top: 50%;
@@ -2397,12 +2393,12 @@ textarea {
   border: 0.2rem solid #e1e1e1;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #989898;
+  color: #000000;
   padding: 1.6rem;
   outline: none;
   resize: none;
   min-height: 11rem;
-  font-family: "SUIT", sans-serif;
+  font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
   border-radius: 0.5rem;
 }
 
@@ -3533,7 +3529,7 @@ textarea {
 }
 
 .swiper-pagination {
-  left: 3.2rem;
+  left: 0;
   bottom: -4.7rem;
 }
 

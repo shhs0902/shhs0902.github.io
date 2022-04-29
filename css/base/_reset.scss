@@ -141,7 +141,7 @@ h4,
 h5,
 h6 {
   font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
-  font-weight: 700;
+  font-weight: normal;
 }
 
 a {
@@ -157,9 +157,9 @@ html {
   // height: 100%;
   font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
   font-size: 50%;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: -0.05rem;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: -0.1rem;
 }
 body {
   width: 100%;
