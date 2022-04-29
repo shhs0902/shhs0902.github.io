@@ -31,7 +31,7 @@
           align-items: center;
           justify-content: flex-end;
           .form-area {
-            width: 27.5rem;
+            width: 30rem;
           }
           .header-icon {
             display: block;
@@ -273,24 +273,44 @@
         }
       }
       .terms-area {
-        padding-top: 11.5rem;
-        .title {
+        h2 {
           font-size: 2.5rem;
+          font-weight: bold;
+          padding-bottom: 3rem;
         }
-        .cont-box {
+        .contents {
           border-radius: 0.5rem;
+          padding: 5rem 8rem;
           background-color: #ffffff;
-          padding: 3.7rem 5.2rem;
-          margin-top: 2.8rem;
-          .txt-group {
-            .title {
+        }
+        .row- {
+          &list {
+            h3 {
               font-size: 1.5rem;
-              font-weight: 700;
+              font-weight: bold;
             }
             .desc {
-              font-size: 1.3rem;
-              font-weight: 400;
-              padding: 4rem 0;
+              font-size: 1.4rem;
+              text-align: left;
+              line-height: 1.9rem;
+            }
+            ul {
+              margin-top: 1rem;
+              p {
+                font-size: 1.4rem;
+                font-weight: bold;
+                margin-bottom: 1rem;
+              }
+              li {
+                font-size: 1.4rem;
+                line-height: 1.9rem;
+                & + li {
+                  margin-top: 0.4rem;
+                }
+              }
+            }
+            & + .row-list {
+              margin-top: 2rem;
             }
           }
         }
@@ -531,6 +551,7 @@
       .tip .title {
         font-size: 1.3rem;
       }
+      
     }
     .main-menu {
       & + .contents-area {
@@ -1225,23 +1246,34 @@
       &.f- {
         &home {
           background: url("../../img/icon/f_home.png") no-repeat center center / 2.3rem 2.6rem;
+          &.on {
+            background-image: url("../../img/icon/f_home_on.png");
+          }
          
         }
         &search {
            background: url("../../img/icon/f_search.png") no-repeat center center / 2.5rem 2.5rem;
-         
+           &.on {
+            background-image: url("../../img/icon/f_search_on.png");
+          }
         }
         &alram {
            background: url("../../img/icon/f_alram.png") no-repeat center center / 2.5rem 2.5rem;
-         
+           &.on {
+            background-image: url("../../img/icon/f_alram_on.png");
+          }
         }
         &my {
            background: url("../../img/icon/f_my.png") no-repeat center center / 2.5rem 2.5rem;
-         
+           &.on {
+            background-image: url("../../img/icon/f_my_on.png");
+          }
         }
         &write {
            background: url("../../img/icon/f_write.png") no-repeat center center / 2.7rem 2.7rem;
-         
+           &.on {
+            background-image: url("../../img/icon/f_write_on.png");
+          }
         }
       }
     }
@@ -1368,6 +1400,7 @@
         height: calc(100% - 20rem);
         text-align: left;
         padding: 0;
+        background-color: transparent;
       }
       &head {
         height: 7.5rem;
@@ -1411,10 +1444,6 @@
                 & + li {
                   margin-top: 0.4rem;
                 }
-                .depth01 {
-                  padding-left: 0.5rem;
-                  margin-top: 0.5rem;
-                }
               }
             }
             & + .row-list {
@@ -1422,6 +1451,7 @@
             }
           }
         }
+        
         // &.type01 {
         //   .desc {
         //     font-size: 1.3rem;
