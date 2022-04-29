@@ -824,11 +824,21 @@ label {
   .app .app-contents .sect-contents .list-item {
     margin-top: 2.5rem;
   }
-  .app .my-page .container {
+  .app .my-page .container,
+  .app .container.tab {
     padding: 0;
   }
   .app .tab-area.container {
     padding: 0;
+  }
+  .app .tab-contents-area .btn-area {
+    top: 0;
+  }
+  .app .tab-contents-area .btn-area .btn-regist {
+    right: auto;
+    height: 3.5rem;
+    line-height: 3.5rem;
+    margin-left: 1.5rem;
   }
   .app .app-contents .sect-contents .list-item ul::before {
     content: none;
@@ -984,6 +994,11 @@ nav .gnb-list > li.on .icon-drop {
 
 .app .container.form-container .btn-ipform {
   font-size: 1.5rem;
+}
+
+.app .container.tab .title {
+  font-size: 2.5rem;
+  text-align: center;
 }
 
 .app header input:focus::-webkit-input-placeholder {
