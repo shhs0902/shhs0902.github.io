@@ -264,8 +264,28 @@
     
   } 
 
+  // 메인 검색창 팝업
+  function searchPopUpShowHide() {
+    const searchIp = document.querySelectorAll("input[type='text']");
+   
+    [].forEach.call(searchIp, function(item, idx){
+     
+      const parent = item.closest(".form-area");
+      const sibling = parent.nextElementSibling;
+      if(!sibling) {
+        return;
+      }
+      const hasClass = sibling.classList.contains("search-popup");
+      item.addEventListener("focus", function(e){
+        if(hasClass) {
+          parent.classList.add(ONSTRING);
+        }
+      });
+    });
+  }
+
   function loopHandler() {
-    
+
     // 탭
     [].forEach.call(tabBtn, function (btn, idx) {
       btn.addEventListener("click", function (e) {
@@ -309,10 +329,12 @@
     hbgBtnEvHandler();
     gnbMenuClose();
     slideContainerWidthCalc();
-    // locationHandler();
     autoTextInputHandler();
     fileAddInput();
     footerDropHandler();
+    searchPopUpShowHide();
+    // locationHandler();
+
 
     if (phoneInput) {
       phoneInput.onkeyup = function () {
