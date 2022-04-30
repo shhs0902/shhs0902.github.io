@@ -472,13 +472,127 @@
         </div>
         <div class="footer-bar">
           <a href="../index.html" class="f-home"></a>
-          <a href="javascript:void(0)" class="f-search"></a>
-          <a href="javascript:void(0)" class="f-alram"></a>
+          <a href="#none" class="f-search" onclick="popupOpen(pop02)"></a>
+          <a href="#none" class="f-alram" onclick="popupOpen(pop03)"></a>
           <a href="mypage.html" class="f-my on"></a>
           <a href="class_board_write.html" class="f-write"></a>
         </div>
       </footer>
       <!-- //footer mobile -->
+
+      <!-- 검색 팝업 -->
+      <div class="popup-wrap type02" id="pop02">
+        <div class="popup-area">
+          <div class="popup-head">
+            <div class="form-area">
+              <input type="text" />
+              <a href="#none" class="pop-back" onclick="popupClose(pop02);"></a>
+              <a href="#none" class="pop-search"></a>
+            </div>
+            <div class="check-area">
+              <div class="form-area">
+                <input type="checkbox" id="check05" />
+                <label for="check05">제목</label>
+              </div>
+
+              <div class="form-area">
+                <input type="checkbox" id="check06" />
+                <label for="check06">내용</label>
+              </div>
+
+              <div class="form-area">
+                <input type="checkbox" id="check07" />
+                <label for="check07">작성자</label>
+              </div>
+
+              <div class="form-area">
+                <input type="checkbox" id="check08" />
+                <label for="check08">학급별</label>
+              </div>
+            </div>
+          </div>
+          <!-- popup-contents "none" 클래스 넣으면 none-contents 노출 -->
+          <div class="popup-contents">
+            <div class="title">최근검색어</div>
+            <div class="none-contents">검색내역이 없습니다.</div>
+            <ul class="list-item">
+              <li><a href="#none">검색어1</a></li>
+              <li><a href="#none">검색어2</a></li>
+              <li><a href="#none">검색어3</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- 알림 팝업 -->
+      <div class="popup-wrap type02" id="pop03">
+        <div class="popup-area type01">
+          <div class="popup-head">
+            <div class="form-area">
+              <div class="title">내 글에 댓글이 달렸습니다.</div>
+              <a
+                href="#none"
+                class="pop-close01"
+                onclick="popupClose(pop03);"
+              ></a>
+            </div>
+          </div>
+          <!-- popup-contents "none" 클래스 넣으면 none-contents 노출 -->
+          <div class="popup-contents">
+            <div class="none-contents">검색내역이 없습니다.</div>
+            <ul class="list-item">
+              <li>
+                <a href="#none">
+                  <span class="li-title"
+                    >질병휴직 사용시 병가, 연가 사용 문의</span
+                  >
+                  <span class="li-content">댓글 내용이 이곳에 나옵니다.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="li-title"
+                    >질병휴직 사용시 병가, 연가 사용 문의</span
+                  >
+                  <span class="li-content">댓글 내용이 이곳에 나옵니다.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="li-title"
+                    >질병휴직 사용시 병가, 연가 사용 문의</span
+                  >
+                  <span class="li-content">댓글 내용이 이곳에 나옵니다.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="li-title"
+                    >질병휴직 사용시 병가, 연가 사용 문의</span
+                  >
+                  <span class="li-content">댓글 내용이 이곳에 나옵니다.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="li-title"
+                    >질병휴직 사용시 병가, 연가 사용 문의</span
+                  >
+                  <span class="li-content">댓글 내용이 이곳에 나옵니다.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#none">
+                  <span class="li-title"
+                    >질병휴직 사용시 병가, 연가 사용 문의</span
+                  >
+                  <span class="li-content">댓글 내용이 이곳에 나옵니다.</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
     <script>
       var windowW = window.innerWidth;
