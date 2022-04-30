@@ -620,6 +620,9 @@ label {
   .app .app-contents .ly-form .check-area .form-depth {
     display: block;
   }
+  .app .app-contents .ly-form .check-area .form-depth.depth01 {
+    display: none;
+  }
   .app .ly-form .check-area .title + .form-area {
     margin-left: 0;
   }
@@ -656,6 +659,7 @@ label {
   }
   .app .btn-ipform {
     width: 10rem;
+    margin-right: 1.8rem;
   }
   .app .table-type01 table tr th {
     padding: 0 1.8rem 0 1rem;
