@@ -47,7 +47,6 @@
     display: none;
     &.on {
       display: block;
-
     }
   }
   .main-menu {
@@ -82,16 +81,16 @@
         background-color: #39c6cc;
         .menu-btn {
           &01 {
-            background-image: url("../img/bg/menu_btn01_hpver.png");
+            background-image: url('../img/bg/menu_btn01_hpver.png');
           }
           &02 {
-            background-image: url("../img/bg/menu_btn02_hpver.png");
+            background-image: url('../img/bg/menu_btn02_hpver.png');
           }
           &03 {
-            background-image: url("../img/bg/menu_btn03_hpver.png");
+            background-image: url('../img/bg/menu_btn03_hpver.png');
           }
           &04 {
-            background-image: url("../img/bg/menu_btn04_hpver.png");
+            background-image: url('../img/bg/menu_btn04_hpver.png');
           }
         }
       }
@@ -99,37 +98,36 @@
         margin-left: 0.8rem;
       }
       &01 {
-        background-image: url("../img/bg/menu_btn01.png");
+        background-image: url('../img/bg/menu_btn01.png');
       }
       &02 {
-        background-image: url("../img/bg/menu_btn02.png");
+        background-image: url('../img/bg/menu_btn02.png');
       }
       &03 {
-        background-image: url("../img/bg/menu_btn03.png");
+        background-image: url('../img/bg/menu_btn03.png');
       }
       &04 {
-        background-image: url("../img/bg/menu_btn04.png");
+        background-image: url('../img/bg/menu_btn04.png');
       }
       &:hover {
         @include bgGreen;
         color: #ffffff;
         .menu-btn {
           &01 {
-            background-image: url("../img/bg/menu_btn01_hpver.png");
+            background-image: url('../img/bg/menu_btn01_hpver.png');
           }
           &02 {
-            background-image: url("../img/bg/menu_btn02_hpver.png");
+            background-image: url('../img/bg/menu_btn02_hpver.png');
           }
           &03 {
-            background-image: url("../img/bg/menu_btn03_hpver.png");
+            background-image: url('../img/bg/menu_btn03_hpver.png');
           }
           &04 {
-            background-image: url("../img/bg/menu_btn04_hpver.png");
+            background-image: url('../img/bg/menu_btn04_hpver.png');
           }
         }
       }
     }
-   
   }
   &-contents {
     position: relative;
@@ -149,7 +147,8 @@
       &.sub-visual {
         background-color: #fcb414;
         .container {
-          background: url("../img/bg/sub_visual.png") no-repeat right bottom / cover;
+          background: url('../img/bg/sub_visual.png') no-repeat right bottom /
+            cover;
           .visual-txt {
             left: 0;
             font-size: 4rem;
@@ -243,7 +242,7 @@
               height: 47.9rem;
               margin-top: 5rem;
               border-radius: 1.5rem;
-              background: url("../img/bg/map.png") no-repeat center center;
+              background: url('../img/bg/map.png') no-repeat center center;
             }
           }
         }
@@ -263,7 +262,6 @@
         .table-area {
           border-top: 0;
           & + .submit {
-           
             height: 4.4rem;
             line-height: 4.4rem;
             margin-left: auto;
@@ -381,7 +379,6 @@
               color: #989898;
               padding-left: 1.6rem;
               margin-left: 1.2rem;
-              
             }
           }
         }
@@ -397,11 +394,11 @@
         .txt-like {
           font-size: 1.3rem;
           // background: url("../img/icon/heart.png") no-repeat 0 center / 1.4rem
-            // 1.3rem;
+          // 1.3rem;
           padding-left: 2rem;
           &.type01 {
             // background: url("../img/icon/tbl_like.png") no-repeat 0 center /
-              // 1.1rem 1rem;
+            // 1.1rem 1rem;
             // &.on {
             //   background: url("../img/icon/tbl_like_on.png") no-repeat 0 center /
             //     1.4rem 1.3rem;
@@ -409,7 +406,7 @@
           }
           &.on {
             // background: url("../img/icon/heart_on.png") no-repeat 0 center /
-              // 1.4rem 1.3rem;
+            // 1.4rem 1.3rem;
           }
         }
         .board- {
@@ -420,7 +417,7 @@
               &01 {
                 display: flex;
                 border-bottom: 1px solid #989898;
-                 > li {
+                > li {
                   position: relative;
                   width: 17.6rem;
                   background-color: #ffffff;
@@ -433,19 +430,17 @@
                     padding: 2.3rem 3rem 2.3rem 0;
                     background-color: #ffffff;
                     &.item-depth01 {
-                      background: url("../img/icon/drop_btn.png") no-repeat
+                      background: url('../img/icon/drop_btn.png') no-repeat
                         right 3rem center / 1.7rem 1rem;
                       position: relative;
                       z-index: 999;
-                     
                     }
                     // &.on {
                     //   & + .list-item-depth02 {
                     //     transform: scaleY(1);
                     //   }
-                     
+
                     // }
-                    
                   }
                   &:first-child {
                     .list-item-depth02 {
@@ -462,7 +457,7 @@
                   }
                   & + li {
                     &::before {
-                      content: "";
+                      content: '';
                       position: absolute;
                       top: 50%;
                       left: -3rem;
@@ -472,8 +467,6 @@
                       transform: translateY(-50%);
                     }
                   }
-                  
-                  
                 }
               }
               &02 {
@@ -497,7 +490,6 @@
                     height: 100%;
                     text-align: center;
                     padding: 1rem 0;
-                    
                   }
                   & + li {
                     border-top: 0.1rem solid #e1e1e1;
@@ -506,10 +498,10 @@
                     }
                   }
                   &:first-child {
-                        padding-top: 0.8rem;
+                    padding-top: 0.8rem;
                   }
                   &:last-child {
-                        padding-bottom: 0.8rem;
+                    padding-bottom: 0.8rem;
                   }
                 }
               }
@@ -540,7 +532,6 @@
         }
         .board-footer {
           display: flex;
-          
         }
       }
       .tab-area {
@@ -551,7 +542,6 @@
       .tip .title {
         font-size: 1.3rem;
       }
-      
     }
     .main-menu {
       & + .contents-area {
@@ -576,7 +566,7 @@
 
       &#cont- {
         &01 {
-         padding-top: 0;
+          padding-top: 0;
           .title {
             font-size: 1.5rem;
             color: #39c6cc;
@@ -613,25 +603,25 @@
               &-ic {
                 &01 {
                   &:after {
-                    content: "";
+                    content: '';
                     position: absolute;
                     right: 3.7rem;
                     bottom: -1.7rem;
                     width: 30.2rem;
                     height: 18.3rem;
-                    background: url("../img/bg/sect_teacher.png") no-repeat 0 0 /
+                    background: url('../img/bg/sect_teacher.png') no-repeat 0 0 /
                       100% 100%;
                   }
                 }
                 &02 {
                   &:after {
-                    content: "";
+                    content: '';
                     position: absolute;
                     right: -4.7rem;
                     bottom: -6.1rem;
                     width: 24.4rem;
                     height: 26.6rem;
-                    background: url("../img/bg/sect_par_stu.png") no-repeat 0 0 /
+                    background: url('../img/bg/sect_par_stu.png') no-repeat 0 0 /
                       100% 100%;
                     z-index: 999;
                   }
@@ -691,16 +681,16 @@
                     rgba(0, 0, 0, 0.55) 0%,
                     rgba(0, 0, 0, 0) 100%
                   ),
-                  url("../img/bg/slide_01.png");
+                  url('../img/bg/slide_01.png');
                 &:after {
-                  content: "";
+                  content: '';
                   display: block;
                   position: absolute;
                   right: 2.8rem;
                   top: 2rem;
                   width: 4.5rem;
                   height: 4.5rem;
-                  background: url("../img/icon/slide_01_icon.png") no-repeat 0 0 /
+                  background: url('../img/icon/slide_01_icon.png') no-repeat 0 0 /
                     100% 100%;
                 }
               }
@@ -710,16 +700,16 @@
                     rgba(0, 0, 0, 0.55) 0%,
                     rgba(0, 0, 0, 0) 100%
                   ),
-                  url("../img/bg/slide_02.png");
+                  url('../img/bg/slide_02.png');
                 &:after {
-                  content: "";
+                  content: '';
                   display: block;
                   position: absolute;
                   right: 2.8rem;
                   top: 2rem;
                   width: 4.5rem;
                   height: 4.5rem;
-                  background: url("../img/icon/slide_02_icon.png") no-repeat 0 0 /
+                  background: url('../img/icon/slide_02_icon.png') no-repeat 0 0 /
                     100% 100%;
                 }
               }
@@ -729,16 +719,16 @@
                     rgba(0, 0, 0, 0.55) 0%,
                     rgba(0, 0, 0, 0) 100%
                   ),
-                  url("../img/bg/slide_03.png");
+                  url('../img/bg/slide_03.png');
                 &:after {
-                  content: "";
+                  content: '';
                   display: block;
                   position: absolute;
                   right: 2.8rem;
                   top: 2rem;
                   width: 4.5rem;
                   height: 4.5rem;
-                  background: url("../img/icon/slide_03_icon.png") no-repeat 0 0 /
+                  background: url('../img/icon/slide_03_icon.png') no-repeat 0 0 /
                     100% 100%;
                 }
               }
@@ -748,16 +738,16 @@
                     rgba(0, 0, 0, 0.55) 0%,
                     rgba(0, 0, 0, 0) 100%
                   ),
-                  url("../img/bg/slide_04.png");
+                  url('../img/bg/slide_04.png');
                 &:after {
-                  content: "";
+                  content: '';
                   display: block;
                   position: absolute;
                   right: 2.8rem;
                   top: 2rem;
                   width: 4.5rem;
                   height: 4.5rem;
-                  background: url("../img/icon/slide_04_icon.png") no-repeat 0 0 /
+                  background: url('../img/icon/slide_04_icon.png') no-repeat 0 0 /
                     100% 100%;
                 }
               }
@@ -767,16 +757,16 @@
                     rgba(0, 0, 0, 0.55) 0%,
                     rgba(0, 0, 0, 0) 100%
                   ),
-                  url("../img/bg/slide_05.png");
+                  url('../img/bg/slide_05.png');
                 &:after {
-                  content: "";
+                  content: '';
                   display: block;
                   position: absolute;
                   right: 2.8rem;
                   top: 2rem;
                   width: 4.5rem;
                   height: 4.5rem;
-                  background: url("../img/icon/slide_05_icon.png") no-repeat 0 0 /
+                  background: url('../img/icon/slide_05_icon.png') no-repeat 0 0 /
                     100% 100%;
                 }
               }
@@ -810,19 +800,19 @@
           }
           .li-ic- {
             &q {
-              background: url("../img/icon/icon_q_a.png") no-repeat center 0 /
+              background: url('../img/icon/icon_q_a.png') no-repeat center 0 /
                 10.6rem 9.4rem;
             }
             &commu {
-              background: url("../img/icon/icon_commu.png") no-repeat center 0 /
+              background: url('../img/icon/icon_commu.png') no-repeat center 0 /
                 10.6rem 9.4rem;
             }
             &edu {
-              background: url("../img/icon/icon_edu_tra_.png") no-repeat center
+              background: url('../img/icon/icon_edu_tra_.png') no-repeat center
                 0 / 10.6rem 9.4rem;
             }
             &expert {
-              background: url("../img/icon/icon_expert.png") no-repeat center 0 /
+              background: url('../img/icon/icon_expert.png') no-repeat center 0 /
                 10.6rem 9.4rem;
             }
           }
@@ -994,8 +984,8 @@
             font-size: 1.5rem;
             font-weight: 400;
             &.more-btn {
-              background: url("../../img/icon/more_btn.png") no-repeat right
-                0.5rem center / 0.8rem 1.04rem;
+              background: url('../img/icon/more_btn.png') no-repeat right 0.5rem
+                center / 0.8rem 1.04rem;
               padding-right: 2.5rem;
             }
           }
@@ -1005,23 +995,23 @@
             background-position: left 1rem top 0;
             padding-top: 0.4rem;
             &.class {
-              background-image: url("../img/icon/sub_icon_class.png");
+              background-image: url('../img/icon/sub_icon_class.png');
               background-size: 2.7rem 2.8rem;
             }
             &.law {
-              background-image: url("../img/icon/sub_icon_row.png");
+              background-image: url('../img/icon/sub_icon_row.png');
               background-size: 2.8rem 2.8rem;
             }
             &.life-edu {
-              background-image: url("../img/icon/sub_icon_life_edu.png");
+              background-image: url('../img/icon/sub_icon_life_edu.png');
               background-size: 2.7rem 2.9rem;
             }
             &.sc-work {
-              background-image: url("../img/icon/sub_icon_sc_w.png");
+              background-image: url('../img/icon/sub_icon_sc_w.png');
               background-size: 3rem 2.9rem;
             }
             &.psy {
-              background-image: url("../img/icon/sub_icon_psy.png");
+              background-image: url('../img/icon/sub_icon_psy.png');
               background-size: 3.2rem 2.5rem;
             }
           }
@@ -1069,7 +1059,7 @@
       height: 4.9rem;
       margin-top: 1rem;
       font-size: 0;
-      input[type *= "file"] {
+      input[type*='file'] {
         position: absolute;
         width: 0;
         height: 0;
@@ -1122,7 +1112,6 @@
         }
         &right {
           text-align: right;
-          
         }
       }
       .footer-info {
@@ -1141,8 +1130,7 @@
       display: block;
       height: 3.1rem;
       margin-bottom: 3.9rem;
-      background: url("../img/logo/footer_tc_logo.png") no-repeat right
-        top;
+      background: url('../img/logo/footer_tc_logo.png') no-repeat right top;
     }
     &.mobile {
       display: none;
@@ -1163,7 +1151,7 @@
               margin-left: 2.8rem;
             }
             &::before {
-              content: "";
+              content: '';
               position: absolute;
               top: 0;
               left: -1.2rem;
@@ -1182,7 +1170,7 @@
         & + .footer-info {
           padding-top: 3.6rem;
         }
-        
+
         .footer-drop {
           height: 3.9rem;
           line-height: 3.8rem;
@@ -1199,7 +1187,6 @@
               p {
                 display: inline-block;
               }
-  
             }
             address {
               padding-top: 0.8rem;
@@ -1227,7 +1214,6 @@
         background-position: center;
       }
     }
-   
   }
   .footer-bar {
     position: fixed;
@@ -1245,39 +1231,42 @@
       height: 100%;
       &.f- {
         &home {
-          background: url("../../img/icon/f_home.png") no-repeat center center / 2.3rem 2.6rem;
+          background: url('../img/icon/f_home.png') no-repeat center center /
+            2.3rem 2.6rem;
           &.on {
-            background-image: url("../../img/icon/f_home_on.png");
+            background-image: url('../img/icon/f_home_on.png');
           }
-         
         }
         &search {
-           background: url("../../img/icon/f_search.png") no-repeat center center / 2.5rem 2.5rem;
-           &.on {
-            background-image: url("../../img/icon/f_search_on.png");
+          background: url('../img/icon/f_search.png') no-repeat center center /
+            2.5rem 2.5rem;
+          &.on {
+            background-image: url('../img/icon/f_search_on.png');
           }
         }
         &alram {
-           background: url("../../img/icon/f_alram.png") no-repeat center center / 2.5rem 2.5rem;
-           &.on {
-            background-image: url("../../img/icon/f_alram_on.png");
+          background: url('../img/icon/f_alram.png') no-repeat center center /
+            2.5rem 2.5rem;
+          &.on {
+            background-image: url('../img/icon/f_alram_on.png');
           }
         }
         &my {
-           background: url("../../img/icon/f_my.png") no-repeat center center / 2.5rem 2.5rem;
-           &.on {
-            background-image: url("../../img/icon/f_my_on.png");
+          background: url('../img/icon/f_my.png') no-repeat center center /
+            2.5rem 2.5rem;
+          &.on {
+            background-image: url('../img/icon/f_my_on.png');
           }
         }
         &write {
-           background: url("../../img/icon/f_write.png") no-repeat center center / 2.7rem 2.7rem;
-           &.on {
-            background-image: url("../../img/icon/f_write_on.png");
+          background: url('../img/icon/f_write.png') no-repeat center center /
+            2.7rem 2.7rem;
+          &.on {
+            background-image: url('../img/icon/f_write_on.png');
           }
         }
       }
     }
-   
   }
   .side-menu {
     position: fixed;
@@ -1296,15 +1285,15 @@
       background-position: center top 1.6rem;
       &.menu- {
         &01 {
-          background-image: url("../img/icon/re_ref.png");
+          background-image: url('../img/icon/re_ref.png');
           background-color: #3579b7;
         }
         &02 {
-          background-image: url("../img/icon/re_apply.png");
+          background-image: url('../img/icon/re_apply.png');
           background-color: #39c6cc;
         }
         &03 {
-          background-image: url("../img/icon/re_q_a.png");
+          background-image: url('../img/icon/re_q_a.png');
           background-color: #fcb414;
         }
       }
@@ -1333,32 +1322,33 @@
   .ic- {
     &hits {
       padding-left: 1.8rem;
-      background: url("../img/icon/tbl_hits.png") no-repeat 0 center / 1.3rem
+      background: url('../img/icon/tbl_hits.png') no-repeat 0 center / 1.3rem
         1rem;
     }
     &like {
       padding-left: 1.6rem;
-      background: url("../img/icon/tbl_like.png") no-repeat 0 center / 1.1rem
+      background: url('../img/icon/tbl_like.png') no-repeat 0 center / 1.1rem
         1rem;
       margin-left: 1.4rem;
     }
     &comment {
       padding-left: 1.5rem;
-      background: url("../img/icon/tbl_comment.png") no-repeat 0 center / 1rem
+      background: url('../img/icon/tbl_comment.png') no-repeat 0 center / 1rem
         1rem;
       margin-left: 1.4rem;
     }
   }
   .txt-like {
-    background: url("../img/icon/heart.png") no-repeat 0 center / 1.4rem 1.3rem;
+    background: url('../img/icon/heart.png') no-repeat 0 center / 1.4rem 1.3rem;
     cursor: pointer;
     &.on {
-      background-image: url("../img/icon/heart_on.png");
+      background-image: url('../img/icon/heart_on.png');
     }
     &.type01 {
-      background: url("../img/icon/heart_sm.png") no-repeat 0 center / 1.1rem 1rem;
+      background: url('../img/icon/heart_sm.png') no-repeat 0 center / 1.1rem
+        1rem;
       &.on {
-        background-image: url("../img/icon/heart_sm_on.png");
+        background-image: url('../img/icon/heart_sm_on.png');
       }
     }
   }
@@ -1451,12 +1441,6 @@
             }
           }
         }
-        
-        // &.type01 {
-        //   .desc {
-        //     font-size: 1.3rem;
-        //   }
-        // }
       }
     }
   }
@@ -1475,6 +1459,7 @@
             height: 4.8rem;
             border: 0;
             border-radius: 0;
+            padding: 0 3.5rem;
           }
           a {
             position: absolute;
@@ -1486,7 +1471,7 @@
                 width: 0.8rem;
                 height: 1.4rem;
                 transform: translateY(-50%);
-                background: url("../../img/icon/pop_back.png") no-repeat 0 0 / 100% ;
+                background: url('../img/icon/pop_back.png') no-repeat 0 0 / 100%;
               }
               &search {
                 right: 1.4rem;
@@ -1494,11 +1479,10 @@
                 width: 2.5rem;
                 height: 2.5rem;
                 transform: translateY(-50%);
-                background: url("../../img/icon/f_search.png") no-repeat 0 0 / 100% ;
+                background: url('../img/icon/f_search.png') no-repeat 0 0 / 100%;
               }
             }
           }
-         
         }
         .check-area {
           display: flex;
@@ -1540,7 +1524,7 @@
               margin-top: 1rem;
             }
             a {
-              color: #989898;;
+              color: #989898;
             }
           }
         }
@@ -1555,7 +1539,8 @@
           border-bottom: 0.1rem solid #e1e1e1;
           background-color: transparent;
           padding: 0 2.7rem 0 2.7rem;
-          background: url("../../img/icon/pop_alram.png") no-repeat 0 center / 2.1rem 2.1rem;
+          background: url('../img/icon/pop_alram.png') no-repeat 0 center /
+            2.1rem 2.1rem;
         }
         .pop-close01 {
           position: absolute;
@@ -1564,7 +1549,7 @@
           width: 1.6rem;
           height: 1.7rem;
           transform: translateY(-50%);
-          background: url("../../img/icon/pop_cloas01.png") no-repeat 0 0 / 100%;
+          background: url('../img/icon/pop_cloas01.png') no-repeat 0 0 / 100%;
         }
         .popup-contents {
           padding: 0;
@@ -1581,8 +1566,8 @@
                   }
                   &.li- {
                     &title {
-
-                    }&content {
+                    }
+                    &content {
                       color: #989898;
                     }
                   }
@@ -1596,7 +1581,6 @@
         }
       }
     }
-    
   }
   .popup-area {
     position: absolute;
@@ -1620,7 +1604,7 @@
     .popup-contents {
       font-size: 1.5rem;
       font-weight: bold;
-      padding-top: 2rem
+      padding-top: 2rem;
     }
     .btn-login {
       @include bgGreen;
@@ -1638,7 +1622,6 @@
       width: 18rem;
       margin: 2.2rem auto 0;
       line-height: 4rem;
-
     }
     .btn-close {
       right: 2rem;
