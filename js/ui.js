@@ -38,14 +38,14 @@
   // gnb 메뉴 리스트 
   function gnbMenuListShowHide(item, idx) {
     const gnbLiH = item.offsetHeight;
-
+ 
     item.addEventListener("click", function(){
+ 
       const subGnb = item.querySelector(".sub-gnb-list");
       const subGnbH = subGnb.offsetHeight;
-
+  
       if(subGnb) {
         if(item.offsetHeight === gnbLiH) {
-          console.log(item.offsetHeight)
           item.style.height = gnbLiH + subGnbH + "px";
           item.classList.add(ONSTRING);
           dimmer.classList.add("active");
