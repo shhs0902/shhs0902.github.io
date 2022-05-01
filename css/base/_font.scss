@@ -1,19 +1,19 @@
 @charset 'utf-8';
 
 @font-face {
-  font-family: "SUIT";
-  font-weight: 400;
-  src: url("../font/SUIT-Regular.otf") format("OpenType");
+  font-family: "NanumBarunGothic";
+  font-weight: 500;
+  src: url("../font/NanumBarunGothicLight.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "SUIT";
+  font-family: "NanumBarunGothic";
+  font-weight: 500;
+  src: url("../font/NanumBarunGothic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
   font-weight: 700;
-  src: url("../font/SUIT-Bold.otf") format("OpenType");
-}
-
-@font-face {
-  font-family: "SUIT";
-  font-weight: 900;
-  src: url("../font/SUIT-ExtraBold.otf") format("OpenType");
+  src: url("../font/NanumBarunGothicBold.ttf") format("ttf");
 }

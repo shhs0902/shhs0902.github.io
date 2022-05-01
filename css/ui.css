@@ -291,21 +291,21 @@ label {
 }
 
 @font-face {
-  font-family: "SUIT";
-  font-weight: 400;
-  src: url("../font/SUIT-Regular.otf") format("OpenType");
+  font-family: "NanumBarunGothic";
+  font-weight: 500;
+  src: url("../font/NanumBarunGothicLight.ttf") format("ttf");
 }
 
 @font-face {
-  font-family: "SUIT";
+  font-family: "NanumBarunGothic";
+  font-weight: 500;
+  src: url("../font/NanumBarunGothic.ttf") format("ttf");
+}
+
+@font-face {
+  font-family: "NanumBarunGothic";
   font-weight: 700;
-  src: url("../font/SUIT-Bold.otf") format("OpenType");
-}
-
-@font-face {
-  font-family: "SUIT";
-  font-weight: 900;
-  src: url("../font/SUIT-ExtraBold.otf") format("OpenType");
+  src: url("../font/NanumBarunGothicBold.ttf") format("ttf");
 }
 
 @media (max-width: 1336px) {
@@ -360,7 +360,7 @@ label {
   }
   .app .table .ui-tr .ui-td.tbl-title {
     width: 100%;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 0;
   }
   .app .table .ui-tr .ui-td.tbl-date {
@@ -1276,7 +1276,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-contents .visual .visual-txt .desc {
   font-size: 1.4rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 2rem;
   letter-spacing: 0.01rem;
   margin-top: 2rem;
@@ -1364,7 +1364,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-contents .contents-area.map-area .map-box .map-desc .desc {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   padding: 1.3rem 0 2.4rem;
   line-height: 1.875rem;
 }
@@ -1705,7 +1705,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-contents .sect-contents .title + .desc {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.875rem;
   margin-top: 2.4rem;
   padding: 0;
@@ -1999,7 +1999,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-contents .sect-contents .list-item ul li a .desc {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 2.2rem;
   margin-bottom: 0;
   line-height: 1.6;
@@ -2124,7 +2124,7 @@ nav .gnb-list > li.on .icon-drop {
 .app-contents .menu-list-group .menu-list .title .right-area {
   display: block;
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .app-contents .menu-list-group .menu-list .title .right-area.more-btn {
@@ -3304,7 +3304,7 @@ textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .table .ui-tr .ui-td.tbl-title a {
@@ -3412,7 +3412,7 @@ textarea {
 .table-type01 table tr td .tip ul li {
   position: relative;
   font-size: 1.3rem;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.8rem;
   padding-left: 1.2rem;
 }
@@ -3686,7 +3686,7 @@ textarea {
 
 .btn-more {
   font-size: 1.5rem;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .btn-certify {
