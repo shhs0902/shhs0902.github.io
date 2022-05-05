@@ -1,9 +1,11 @@
 (function () {
   const ONSTRING = "on";
 
+  const body = document.querySelector("body");
   const closeBtn = document.querySelector(".btn-close");
   const tabBtn = document.querySelectorAll(".tab-btn");
   const tabContent = document.querySelectorAll(".tab-cont");
+  const tabTit = document.querySelector(".tab .title");
   const phoneInput = document.querySelector("#phone");
   const nav = document.querySelector("nav");
   const targetItem = document.querySelectorAll(".item-depth01");
@@ -16,6 +18,8 @@
   const footerDrop = document.querySelector(".footer-drop");
 
 
+
+
   // 햄버거 버튼(전체 페이지 공통)
   function hbgBtnEvHandler() {
     const hbgBtn = document.querySelector(".btn-hbg");
@@ -23,6 +27,7 @@
     hbgBtn.addEventListener("click", function () {
       nav.classList.add(ONSTRING);
       nav.style.right = 0;
+      body.style.overflow = "hidden";
     });
   }
 
@@ -33,6 +38,7 @@
     }
     nav.style.right = -(nav.offsetWidth) + "px";
     nav.classList.remove(ONSTRING);
+    body.style.overflow = "auto";
   }
 
   // gnb 메뉴 리스트 
@@ -96,33 +102,33 @@
     });
 
     tabContent[idx].classList.add(ONSTRING);
+    tabTit.innerText = btn.innerText;
+
 
     btn.classList.add(ONSTRING);
 
   }
 
   // 외부 페이지 탭 이동
-  // function locationHandler() {
-  //   const url = location.href;
-  //   const target = String(url.match(/\#[\w\-\w]+/g));
-  //   const currentHash = location.hash;
+  function locationHandler() {
+    const url = location.href;
+    const target = String(url.match(/\#[\w\-\w]+/g));
+    const currentHash = location.hash;
 
-  //   if (currentHash === target) {
-  //     [].forEach.call(tabBtn, function (item, ix) {
-  //       const tagUrl = item.getAttribute("href");
-  //       item.classList.remove(ONSTRING);
-  //       tabContent[ix].classList.remove(ONSTRING);
+    if (currentHash === target) {
+      [].forEach.call(tabBtn, function (item, ix) {
+        const tagUrl = item.getAttribute("href");
+        item.classList.remove(ONSTRING);
+        tabContent[ix].classList.remove(ONSTRING);
 
-  //       if (tagUrl === target) {
-  //         item.classList.add(ONSTRING);
-  //       }
-
-  //       const newTarget = target.replace("#", "");
-          
-  //       document.getElementById(newTarget).classList.add(ONSTRING);
-  //     });
-  //   }
-  // }
+        if (tagUrl === target) {
+          item.classList.add(ONSTRING);
+          tabTit.innerText = item.innerText;
+          tabContent[ix].classList.add(ONSTRING);
+        }
+      });
+    }
+  }
 
   
   
@@ -216,6 +222,9 @@
     const check = document.querySelector(".check-gorup");
     const depth01 = document.querySelector(".form-depth.depth01");
     const rowGroup = document.querySelectorAll(".row-multiple .row-group");
+    if(!checkPoint) {
+      return;
+    }
 
     input.addEventListener("click", function(){
       if(checkPoint.checked === true) {
@@ -284,6 +293,19 @@
     });
   }
 
+  function alarmPopupShowHide() {
+    const alarmArea = document.querySelector(".alarm-area");
+    const alarmBtn = document.querySelector(".btn-alarm");
+
+    if(!alarmBtn) {
+      return;
+    }
+
+    alarmBtn.addEventListener("click", function(){
+      alarmArea.classList.toggle(ONSTRING);
+    });
+  }
+
   function loopHandler() {
 
     // 탭
@@ -333,8 +355,8 @@
     fileAddInput();
     footerDropHandler();
     searchPopUpShowHide();
-    // locationHandler();
-
+    locationHandler();
+    alarmPopupShowHide();
 
     if (phoneInput) {
       phoneInput.onkeyup = function () {
@@ -348,8 +370,6 @@
       slideContainerWidthCalc();
       nav.style.right = -(nav.offsetWidth) + "px";
     });
-
-   
   }
 
   document.addEventListener("DOMContentLoaded", function () {
