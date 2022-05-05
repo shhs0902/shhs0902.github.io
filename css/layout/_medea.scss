@@ -576,14 +576,10 @@
   .app .app-contents .sect-contents .list-item {
     margin-top: 2.5rem;
   }
-  .app .my-page .container,
-  .app .container.tab {
+  .app .my-page .container {
     padding: 0;
   }
-  .app .container.tab .tab-contents-area {
-    padding-left: 6%;
-    padding-right: 6%;
-  }
+
   .app .app-contents .contents-area.my-page .title + .desc {
     padding-left: 6%;
   }
