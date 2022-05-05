@@ -23,12 +23,67 @@
           </div>
           <div class="cont-right">
             <div class="search-area">
-              <div class="form-area">
+              <div class="form-area check-focus">
                 <input type="text" placeholder="내용을 입력해주세요." />
+                <a href="#none" class="search-btn">통합검색</a>
+              </div>
+              <div class="search-popup">
+                <ul class="list-item">
+                  <li><a href="#none">최근검색어</a></li>
+                </ul>
+                <div class="check-area">
+                  <div class="form-area">
+                    <input type="checkbox" id="check01" />
+                    <label for="check01">제목</label>
+                  </div>
+                  <div class="form-area">
+                    <input type="checkbox" id="check02" />
+                    <label for="check02">내용</label>
+                  </div>
+                  <div class="form-area">
+                    <input type="checkbox" id="check03" />
+                    <label for="check03">작성자</label>
+                  </div>
+                  <div class="form-area">
+                    <input type="checkbox" id="check04" />
+                    <label for="check04">학급별</label>
+                  </div>
+                </div>
               </div>
             </div>
-            <a href="#none" class="header-icon btn-alarm on"></a>
-            <a href="#none" class="header-icon btn-user"></a>
+            <div class="header-icon alarm-area">
+              <a href="#none" class="btn-alarm on"></a>
+              <div class="alarm-popup">
+                <ul>
+                  <li>
+                    <a href="#none">
+                      <div class="title">
+                        질병휴직 사용시 병가, 연가 사용 문의
+                      </div>
+                      <div class="desc">댓글 내용이 이곳에 짧게 나옵니다.</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#none">
+                      <div class="title">
+                        질병휴직 사용시 병가, 연가 사용 문의
+                      </div>
+                      <div class="desc">
+                        댓글 내용이 길어지면 말줄임표로 표시됩니다.댓글 내용이
+                        길어지면 말줄임표로 표시됩니다.
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#none">
+                      <div class="title">글 제목이 여기에 보입니다.</div>
+                      <div class="desc">샘플텍스트 입니다.</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="mypage.html" class="header-icon btn-user"></a>
             <a href="#none" class="header-icon btn-hbg">
               <span></span>
               <span></span>
@@ -210,8 +265,16 @@
         </div>
         <div class="footer-bar">
           <a href="../index.html" class="f-home"></a>
-          <a href="#none" class="f-search" onclick="popupOpen(pop02)"></a>
-          <a href="#none" class="f-alram" onclick="popupOpen(pop03)"></a>
+          <a
+            href="javascript:void(0)"
+            class="f-search"
+            onclick="popupOpen(pop02)"
+          ></a>
+          <a
+            href="javascript:void(0)"
+            class="f-alram"
+            onclick="popupOpen(pop03)"
+          ></a>
           <a href="mypage.html" class="f-my"></a>
           <a href="class_board_write.html" class="f-write"></a>
         </div>

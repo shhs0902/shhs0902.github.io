@@ -26,6 +26,7 @@
             <div class="search-area">
               <div class="form-area check-focus">
                 <input type="text" placeholder="내용을 입력해주세요." />
+                <a href="#none" class="search-btn">통합검색</a>
               </div>
               <div class="search-popup">
                 <ul class="list-item">
@@ -51,8 +52,39 @@
                 </div>
               </div>
             </div>
-            <a href="#none" class="header-icon btn-alarm on"></a>
-            <a href="#none" class="header-icon btn-user"></a>
+            <div class="header-icon alarm-area">
+              <a href="#none" class="btn-alarm on"></a>
+              <div class="alarm-popup">
+                <ul>
+                  <li>
+                    <a href="#none">
+                      <div class="title">
+                        질병휴직 사용시 병가, 연가 사용 문의
+                      </div>
+                      <div class="desc">댓글 내용이 이곳에 짧게 나옵니다.</div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#none">
+                      <div class="title">
+                        질병휴직 사용시 병가, 연가 사용 문의
+                      </div>
+                      <div class="desc">
+                        댓글 내용이 길어지면 말줄임표로 표시됩니다.댓글 내용이
+                        길어지면 말줄임표로 표시됩니다.
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#none">
+                      <div class="title">글 제목이 여기에 보입니다.</div>
+                      <div class="desc">샘플텍스트 입니다.</div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a href="mypage.html" class="header-icon btn-user"></a>
             <a href="#none" class="header-icon btn-hbg">
               <span></span>
               <span></span>
@@ -618,7 +650,10 @@
           <div class="cont-right">
             <h1><a href="#none" class="footer-ci"></a></h1>
             <div class="footer-info">
-              <span>이용약관 | 개인정보취급방침</span>
+              <span
+                ><a href="terms_of_use.html">이용약관</a> |
+                <a href="personal_information.html">개인정보취급방침</a></span
+              >
             </div>
             <div class="footer-info">
               <span class="copyright"
@@ -634,10 +669,8 @@
         <div class="container">
           <div class="footer-info flex">
             <a href="login.html">로그인</a><a href="join.html">회원가입</a
-            ><a href="javascript:void(0)" onclick="popupOpen(pop02)">이용약관</a
-            ><a href="javascript:void(0)" onclick="popupOpen(pop03)"
-              >개인정보취급방침</a
-            >
+            ><a href="terms_of_use.html">이용약관</a
+            ><a href="personal_information.html">개인정보취급방침</a>
           </div>
           <div class="footer-info">
             <div class="footer-drop">티포유 사업자정보</div>
@@ -667,8 +700,16 @@
         </div>
         <div class="footer-bar">
           <a href="../index.html" class="f-home"></a>
-          <a href="#none" class="f-search" onclick="popupOpen(pop02)"></a>
-          <a href="#none" class="f-alram" onclick="popupOpen(pop03)"></a>
+          <a
+            href="javascript:void(0)"
+            class="f-search"
+            onclick="popupOpen(pop02)"
+          ></a>
+          <a
+            href="javascript:void(0)"
+            class="f-alram"
+            onclick="popupOpen(pop03)"
+          ></a>
           <a href="mypage.html" class="f-my"></a>
           <a href="class_board_write.html" class="f-write"></a>
         </div>
