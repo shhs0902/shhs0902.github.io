@@ -246,7 +246,7 @@
     display: none;
   }
   .app .app-header .container .cont-right .search-area,
-  .app .app-header .container .cont-right .header-icon.btn-alarm,
+  .app .app-header .container .cont-right .alarm-area,
   .app .app-header .container .cont-right .header-icon.btn-user {
     display: none;
   }
@@ -267,6 +267,7 @@
   }
 
   .app.main .visual {
+    display: block;
     height: 47.4rem;
   }
 
@@ -579,6 +580,10 @@
   .app .container.tab {
     padding: 0;
   }
+  .app .container.tab .tab-contents-area {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
   .app .app-contents .contents-area.my-page .title + .desc {
     padding-left: 6%;
   }
@@ -589,10 +594,10 @@
     top: 0;
   }
   .app .tab-contents-area .btn-area .btn-regist {
-    right: auto;
+    left: auto;
     height: 3.5rem;
     line-height: 3.5rem;
-    margin-left: 1.5rem;
+    // margin-right: 1.5rem;
   }
   .app .app-contents .sect-contents .list-item ul::before {
     content: none;

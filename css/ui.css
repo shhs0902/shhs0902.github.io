@@ -531,7 +531,7 @@ label {
     display: none;
   }
   .app .app-header .container .cont-right .search-area,
-  .app .app-header .container .cont-right .header-icon.btn-alarm,
+  .app .app-header .container .cont-right .alarm-area,
   .app .app-header .container .cont-right .header-icon.btn-user {
     display: none;
   }
@@ -549,6 +549,7 @@ label {
     padding: 0;
   }
   .app.main .visual {
+    display: block;
     height: 47.4rem;
   }
   .app .app-contents .slide-container .swiper-wrapper .slide.main-slide01,
@@ -832,6 +833,10 @@ label {
   .app .container.tab {
     padding: 0;
   }
+  .app .container.tab .tab-contents-area {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
   .app .app-contents .contents-area.my-page .title + .desc {
     padding-left: 6%;
   }
@@ -842,10 +847,9 @@ label {
     top: 0;
   }
   .app .tab-contents-area .btn-area .btn-regist {
-    right: auto;
+    left: auto;
     height: 3.5rem;
     line-height: 3.5rem;
-    margin-left: 1.5rem;
   }
   .app .app-contents .sect-contents .list-item ul::before {
     content: none;
@@ -1105,6 +1109,7 @@ nav .gnb-list > li.on .icon-drop {
 }
 
 .app-header .container .cont-right .form-area {
+  position: relative;
   width: 30rem;
 }
 
@@ -1114,6 +1119,52 @@ nav .gnb-list > li.on .icon-drop {
 
 .app-header .container .cont-right .header-icon + .header-icon {
   margin-left: 2.5rem;
+}
+
+.app-header .alarm-area {
+  position: relative;
+}
+
+.app-header .alarm-area .btn-alarm {
+  display: block;
+}
+
+.app-header .alarm-area .alarm-popup {
+  position: absolute;
+  top: 4.3rem;
+  left: -1.9rem;
+  display: none;
+  width: 28.8rem;
+  border: 0.3rem solid #000000;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  background-color: #ffffff;
+}
+
+.app-header .alarm-area .alarm-popup ul li + li {
+  border-bottom: 0.1rem solid #F2F2F2;
+}
+
+.app-header .alarm-area .alarm-popup ul li a {
+  display: block;
+  height: 100%;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+
+.app-header .alarm-area .alarm-popup ul li a .title {
+  font-weight: bold;
+}
+
+.app-header .alarm-area .alarm-popup ul li a .desc {
+  margin-top: 0.5rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.app-header .alarm-area.on .alarm-popup {
+  display: block;
 }
 
 .app .main-type {
@@ -1661,7 +1712,7 @@ nav .gnb-list > li.on .icon-drop {
 .app-contents .contents-area .board-area .board-contents .title input {
   font-size: 1.8rem;
   font-weight: 700;
-  color: #989898;
+  color: #000000;
   border: 0;
   border-radius: 0;
   padding: 2.4rem 0 2.2rem;
@@ -1960,6 +2011,10 @@ nav .gnb-list > li.on .icon-drop {
   background-color: #f7f8fa;
 }
 
+.app-contents .sect-contents#cont-06 .list-item {
+  padding: 2rem 0;
+}
+
 .app-contents .sect-contents#cont-06 .ic-like {
   margin-left: 0.4rem;
 }
@@ -2248,6 +2303,7 @@ nav .gnb-list > li.on .icon-drop {
   color: #fff;
   text-align: center;
   line-height: 4.9rem;
+  border-radius: 0.5rem;
   vertical-align: top;
   background-color: #39c6cc;
   cursor: pointer;
@@ -2508,7 +2564,7 @@ nav .gnb-list > li.on .icon-drop {
 
 .app .category-icon.notice {
   height: 2rem;
-  line-height: 2rem;
+  line-height: 1.8rem;
   color: #39c6cc;
   border: 0.1rem solid #39c6cc;
   -webkit-box-sizing: border-box;
@@ -2932,7 +2988,32 @@ select {
 
 .search-area input[type*="text"] {
   background: url("../img/icon/input_searc_btn.png") no-repeat 1.6rem center/2.2rem 2.2rem;
-  padding-left: 4.5rem;
+  padding: 0 7.8rem 0 4.5rem;
+}
+
+.search-area .search-btn {
+  position: absolute;
+  top: 50%;
+  right: 1.6rem;
+  display: block;
+  height: 100%;
+  font-size: 1.3rem;
+  line-height: 4.2rem;
+  color: #989898;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.search-area .search-btn::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.8rem;
+  width: 0.1rem;
+  height: 1.2rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: #989898;
 }
 
 .search-area + .header-icon {
@@ -3233,7 +3314,7 @@ select {
   margin-top: 1.8rem;
 }
 
-.ly-form .btn-group.btn-group-login button + button {
+.ly-form .btn-group.btn-group-login a + a {
   margin-top: 1.8rem;
 }
 
@@ -3498,6 +3579,7 @@ textarea {
   font-size: 1.8rem;
   font-weight: 700;
   color: #39c6cc;
+  line-height: 5.1rem;
   border: 0.2rem solid #39c6cc;
   background-color: transparent;
   margin-left: 0;
@@ -3515,6 +3597,7 @@ textarea {
   font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
+  line-height: 5.7rem;
   border: 0;
   margin-left: 0;
 }
@@ -3524,6 +3607,7 @@ textarea {
   height: 7rem;
   line-height: 7rem;
   font-weight: 900;
+  letter-spacing: 0.05rem;
   color: #000000;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 0px 25px rgba(149, 157, 170, 0.3);

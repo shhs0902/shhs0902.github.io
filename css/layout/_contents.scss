@@ -32,14 +32,61 @@
           align-items: center;
           justify-content: flex-end;
           .form-area {
+            position: relative;
             width: 30rem;
+           
           }
           .header-icon {
             display: block;
+            
             & + .header-icon {
               margin-left: 2.5rem;
             }
           }
+        }
+      }
+    }
+    .alarm-area {
+      position: relative;
+      .btn-alarm {
+        display: block;
+      }
+      .alarm-popup {
+        position: absolute;
+        top: 4.3rem;
+        left: -1.9rem;
+        display: none;
+        width: 28.8rem;
+        border: 0.3rem solid #000000;
+        border-radius: 2rem;
+        padding: 1.5rem;
+        background-color: #ffffff;
+        ul {
+          li {
+            & + li {
+              border-bottom: 0.1rem solid #F2F2F2;
+            }
+            a {
+              display: block;
+              height: 100%;
+              font-size: 1.5rem;
+              padding: 1rem 0;
+              .title {
+                font-weight: bold;
+              }
+              .desc {
+                margin-top: 0.5rem;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              }
+            }
+          }
+        }
+      }
+      &.on {
+        .alarm-popup {
+          display: block;
         }
       }
     }
@@ -394,21 +441,7 @@
         }
         .txt-like {
           font-size: 1.3rem;
-          // background: url("../img/icon/heart.png") no-repeat 0 center / 1.4rem
-          // 1.3rem;
           padding-left: 2rem;
-          &.type01 {
-            // background: url("../img/icon/tbl_like.png") no-repeat 0 center /
-            // 1.1rem 1rem;
-            // &.on {
-            //   background: url("../img/icon/tbl_like_on.png") no-repeat 0 center /
-            //     1.4rem 1.3rem;
-            // }
-          }
-          &.on {
-            // background: url("../img/icon/heart_on.png") no-repeat 0 center /
-            // 1.4rem 1.3rem;
-          }
         }
         .board- {
           &box {
@@ -436,12 +469,6 @@
                       position: relative;
                       z-index: 999;
                     }
-                    // &.on {
-                    //   & + .list-item-depth02 {
-                    //     transform: scaleY(1);
-                    //   }
-
-                    // }
                   }
                   &:first-child {
                     .list-item-depth02 {
@@ -451,11 +478,7 @@
                       padding-left: 0;
                     }
                   }
-                  &:last-child {
-                    a {
-                      // padding-right: 0;
-                    }
-                  }
+                  
                   & + li {
                     &::before {
                       content: '';
@@ -517,7 +540,7 @@
               input {
                 font-size: 1.8rem;
                 font-weight: 700;
-                color: #989898;
+                color: #000000;
                 border: 0;
                 border-radius: 0;
                 padding: 2.4rem 0 2.2rem;
@@ -670,11 +693,6 @@
               background-repeat: no-repeat;
               background-size: 28rem 36.7rem;
               background-position: 0 0;
-              // background: linear-gradient(
-              //   180deg,
-              //   rgba(0, 0, 0, 0.55) 0%,
-              //   rgba(0, 0, 0, 0) 100%
-              // );
               background-blend-mode: multiply;
               &-01 {
                 background: linear-gradient(
@@ -825,6 +843,9 @@
         }
         &06 {
           background-color: #f7f8fa;
+          .list-item {
+            padding: 2rem 0;
+          }
           .ic- {
             &like {
               margin-left: 0.4rem;
@@ -961,8 +982,7 @@
             }
           }
         }
-        &.main-list-item {
-        }
+       
       }
     }
 
@@ -1085,6 +1105,7 @@
         color: #fff;
         text-align: center;
         line-height: 4.9rem;
+        border-radius: 0.5rem;
         vertical-align: top;
         background-color: $main-green;
         cursor: pointer;
@@ -1313,7 +1334,7 @@
     margin-right: 1.4rem;
     &.notice {
       height: 2rem;
-      line-height: 2rem;
+      line-height: 1.8rem;
       color: #39c6cc;
       border: 0.1rem solid #39c6cc;
       box-sizing: border-box;
