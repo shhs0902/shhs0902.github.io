@@ -1,0 +1,56 @@
+#{$orgHeader} {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  .#{$header} {
+    &inner {
+      @include onFlex(flex-start, space-between);
+      padding: 8.5rem 8.4% 0 8.4%;
+    }
+    &logo {
+      width: 6.9rem;
+      height: 3.7rem;
+    }
+    &btn {
+      cursor: pointer;
+      span {
+        display: block;
+        width: 2.7rem;
+        height: 0.4rem;
+        background-color: $white;
+        transition: all 0.2s ease-in;
+        & + span {
+          margin-top: 1rem;
+          margin-left: 1.3rem;
+        }
+      }
+      &:hover {
+        span {
+          &:last-child {
+            margin-left: 0;
+          }
+        }
+      }
+      &.on {
+        span {
+          &:first-child {
+            transform: translateY(7px) rotate(-45deg);
+          }
+          &:last-child {
+            margin-left: 0;
+            transform: translateY(-7px) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes transformBtn {
+  from {
+  }
+  to {
+  }
+}

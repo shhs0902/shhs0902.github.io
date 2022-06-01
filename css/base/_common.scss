@@ -1,0 +1,69 @@
+// 1. Tag
+$ly: ly;
+$orgHeader: header;
+$header: header__;
+$main: main__;
+$orgFooter: footer;
+$footer: footer__;
+
+// 2. Color
+$white: #ffffff;
+$black: #000000;
+$mainColor: #e84908;
+$txtGray: #666567;
+
+// 3. Mixin
+@mixin onFlex($align: center, $justify: flex-start) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+// 메인 기본 여백
+@mixin basePad($pad01: 0, $pad02: 9.4%, $pad03: 0, $pad04: 16.1%) {
+  padding: $pad01 $pad02 $pad03 $pad04;
+}
+
+// 4. class
+.title {
+  font-size: 6rem;
+  font-weight: 800;
+  color: $white;
+}
+.divide-area {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $mainColor;
+  margin: 5rem 0 2rem 0;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 6.7rem;
+    display: block;
+    width: 19rem;
+    height: 0.2rem;
+    background-color: $mainColor;
+  }
+}
+.desc {
+  font-size: 1.5rem;
+  color: $white;
+  line-height: 1.875rem;
+}
+.cover-b {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120.96deg, #171717 20.28%, rgba(23, 23, 23, 0) 78.73%);
+  }
+}
+

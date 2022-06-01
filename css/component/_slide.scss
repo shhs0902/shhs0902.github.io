@@ -1,0 +1,44 @@
+.#{$main} {
+ &section {
+   .swiper {
+     height: 100%;
+     &-wrapper {
+       height: 100%;
+     }
+     &-slide {
+       height: 100%;
+     }
+     &-button {
+       &-prev,
+       &-next {
+        top: auto;
+        bottom: 0;
+        left: 16.1%;
+        right: auto;
+       }
+       &-next {
+
+       }
+     }
+     &-pagination {
+      
+       &-fraction {
+         left: 16.1%;
+         bottom: 9rem;
+         width: auto;
+         font-size: 1.5rem;
+         font-weight: 700;
+         color: $white;
+         text-align: left;
+
+       }
+       &-current {
+       }
+       &-total {
+         font-weight: 400;
+       }
+     }
+   }
+ }
+
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/vender/swiper-bundle.css" />
+    <link rel="stylesheet" href="css/ui.css" />
+    <script src="js/vender/swiper-bundle.js"></script>
+    <script src="js/ui.js" defer></script>
+    <title>Dazzling</title>
+  </head>
+  <body>
+    <div class="ly-wrap">
+      <header>
+        <div class="header__inner">
+          <a href="inde.html" class="header__logo"></a>
+          <div class="header__btn">
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </header>
+      <!-- //header -->
+
+      <main>
+        <section class="main__section main__visual">
+          <div class="swiper slide-container">
+            <div class="swiper-wrapper">
+              <!-- slide -->
+              <div class="swiper-slide slide01" data-swiper-parallax="-300">
+                <div class="main__text">
+                  <h1 class="title" data-swiper-parallax="-300">
+                    <!-- main__text--title -->
+                    DAZZLING<br />DESIGN STUDIO
+                  </h1>
+                  <div class="divide-area" data-swiper-parallax="-200">
+                    we are
+                  </div>
+                  <div class="desc" data-swiper-parallax="-100">
+                    디자인 전문가들의 탄탄한 실력과 구성으로<br />
+                    내일의 변화를 함께 만들어 나갑니다
+                  </div>
+                </div>
+              </div>
+              <!-- //slide -->
+
+              <!-- slide -->
+              <div
+                class="swiper-slide slide02 cover-b"
+                data-swiper-parallax="-300"
+              >
+                <div class="main__text">
+                  <h1 class="title" data-swiper-parallax="-300">
+                    <!-- main__text--title -->
+                    DAZZLING<br />DESIGN STUDIO
+                  </h1>
+                  <div class="divide-area" data-swiper-parallax="-200">
+                    we are
+                  </div>
+                  <div class="desc" data-swiper-parallax="-100">
+                    디자인 전문가들의 탄탄한 실력과 구성으로<br />
+                    내일의 변화를 함께 만들어 나갑니다
+                  </div>
+                </div>
+              </div>
+              <!-- //slide -->
+
+              <!-- slide -->
+              <div
+                class="swiper-slide slide03 cover-b"
+                data-swiper-parallax="-300"
+              >
+                <div class="main__text">
+                  <h1 class="title" data-swiper-parallax="-300">
+                    <!-- main__text--title -->
+                    DAZZLING<br />DESIGN STUDIO
+                  </h1>
+                  <div class="divide-area" data-swiper-parallax="-200">
+                    we are
+                  </div>
+                  <div class="desc" data-swiper-parallax="-100">
+                    디자인 전문가들의 탄탄한 실력과 구성으로<br />
+                    내일의 변화를 함께 만들어 나갑니다
+                  </div>
+                </div>
+              </div>
+              <!-- //slide -->
+            </div>
+            <!-- <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </main>
+      <!-- //main -->
+
+      <footer>
+        <div class="footer__contents">
+          <h1 class="title footer__title">
+            눈부신 다즐링의<br />
+            특별한 이야기
+          </h1>
+          <a href="#none" class="instagram">
+            dazzling<br />
+            instagram
+          </a>
+        </div>
+      </footer>
+      <!-- //footer -->
+    </div>
+    <!-- //ly-wrap -->
+
+    <script>
+      var swiper = new Swiper('.slide-container', {
+        direction: 'vertical',
+        speed: 2000,
+        parallax: true,
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+            return ('0' + number).slice(-2);
+          },
+          formatFractionTotal: function (number) {
+            return ('0' + number).slice(-2);
+          },
+          renderFraction: function (currentClass, totalClass) {
+            return (
+              '<span class="' +
+              currentClass +
+              '"></span>' +
+              ' / ' +
+              '<span class="' +
+              totalClass +
+              '"></span>'
+            );
+          },
+        },
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
+      });
+    </script>
+  </body>
+</html>
