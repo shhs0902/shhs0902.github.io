@@ -1,19 +1,58 @@
-.#{$main} {
-  &section {
-    height: 100vh;
-    overflow: hidden;
-  }
-  &text {
-    position: relative;
-    @include onFlex();
-    flex-wrap: wrap;
-    align-content: center;
-    height: 100%;
-    @include basePad();
-    * {
-      width: 100%;
+#{$orgMain} {
+  position: relative;
+  z-index: 1;
+}
+
+.#{$contents} {
+  &-wrap {
+    background-color: $bascBg;
+    .visual {
+      &-area {
+        height: 100vh;
+        overflow: hidden;
+        &__inner {
+          height: 100%;
+        }
+      }
+    }
+    .contents {
+      &-area {
+        height: 100%;
+        @include basePad(11.2rem, 9.4%, 33rem, 16.1%);
+        &__sub {
+          
+        }
+      }
+    }
+    .text-area {
+      &.type {
+        &01 {
+          .divide-area {
+            margin: 0;
+            &::after {
+              content: none;
+            }
+          }
+          .desc {
+            font-size: 4.4rem;
+            font-weight: 700;
+            padding: 5rem 0 3.5rem;
+            line-height: 5.5rem;
+            &__sub {
+              font-size: 1.8rem;
+              font-weight: 700;
+              color: $white;
+              line-height: 2.25rem;
+            }
+          }
+        }
+      }
     }
   }
+
+ 
+  
+  
 }
 
 

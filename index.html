@@ -24,74 +24,84 @@
       <!-- //header -->
 
       <main>
-        <section class="main__section main__visual">
-          <div class="swiper slide-container">
-            <div class="swiper-wrapper">
-              <!-- slide -->
-              <div class="swiper-slide slide01" data-swiper-parallax="-300">
-                <div class="main__text">
-                  <h1 class="title" data-swiper-parallax="-300">
-                    <!-- main__text--title -->
-                    DAZZLING<br />DESIGN STUDIO
-                  </h1>
-                  <div class="divide-area" data-swiper-parallax="-200">
-                    we are
-                  </div>
-                  <div class="desc" data-swiper-parallax="-100">
-                    디자인 전문가들의 탄탄한 실력과 구성으로<br />
-                    내일의 변화를 함께 만들어 나갑니다
-                  </div>
-                </div>
-              </div>
-              <!-- //slide -->
+        <div class="contents-wrap">
+          <section class="visual-area">
+            <div class="visual-area__inner">
+              <div class="swiper slide-container">
+                <ul class="swiper-wrapper">
+                  <!-- slide -->
+                  <li
+                    class="swiper-slide slide01 cover-dimmer"
+                    data-swiper-parallax="-300"
+                  >
+                    <div class="cover"></div>
+                    <div class="text-area">
+                      <h1 class="title" data-swiper-parallax="-300">
+                        <!-- main__text--title -->
+                        DAZZLING<br />DESIGN STUDIO
+                      </h1>
+                      <div class="divide-area" data-swiper-parallax="-200">
+                        we are
+                      </div>
+                      <div class="desc" data-swiper-parallax="-100">
+                        디자인 전문가들의 탄탄한 실력과 구성으로<br />
+                        내일의 변화를 함께 만들어 나갑니다
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //slide -->
 
-              <!-- slide -->
-              <div
-                class="swiper-slide slide02 cover-b"
-                data-swiper-parallax="-300"
-              >
-                <div class="main__text">
-                  <h1 class="title" data-swiper-parallax="-300">
-                    <!-- main__text--title -->
-                    DAZZLING<br />DESIGN STUDIO
-                  </h1>
-                  <div class="divide-area" data-swiper-parallax="-200">
-                    we are
-                  </div>
-                  <div class="desc" data-swiper-parallax="-100">
-                    디자인 전문가들의 탄탄한 실력과 구성으로<br />
-                    내일의 변화를 함께 만들어 나갑니다
-                  </div>
-                </div>
-              </div>
-              <!-- //slide -->
+                  <!-- slide -->
+                  <li
+                    class="swiper-slide slide02 cover-dimmer"
+                    data-swiper-parallax="-300"
+                  >
+                    <div class="cover"></div>
+                    <div class="text-area">
+                      <h1 class="title" data-swiper-parallax="-300">
+                        <!-- main__text--title -->
+                        DAZZLING<br />DESIGN STUDIO
+                      </h1>
+                      <div class="divide-area" data-swiper-parallax="-200">
+                        we are
+                      </div>
+                      <div class="desc" data-swiper-parallax="-100">
+                        디자인 전문가들의 탄탄한 실력과 구성으로<br />
+                        내일의 변화를 함께 만들어 나갑니다
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //slide -->
 
-              <!-- slide -->
-              <div
-                class="swiper-slide slide03 cover-b"
-                data-swiper-parallax="-300"
-              >
-                <div class="main__text">
-                  <h1 class="title" data-swiper-parallax="-300">
-                    <!-- main__text--title -->
-                    DAZZLING<br />DESIGN STUDIO
-                  </h1>
-                  <div class="divide-area" data-swiper-parallax="-200">
-                    we are
-                  </div>
-                  <div class="desc" data-swiper-parallax="-100">
-                    디자인 전문가들의 탄탄한 실력과 구성으로<br />
-                    내일의 변화를 함께 만들어 나갑니다
-                  </div>
-                </div>
-              </div>
-              <!-- //slide -->
-            </div>
-            <!-- <div class="swiper-button-next"></div>
+                  <!-- slide -->
+                  <li
+                    class="swiper-slide slide03 cover-dimmer"
+                    data-swiper-parallax="-300"
+                  >
+                    <div class="cover"></div>
+                    <div class="text-area">
+                      <h1 class="title" data-swiper-parallax="-300">
+                        <!-- main__text--title -->
+                        DAZZLING<br />DESIGN STUDIO
+                      </h1>
+                      <div class="divide-area" data-swiper-parallax="-200">
+                        we are
+                      </div>
+                      <div class="desc" data-swiper-parallax="-100">
+                        디자인 전문가들의 탄탄한 실력과 구성으로<br />
+                        내일의 변화를 함께 만들어 나갑니다
+                      </div>
+                    </div>
+                  </li>
+                  <!-- //slide -->
+                </ul>
+                <!-- <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div> -->
-            <div class="swiper-pagination"></div>
-          </div>
-        </section>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+          </section>
+        </div>
       </main>
       <!-- //main -->
 
@@ -146,7 +156,32 @@
         //   nextEl: '.swiper-button-next',
         //   prevEl: '.swiper-button-prev',
         // },
+
+        on: {
+          activeIndexChange: function (index) {
+            setTimeout(function () {
+              const cover = document.querySelectorAll('.cover');
+
+              [].forEach.call(cover, function (c, i) {
+                c.classList.remove('on');
+              });
+
+              if (!cover[index.activeIndex].classList.contains('on')) {
+                cover[index.activeIndex].classList.add('on');
+              }
+            }, 1000);
+          },
+        },
       });
+      let slides = document.querySelectorAll('.swiper-slide');
+      for (let i of slides) {
+        i.addEventListener('mouseover', function () {
+          swiper.autoplay.stop();
+        });
+        i.addEventListener('mouseout', function () {
+          swiper.autoplay.start();
+        });
+      }
     </script>
   </body>
 </html>

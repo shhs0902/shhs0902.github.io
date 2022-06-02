@@ -1,11 +1,10 @@
-.#{$main} {
- &section {
+.#{$contents} {
+ &-wrap {
    .swiper {
-     height: 100%;
-     &-wrapper {
+     &.slide-container {
        height: 100%;
      }
-     &-slide {
+     &-wrapper {
        height: 100%;
      }
      &-button {

@@ -1,5 +1,8 @@
 #{$orgFooter} {
+  position: sticky;
+  bottom: 0;
   height: 58.4rem;
+  z-index: -1;
   .#{$footer} {
       &contents {
         @include onFlex(center, center);

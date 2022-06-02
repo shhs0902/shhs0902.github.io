@@ -1,59 +1,33 @@
 // header bg
 .#{$header} {
   &logo {
-    background: url("../../img/logo_white.png") no-repeat 0 0 / 100% 100%;
+    background: url('../img/logo_white.png') no-repeat 0 0 / 100% 100%;
   }
 }
 
-// main visual
-.#{$main} {
-  &visual {
-    .slide {
-      &01 {
-        background: url("../../img/main_visual_01.png") no-repeat 0 0 / cover;
-      }
-
-      &02 {
-        background: url("../../img/section01.png") no-repeat 0 0 / cover;
-      }
-
-      &03 {
-        background: url("../../img/section02.png") no-repeat 0 0 / cover;
-      }
-
-    }
-  }
-  &part {
-    &--01 {
-      .slide {
+// visual
+.#{$contents} {
+  &-wrap {
+    .visual {
+      &-area {
+        .slide {
           &01 {
-            background: url("../../img/section01.png") no-repeat 0 0 / cover;
+            background: url('../img/main_visual_01.png') no-repeat 0 0 / cover;
           }
-      
+
           &02 {
-            background: url("../../img/section01.png") no-repeat 0 0 / cover;
+            background: url('../img/section01.png') no-repeat 0 0 / cover;
           }
-      
+
           &03 {
-            background: url("../../img/section01.png") no-repeat 0 0 / cover;
+            background: url('../img/section02.png') no-repeat 0 0 / cover;
           }
-      
-      }
-    }
-    &--02 {
-      .slide {
-        &01 {
-          background: url("../../img/section02.png") no-repeat 0 0 / cover;
         }
-
-        &02 {
-          background: url("../../img/section02.png") no-repeat 0 0 / cover;
+        &__inner {
+          &.about {
+            background: url('../../img/sub_img01.png') no-repeat 0 0 / cover;
+          }
         }
-
-        &03 {
-          background: url("../../img/section02.png") no-repeat 0 0 / cover;
-        }
-
       }
     }
   }
@@ -62,6 +36,6 @@
 // footer
 .#{$footer} {
   &contents {
-    background: url("../../img/footer.png") no-repeat 0 0 / cover;
+    background: url('../img/footer.png') no-repeat 0 0 / cover;
   }
 }

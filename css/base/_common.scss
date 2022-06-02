@@ -2,7 +2,8 @@
 $ly: ly;
 $orgHeader: header;
 $header: header__;
-$main: main__;
+$orgMain: main;
+$contents: contents;
 $orgFooter: footer;
 $footer: footer__;
 
@@ -11,6 +12,7 @@ $white: #ffffff;
 $black: #000000;
 $mainColor: #e84908;
 $txtGray: #666567;
+$bascBg: #171717;
 
 // 3. Mixin
 @mixin onFlex($align: center, $justify: flex-start) {
@@ -25,6 +27,9 @@ $txtGray: #666567;
 }
 
 // 4. class
+.#{$ly} {
+  min-width: 36rem;
+}
 .title {
   font-size: 6rem;
   font-weight: 800;
@@ -47,23 +52,48 @@ $txtGray: #666567;
     background-color: $mainColor;
   }
 }
+.text-area {
+  position: relative;
+  @include onFlex();
+  flex-wrap: wrap;
+  align-content: center;
+  height: 100%;
+  @include basePad();
+  * {
+    width: 100%;
+  }
+}
 .desc {
   font-size: 1.5rem;
   color: $white;
   line-height: 1.875rem;
 }
-.cover-b {
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    width: 100%;
+.cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: $bascBg;
+  opacity: 1;
+  transition: opacity 1.5s ease-in-out;
+  transition-delay: 0.7s;
+  &-dimmer {
     height: 100%;
-    background: linear-gradient(120.96deg, #171717 20.28%, rgba(23, 23, 23, 0) 78.73%);
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(120.96deg, $bascBg 20.28%, rgba(23, 23, 23, 0) 78.73%);
+    }
+  }
+  &.on {
+    opacity: 0;
   }
 }
 
