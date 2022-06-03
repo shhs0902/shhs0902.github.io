@@ -28,12 +28,17 @@ $bascBg: #171717;
 
 // 4. class
 .#{$ly} {
-  min-width: 36rem;
+  &-wrap {
+    min-width: 36rem;
+  }
 }
 .title {
   font-size: 6rem;
   font-weight: 800;
   color: $white;
+  &--fz44 {
+    font-size: 4.4rem;
+  }
 }
 .divide-area {
   position: relative;
@@ -42,7 +47,7 @@ $bascBg: #171717;
   color: $mainColor;
   margin: 5rem 0 2rem 0;
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     top: 50%;
     left: 6.7rem;
@@ -62,6 +67,9 @@ $bascBg: #171717;
   * {
     width: 100%;
   }
+  &__block {
+    display: block;
+  }
 }
 .desc {
   font-size: 1.5rem;
@@ -69,31 +77,48 @@ $bascBg: #171717;
   line-height: 1.875rem;
 }
 .cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  background: $bascBg;
-  opacity: 1;
-  transition: opacity 1.5s ease-in-out;
-  transition-delay: 0.7s;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // display: block;
+  // width: 100%;
+  // height: 100%;
+  // background: $bascBg;
+  // opacity: 1;
+  // transition: opacity 1.5s ease-in-out;
+  // transition-delay: 0.7s;
   &-dimmer {
-    height: 100%;
+    // height: 100%;
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       display: block;
       width: 100%;
       height: 100%;
-      background: linear-gradient(120.96deg, $bascBg 20.28%, rgba(23, 23, 23, 0) 78.73%);
+      background: linear-gradient(
+        120.96deg,
+        $bascBg 20.28%,
+        rgba(23, 23, 23, 0) 78.73%
+      );
     }
   }
   &.on {
     opacity: 0;
   }
 }
+.both-side {
+  @include onFlex(flex-start, space-between);
+}
 
+@keyframes fadeIN {
+  0% {
+    top: 5rem;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}

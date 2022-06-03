@@ -1,16 +1,17 @@
 @charset 'utf-8';
 
 // base
-@import "base/reset";
-@import "base/font";
-@import "base/common";
+@import 'base/reset';
+@import 'base/font';
+@import 'base/common';
 
 // component
-@import "component/bg";
-@import "component/btn";
-@import "component/slide";
+@import 'component/bg';
+@import 'component/btn';
+@import 'component/slide';
+@import 'component/form';
 
 // layout
-@import "layout/header";
-@import "layout/main";
-@import "layout/footer";
+@import 'layout/header';
+@import 'layout/main';
+@import 'layout/footer';

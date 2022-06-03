@@ -14,7 +14,7 @@
     <div class="ly-wrap">
       <header>
         <div class="header__inner">
-          <a href="../inde.html" class="header__logo"></a>
+          <a href="../index.html" class="header__logo"></a>
           <div class="header__btn">
             <span></span>
             <span></span>
@@ -45,11 +45,93 @@
 
           <section class="contents-area contents-area__sub">
             <div class="contents-area__inner">
-              <ul class="swiper-wrapper">
-                <!-- slide -->
-                <li class="swiper-slide"></li>
-                <!-- //slide -->
-              </ul>
+              <div class="contents-area__part swiper slide__container--api">
+                <ul class="swiper-wrapper">
+                  <!-- slide -->
+                  <li class="swiper-slide slide both-side">
+                    <div class="text-area text-area__block type01">
+                      <div class="divide-area">our service</div>
+                      <h2 class="title title--fz44">we draw pleasure</h2>
+                      <div class="desc__sub">
+                        창의적 생각과 색다른 시각으로, <br />
+                        늘 눈부신 세상을 창조하는 우리는 다즐링입니다
+                      </div>
+                    </div>
+                    <article class="dest-list">
+                      <div class="img-area"></div>
+                      <div class="text-area__desc">
+                        <dl>
+                          <dt>Editorial design</dt>
+                          <dd>poster</dd>
+                          <dd>business card</dd>
+                          <dd>X banner</dd>
+                        </dl>
+                        <dl>
+                          <dt>Web design</dt>
+                          <dd>ui/ux</dd>
+                          <dd>product page</dd>
+                          <dd>pop-up banner</dd>
+                          <dd>E book</dd>
+                          <dd>card news</dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </li>
+                  <!-- //slide -->
+
+                  <!-- slide -->
+                  <li class="swiper-slide slide both-side">
+                    <div class="text-area text-area__block type01">
+                      <div class="divide-area">our service</div>
+                      <h2 class="title title--fz44">we draw pleasure</h2>
+                      <div class="desc__sub">
+                        창의적 생각과 색다른 시각으로, <br />
+                        늘 눈부신 세상을 창조하는 우리는 다즐링입니다
+                      </div>
+                    </div>
+                    <article class="dest-list">
+                      <div class="img-area"></div>
+                      <div class="text-area__desc">
+                        <dl>
+                          <dt>Editorial design</dt>
+                          <dd>poster</dd>
+                          <dd>business card</dd>
+                          <dd>X banner</dd>
+                        </dl>
+                        <dl>
+                          <dt>Web design</dt>
+                          <dd>ui/ux</dd>
+                          <dd>product page</dd>
+                          <dd>pop-up banner</dd>
+                          <dd>E book</dd>
+                          <dd>card news</dd>
+                        </dl>
+                      </div>
+                    </article>
+                  </li>
+                  <!-- //slide -->
+                </ul>
+                <div class="slide__btn swiper-button-next">다음</div>
+                <div class="slide__btn swiper-button-prev">이전</div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="contents-area__part both-side">
+                <div class="text-area text-area__block type01">
+                  <div class="divide-area">our service</div>
+                  <h2 class="title title--fz44">have joy join us</h2>
+                  <div class="desc__sub">
+                    즐기며 일하는 방법을 아는<br />
+                    다즐링의 파트너를 소개합니다!
+                  </div>
+                </div>
+                <ul class="list-item list-item__row">
+                  <li>
+                    <img src="../img/partner01.png" alt="" />
+                  </li>
+                  <li><img src="../img/partner02.png" alt="" /></li>
+                  <li><img src="../img/partner03.png" alt="" /></li>
+                </ul>
+              </div>
             </div>
           </section>
         </div>
@@ -71,5 +153,42 @@
       <!-- //footer -->
     </div>
     <!-- //ly-wrap -->
+
+    <script>
+      var swiper = new Swiper('.slide__container--api', {
+        // slidesPerView: '1',
+        // speed: 2000,
+        loop: true,
+        // autoplay: {
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+            return ('0' + number).slice(-2);
+          },
+          formatFractionTotal: function (number) {
+            return ('0' + number).slice(-2);
+          },
+          renderFraction: function (currentClass, totalClass) {
+            return (
+              '<span class="' +
+              currentClass +
+              '"></span>' +
+              ' / ' +
+              '<span class="' +
+              totalClass +
+              '"></span>'
+            );
+          },
+        },
+        // navigation: {
+        //   nextEl: '.swiper-button-next',
+        //   prevEl: '.swiper-button-prev',
+        // },
+      });
+    </script>
   </body>
 </html>

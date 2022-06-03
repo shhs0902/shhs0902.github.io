@@ -8,22 +8,14 @@
     background-color: $bascBg;
     .visual {
       &-area {
+        position: relative;
         height: 100vh;
-        overflow: hidden;
         &__inner {
           height: 100%;
         }
       }
     }
-    .contents {
-      &-area {
-        height: 100%;
-        @include basePad(11.2rem, 9.4%, 33rem, 16.1%);
-        &__sub {
-          
-        }
-      }
-    }
+
     .text-area {
       &.type {
         &01 {
@@ -49,11 +41,117 @@
       }
     }
   }
+  &-area {
+    @include basePad(11.2rem, 9.4%, 33rem, 16.1%);
+    &__sub {
+      &--form {
+        height: 100%;
+        min-height: 100vh;
+        padding-top: 29.5rem;
+        .both-side {
+          @include onFlex(flex-start, flex-start);
+          .contents-area__part {
+            width: 100%;
+            & + .contents-area__part {
+              margin-top: 0;
+            }
+            &--left {
+              width: 34rem;
+            }
+            &--right {
+              width: calc(100% - 34rem);
+              border-top: 0.4rem solid $white;
+              border-bottom: 0.4rem solid $white;
+              margin-left: 8rem;
+              .form-area__row {
+                padding: 5.4rem 0;
+                & + .form-area__row {
+                  border-top: 0.1rem solid rgba(255, 255, 255, 0.3);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &.contents-area__sub--form {
+      .both-side {
+        .text-area {
+          width: 100%;
+        }
+      }
+    }
 
- 
-  
-  
+    .both-side {
+      .text-area {
+        width: 40%;
+      }
+      .dest-list {
+        width: 60%;
+      }
+    }
+    .text-area {
+      &.type {
+        &01 {
+          padding: 0;
+          .title--fz44 {
+            padding: 5rem 0 3.5rem;
+          }
+        }
+      }
+      &__desc {
+        @include onFlex(flex-start, flex-end);
+        dl {
+          color: $white;
+          dt {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.3rem;
+          }
+          dd {
+            font-size: 1.5rem;
+            & + dd {
+              margin-top: 1.3rem;
+            }
+          }
+          & + dl {
+            margin-left: 3.6rem;
+          }
+        }
+      }
+    }
+    .dest-list {
+      position: relative;
+      width: 100%;
+      min-width: 53rem;
+      padding: 5rem 5rem 0 0;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 27.9rem;
+        height: 23.7rem;
+      }
+    }
+    .img-area {
+      width: 100%;
+      height: 42.6rem;
+      margin-bottom: 4.3rem;
+    }
+    &__part {
+      & + .contents-area__part {
+        margin-top: 21.5rem;
+      }
+      .list-item__row {
+        @include onFlex(flext-start, flex-end);
+        li {
+          & + li {
+            margin-left: 1.6rem;
+          }
+        }
+      }
+    }
+  }
 }
-
-
-
