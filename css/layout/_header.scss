@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 110;
   .#{$header} {
     &inner {
       @include onFlex(flex-start, space-between);
@@ -14,6 +14,8 @@
       height: 3.7rem;
     }
     &btn {
+      position: absolute;
+      right: 16rem;
       cursor: pointer;
       span {
         display: block;
@@ -35,6 +37,7 @@
       }
       &.on {
         span {
+          background-color: $mainColor;
           &:first-child {
             transform: translateY(7px) rotate(-45deg);
           }

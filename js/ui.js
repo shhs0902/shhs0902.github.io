@@ -8,11 +8,16 @@ const PREV_BTN = 'swiper-button-prev';
 const ON_CLASS = 'on';
 
 function hbgBtnActive() {
+  const nav = document.querySelector('nav');
+
   if (!boolean) {
     this.classList.add(ON_CLASS);
+    nav.classList.add(ON_CLASS);
+
     boolean = true;
   } else {
     this.classList.remove(ON_CLASS);
+    nav.classList.remove(ON_CLASS);
     boolean = false;
   }
 }

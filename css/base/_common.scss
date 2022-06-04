@@ -3,6 +3,7 @@ $ly: ly;
 $orgHeader: header;
 $header: header__;
 $orgMain: main;
+$nav: nav;
 $contents: contents;
 $orgFooter: footer;
 $footer: footer__;
@@ -29,7 +30,9 @@ $bascBg: #171717;
 // 4. class
 .#{$ly} {
   &-wrap {
+    position: relative;
     min-width: 36rem;
+    overflow: hidden;
   }
 }
 .title {
