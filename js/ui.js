@@ -69,6 +69,8 @@ function goToSlide(current) {
 }
 
 window.addEventListener('DOMContentLoaded', function () {
+  hbgBtn.addEventListener('click', hbgBtnActive);
+
   if (slideWrap) {
     slideHeightCalc();
   }
@@ -77,6 +79,4 @@ window.addEventListener('DOMContentLoaded', function () {
   } else {
     return;
   }
-
-  hbgBtn.addEventListener('click', hbgBtnActive);
 });
