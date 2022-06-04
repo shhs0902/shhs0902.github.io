@@ -609,7 +609,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 110;
+  z-index: 10;
 }
 
 header .header__inner {
@@ -632,8 +632,9 @@ header .header__logo {
 
 header .header__btn {
   position: absolute;
-  right: 16rem;
+  right: 8.4%;
   cursor: pointer;
+  z-index: 110;
 }
 
 header .header__btn span {
@@ -689,6 +690,7 @@ header .header__btn.on span:last-child {
   right: -100%;
   width: 38%;
   height: 100%;
+  min-width: 36rem;
   background-color: #171717;
   -webkit-transition: right 0.5s cubic-bezier(0.03, -0.02, 1, 1);
   transition: right 0.5s cubic-bezier(0.03, -0.02, 1, 1);
