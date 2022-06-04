@@ -145,16 +145,6 @@ img {
   /* 모서리의 경계가 픽셀이 깨져 보이지 않음, 폰트를 부드럽게 해줌 */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
-  font-weight: normal;
-}
-
 a {
   color: #000;
   text-decoration: none;
@@ -166,7 +156,7 @@ a:link {
 
 html {
   width: 100%;
-  font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
+  font-family: 'SUIT', 'Montserrat', sans-serif;
   font-size: 62.5%;
   font-weight: 400;
   line-height: 1.2;
@@ -195,21 +185,45 @@ label {
 }
 
 @font-face {
-  font-family: "NanumBarunGothic";
-  font-weight: 500;
-  src: url("../font/NanumBarunGothicLight.ttf") format("ttf");
+  font-family: 'Montserrat';
+  font-weight: 400;
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+  unicode-range: U+0041-005A, U+0061-007A;
 }
 
 @font-face {
-  font-family: "NanumBarunGothic";
-  font-weight: 500;
-  src: url("../font/NanumBarunGothic.ttf") format("ttf");
-}
-
-@font-face {
-  font-family: "NanumBarunGothic";
+  font-family: 'Montserrat';
   font-weight: 700;
-  src: url("../font/NanumBarunGothicBold.ttf") format("ttf");
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: 800;
+  src: url("../fonts/Montserrat-ExtraBold.woff") format("woff");
+  unicode-range: U+0041-005A, U+0061-007A;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 400;
+  src: url("../fonts/SUIT-Regular.woff2") format("WOFF2");
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 700;
+  src: url("../fonts/SUIT-Bold.woff2") format("WOFF2");
+  unicode-range: U+AC00-D7A3;
+}
+
+@font-face {
+  font-family: 'SUIT';
+  font-weight: 800;
+  src: url("../fonts/SUIT-Heavy.woff2") format("WOFF2");
+  unicode-range: U+AC00-D7A3;
 }
 
 .ly-wrap {
@@ -380,11 +394,35 @@ label {
   bottom: 0;
   left: 16.1%;
   right: auto;
+  width: 1.2rem;
+  height: 0.9rem;
+}
+
+.contents-wrap .swiper-button-prev {
+  bottom: 9.7rem;
+}
+
+.contents-wrap .swiper-button-prev:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url("../../img/slide_up.png") no-repeat 0 0/100% 100%;
+}
+
+.contents-wrap .swiper-button-next {
+  bottom: 8rem;
+}
+
+.contents-wrap .swiper-button-next:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: url("../../img/slide_down.png") no-repeat 0 0/100% 100%;
 }
 
 .contents-wrap .swiper-pagination-fraction {
-  left: 16.1%;
-  bottom: 9rem;
+  left: 18.5%;
+  bottom: 8.5rem;
   width: auto;
   font-size: 1.5rem;
   font-weight: 700;
@@ -400,10 +438,10 @@ label {
   position: relative;
   display: block;
   height: auto;
-  -webkit-transition: -webkit-transform 0.8s ease-in-out;
-  transition: -webkit-transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out;
-  transition: transform 0.8s ease-in-out, -webkit-transform 0.8s ease-in-out;
+  -webkit-transition: -webkit-transform 2s ease;
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
 }
 
 .contents-wrap .slide__container--myjs .swiper-slide {
@@ -415,10 +453,10 @@ label {
   position: relative;
   -webkit-animation-name: fadeIN;
           animation-name: fadeIN;
-  -webkit-animation-duration: 0.6s;
-          animation-duration: 0.6s;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  -webkit-animation-duration: 0.8s;
+          animation-duration: 0.8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -428,10 +466,10 @@ label {
   position: relative;
   -webkit-animation-name: fadeIN;
           animation-name: fadeIN;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
@@ -441,29 +479,13 @@ label {
   position: relative;
   -webkit-animation-name: fadeIN;
           animation-name: fadeIN;
-  -webkit-animation-duration: 0.4s;
-          animation-duration: 0.4s;
-  -webkit-animation-delay: 0.9s;
-          animation-delay: 0.9s;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   opacity: 0;
-}
-
-.contents-wrap .slide__container--myjs .swiper-button-next,
-.contents-wrap .slide__container--myjs .swiper-button-prev {
-  width: auto;
-  font-size: 2rem;
-  color: #ffffff;
-}
-
-.contents-wrap .slide__container--myjs .swiper-button-next:after,
-.contents-wrap .slide__container--myjs .swiper-button-prev:after {
-  content: none;
-}
-
-.contents-wrap .slide__container--myjs .swiper-button-next {
-  bottom: 5rem;
 }
 
 .contents-area .swiper .swiper-slide {
@@ -816,6 +838,7 @@ main {
 
 .contents-area .both-side .dest-list {
   width: 60%;
+  padding-left: 10%;
 }
 
 .contents-area .text-area.type01 {

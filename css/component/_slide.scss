@@ -16,14 +16,33 @@
           bottom: 0;
           left: 16.1%;
           right: auto;
+          width: 1.2rem;
+          height: 0.9rem;
+        }
+        &-prev {
+          bottom: 9.7rem;
+          &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url('../../img/slide_up.png') no-repeat 0 0 / 100% 100%;
+          }
         }
         &-next {
+          bottom: 8rem;
+          &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            background: url('../../img/slide_down.png') no-repeat 0 0 / 100%
+              100%;
+          }
         }
       }
       &-pagination {
         &-fraction {
-          left: 16.1%;
-          bottom: 9rem;
+          left: 18.5%;
+          bottom: 8.5rem;
           width: auto;
           font-size: 1.5rem;
           font-weight: 700;
@@ -46,7 +65,7 @@
             display: block;
             height: auto;
 
-            transition: transform 0.8s ease-in-out;
+            transition: transform 2s ease;
           }
           .swiper-slide {
             position: static;
@@ -55,42 +74,42 @@
               .title {
                 position: relative;
                 animation-name: fadeIN;
-                animation-duration: 0.6s;
-                animation-delay: 0.7s;
+                animation-duration: 0.8s;
+                animation-delay: 0.8s;
                 animation-fill-mode: forwards;
                 opacity: 0;
               }
               .divide-area {
                 position: relative;
                 animation-name: fadeIN;
-                animation-duration: 0.5s;
-                animation-delay: 0.7s;
+                animation-duration: 0.7s;
+                animation-delay: 1s;
                 animation-fill-mode: forwards;
                 opacity: 0;
               }
               .desc {
                 position: relative;
                 animation-name: fadeIN;
-                animation-duration: 0.4s;
-                animation-delay: 0.9s;
+                animation-duration: 0.6s;
+                animation-delay: 1.2s;
                 animation-fill-mode: forwards;
                 opacity: 0;
               }
             }
           }
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: auto;
-            font-size: 2rem;
-            color: $white;
-          }
-          .swiper-button-next:after,
-          .swiper-button-prev:after {
-            content: none;
-          }
-          .swiper-button-next {
-            bottom: 5rem;
-          }
+          // .swiper-button-next,
+          // .swiper-button-prev {
+          //   width: auto;
+          //   font-size: 2rem;
+          //   color: $white;
+          // }
+          // .swiper-button-next:after,
+          // .swiper-button-prev:after {
+          //   content: none;
+          // }
+          // .swiper-button-next {
+          //   bottom: 5rem;
+          // }
         }
       }
       &__btn {

@@ -81,19 +81,20 @@
         }
       }
     }
-
     .both-side {
       .text-area {
         width: 40%;
       }
       .dest-list {
         width: 60%;
+        padding-left: 10%;
       }
     }
     .text-area {
       &.type {
         &01 {
           padding: 0;
+
           .title--fz44 {
             padding: 5rem 0 3.5rem;
           }

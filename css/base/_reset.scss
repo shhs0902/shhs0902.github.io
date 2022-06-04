@@ -135,15 +135,15 @@ img {
   /* 모서리의 경계가 픽셀이 깨져 보이지 않음, 폰트를 부드럽게 해줌 */
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
-  font-weight: normal;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//   font-family: 'SUIT', 'Montserrat', sans-serif;
+//   font-weight: 400;
+// }
 
 a {
   color: #000;
@@ -155,7 +155,7 @@ a:link {
 
 html {
   width: 100%;
-  font-family: '맑은 고딕','Malgun Gothic', 'NanumBarunGothic', sans-serif;
+  font-family: 'SUIT', 'Montserrat', sans-serif;
   font-size: 62.5%;
   font-weight: 400;
   line-height: 1.2;

@@ -104,8 +104,8 @@
                   </li>
                   <!-- //slide -->
                 </ul>
-                <div class="slide__btn swiper-button-next">다음</div>
-                <div class="slide__btn swiper-button-prev">이전</div>
+                <div class="slide__btn swiper-button-next"></div>
+                <div class="slide__btn swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
               </div>
             </div>
@@ -130,67 +130,77 @@
     </div>
     <!-- //ly-wrap -->
 
-    <!-- <script>
-      var swiper = new Swiper('.slide__container--api', {
-        direction: 'vertical',
-        speed: 2000,
-        parallax: true,
-        loop: true,
-        autoplay: {
-          delay: 3500,
-          disableOnInteraction: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          type: 'fraction',
-          formatFractionCurrent: function (number) {
-            return ('0' + number).slice(-2);
-          },
-          formatFractionTotal: function (number) {
-            return ('0' + number).slice(-2);
-          },
-          renderFraction: function (currentClass, totalClass) {
-            return (
-              '<span class="' +
-              currentClass +
-              '"></span>' +
-              ' / ' +
-              '<span class="' +
-              totalClass +
-              '"></span>'
-            );
-          },
-        },
-        // navigation: {
-        //   nextEl: '.swiper-button-next',
-        //   prevEl: '.swiper-button-prev',
-        // },
+    <script>
+      const swiperContainer = document.querySelector('.swiper');
+      const winW = window.innerWidth;
 
-        on: {
-          activeIndexChange: function (index) {
-            setTimeout(function () {
-              const cover = document.querySelectorAll('.cover');
-
-              [].forEach.call(cover, function (c, i) {
-                c.classList.remove('on');
-              });
-
-              if (!cover[index.activeIndex].classList.contains('on')) {
-                cover[index.activeIndex].classList.add('on');
-              }
-            }, 1000);
+      if (winW < 1160) {
+        var swiper = new Swiper('.slide__container--api', {
+          direction: 'vertical',
+          speed: 2000,
+          parallax: true,
+          loop: true,
+          // autoplay: {
+          //   delay: 3500,
+          //   disableOnInteraction: false,
+          // },
+          pagination: {
+            el: '.swiper-pagination',
+            type: 'fraction',
+            formatFractionCurrent: function (number) {
+              return ('0' + number).slice(-2);
+            },
+            formatFractionTotal: function (number) {
+              return ('0' + number).slice(-2);
+            },
+            renderFraction: function (currentClass, totalClass) {
+              return (
+                '<span class="' +
+                currentClass +
+                '"></span>' +
+                ' / ' +
+                '<span class="' +
+                totalClass +
+                '"></span>'
+              );
+            },
           },
-        },
-      });
-      let slides = document.querySelectorAll('.swiper-slide');
-      for (let i of slides) {
-        i.addEventListener('mouseover', function () {
-          swiper.autoplay.stop();
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+
+          on: {
+            activeIndexChange: function (index) {
+              setTimeout(function () {
+                const cover = document.querySelectorAll('.cover');
+
+                [].forEach.call(cover, function (c, i) {
+                  c.classList.remove('on');
+                });
+
+                if (!cover[index.activeIndex].classList.contains('on')) {
+                  cover[index.activeIndex].classList.add('on');
+                }
+              }, 1000);
+            },
+          },
         });
-        i.addEventListener('mouseout', function () {
-          swiper.autoplay.start();
-        });
+
+        let slides = document.querySelectorAll('.swiper-slide');
+        // for (let i of slides) {
+        //   i.addEventListener('mouseover', function () {
+        //     swiper.autoplay.stop();
+        //   });
+        //   i.addEventListener('mouseout', function () {
+        //     swiper.autoplay.start();
+        //   });
+        // }
+
+        swiperContainer.classList.remove('slide__container--myjs');
+      } else {
+        swiperContainer.classList.add('slide__container--myjs');
       }
-    </script> -->
+    </script>
   </body>
 </html>
