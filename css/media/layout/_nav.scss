@@ -1,0 +1,14 @@
+@media (max-width: 1159px) {
+  .#{$nav} {
+    &__list-item {
+      li {
+        a {
+        }
+        &.on {
+        }
+      }
+    }
+    &.on {
+    }
+  }
+}

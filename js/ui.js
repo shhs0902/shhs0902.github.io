@@ -1,5 +1,6 @@
 'use strict';
 
+const header = document.querySelector('.header__inner');
 const hbgBtn = document.querySelector('.header__btn');
 let boolean = false;
 
@@ -9,14 +10,13 @@ const ON_CLASS = 'on';
 
 function hbgBtnActive() {
   const nav = document.querySelector('nav');
-
   if (!boolean) {
-    this.classList.add(ON_CLASS);
+    this.parentElement.classList.add(ON_CLASS);
     nav.classList.add(ON_CLASS);
 
     boolean = true;
   } else {
-    this.classList.remove(ON_CLASS);
+    this.parentElement.classList.remove(ON_CLASS);
     nav.classList.remove(ON_CLASS);
     boolean = false;
   }

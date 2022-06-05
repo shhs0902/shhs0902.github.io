@@ -1,0 +1,332 @@
+@media (max-width: 1159px) {
+  #{$orgMain} {
+  }
+
+  .#{$contents} {
+    &-wrap {
+      .visual {
+        &-area {
+          &__inner {
+            .text-area {
+              padding: 3.5rem 6.5% 6.5rem 6.5%;
+            }
+          }
+        }
+      }
+
+      .text-area {
+        &.type {
+          &01 {
+            .divide-area {
+              &::after {
+              }
+            }
+            .desc {
+              padding: 2.5rem 0 2rem;
+              &__sub {
+              }
+            }
+          }
+        }
+      }
+      &#about {
+        .visual-area {
+          height: auto;
+          &__inner {
+            padding-top: 15rem;
+          }
+        }
+      }
+      &#art {
+        .text-area {
+          text-align: center;
+          padding-top: 11.5rem;
+          .title {
+            padding: 2.8rem 0 1.6rem;
+          }
+        }
+        .list-item {
+          @include onFlex(center, flex-start);
+
+          li {
+            width: 100%;
+            padding-top: 100%;
+            margin: 3.5rem 0 0 0;
+            a {
+              img {
+              }
+              &:after {
+              }
+              &:hover {
+                &:after {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-area {
+      padding: 6.5rem 6.5% 6.5rem 6.5%;
+      &__sub {
+        &--form {
+          .both-side {
+            display: block;
+            .contents-area__part {
+              & + .contents-area__part {
+                margin-top: 5rem;
+              }
+              &--left {
+                width: 100%;
+              }
+              &--right {
+                width: 100%;
+                margin-left: 0;
+                .form-area__row {
+                  & + .form-area__row {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.contents-area__sub--form {
+        padding-top: 20.5rem;
+
+        .both-side {
+          .text-area {
+          }
+        }
+      }
+      .both-side {
+        .text-area {
+        }
+        .dest-list {
+        }
+      }
+      .text-area {
+        &.type {
+          &01 {
+            .title {
+              font-size: 4.4rem;
+              &--fz44 {
+                padding: 2.5rem 0 2rem;
+              }
+            }
+          }
+        }
+        &__desc {
+          @include onFlex(flex-start, flex-start);
+          padding: 3rem 0 2.5rem;
+
+          dl {
+            dt {
+              font-size: 1.8rem;
+            }
+            dd {
+              font-size: 1.4rem;
+              & + dd {
+                margin-top: 1rem;
+              }
+            }
+            & + dl {
+            }
+          }
+        }
+      }
+      .dest-list {
+        &:after {
+        }
+      }
+      .img-area {
+      }
+      &__part {
+        & + .contents-area__part {
+          margin-top: 10rem;
+        }
+        .list-item__row {
+          li {
+            & + li {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 799px) {
+  #{$orgMain} {
+  }
+
+  .#{$contents} {
+    &-wrap {
+      .visual {
+        &-area {
+          &__inner {
+          }
+        }
+      }
+      &#about {
+        .text-area {
+          align-content: flex-start;
+        }
+        .visual-area {
+          height: auto;
+          &__inner {
+            padding-top: 10rem;
+          }
+        }
+      }
+      &#art {
+        .text-area {
+          padding-top: 8.5rem;
+          .title {
+          }
+        }
+        .list-item {
+          li {
+            a {
+              img {
+              }
+              &:after {
+              }
+              &:hover {
+                &:after {
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .text-area {
+        padding: 20.2rem 6.5% 8.5rem 6.5%;
+
+        &.type {
+          &01 {
+            .divide-area {
+              &::after {
+              }
+            }
+            .desc {
+              font-size: 2.5rem;
+              padding: 2.5rem 0 2rem;
+              line-height: 3.5rem;
+              &__sub {
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+
+      &#about {
+        .visual-area {
+        }
+      }
+      &#art {
+        .text-area {
+          .title {
+          }
+        }
+        .list-item {
+          li {
+            a {
+              img {
+              }
+              &:after {
+              }
+              &:hover {
+                &:after {
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    &-area {
+      @include basePad(6.5rem, 6.5%, 6.5rem, 6.5%);
+      &__sub {
+        &--form {
+          .both-side {
+            .contents-area__part {
+              & + .contents-area__part {
+              }
+              &--left {
+              }
+              &--right {
+                .form-area__row {
+                  padding: 3.4rem 0;
+                  & + .form-area__row {
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      &.contents-area__sub--form {
+        padding-top: 15.5rem;
+
+        .both-side {
+          .text-area {
+          }
+        }
+      }
+      .both-side {
+        display: block;
+
+        .text-area {
+          width: 100%;
+        }
+        .dest-list {
+          width: 100%;
+          padding-left: 0;
+          margin-top: 3rem;
+        }
+      }
+      .text-area {
+        &.type {
+          &01 {
+            .title--fz44 {
+              font-size: 2.5rem;
+            }
+          }
+        }
+        &__desc {
+          padding: 0;
+          dl {
+            dt {
+            }
+            dd {
+              & + dd {
+              }
+            }
+            & + dl {
+            }
+          }
+        }
+      }
+      .dest-list {
+        &:after {
+        }
+      }
+      .img-area {
+        height: 20rem;
+      }
+      &__part {
+        & + .contents-area__part {
+        }
+        .list-item__row {
+          margin-top: 2rem;
+          li {
+            & + li {
+            }
+          }
+        }
+      }
+    }
+  }
+}

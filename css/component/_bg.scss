@@ -23,11 +23,11 @@
             background: url('../img/section02.png') no-repeat 0 0 / cover;
           }
         }
-        &__inner {
-          &.about {
-            background: url('../../img/sub_img01.png') no-repeat 0 0 / cover;
-          }
-        }
+      }
+    }
+    &#about {
+      .visual-area__inner {
+        background: url('../../img/sub_img01.png') no-repeat 0 0 / cover;
       }
     }
   }

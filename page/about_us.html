@@ -26,16 +26,16 @@
       <nav class="nav">
         <ul class="nav__list-item">
           <li><a href="about_us.html">about us</a></li>
-          <li><a href="about_us.html">projects</a></li>
+          <li><a href="play_the_art.html">projects</a></li>
           <li><a href="project_inquire.html">contact</a></li>
         </ul>
       </nav>
       <!-- //nav -->
 
       <main>
-        <div class="contents-wrap">
+        <div class="contents-wrap" id="about">
           <section class="visual-area">
-            <div class="visual-area__inner about">
+            <div class="visual-area__inner">
               <div class="text-area type01">
                 <div class="divide-area">about us</div>
                 <p class="desc">
@@ -50,7 +50,6 @@
               </div>
             </div>
           </section>
-
           <section class="contents-area contents-area__sub">
             <div class="contents-area__inner">
               <div class="contents-area__part swiper slide__container--api">
@@ -119,8 +118,8 @@
                   </li>
                   <!-- //slide -->
                 </ul>
-                <div class="slide__btn swiper-button-next">다음</div>
-                <div class="slide__btn swiper-button-prev">이전</div>
+                <div class="slide__btn swiper-button-next"></div>
+                <div class="slide__btn swiper-button-prev"></div>
                 <div class="swiper-pagination"></div>
               </div>
               <div class="contents-area__part both-side">
@@ -164,9 +163,11 @@
 
     <script>
       var swiper = new Swiper('.slide__container--api', {
-        // slidesPerView: '1',
+        slidesPerView: '1',
         // speed: 2000,
         loop: true,
+        observer: true,
+        observeParents: true,
         // autoplay: {
         //   delay: 3500,
         //   disableOnInteraction: false,

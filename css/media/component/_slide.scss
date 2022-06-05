@@ -1,0 +1,181 @@
+@media (max-width: 1159px) {
+  .#{$contents} {
+    &-wrap {
+      .swiper {
+        &.slide__container {
+          &--api {
+          }
+        }
+
+        &-button {
+          &-prev,
+          &-next {
+          }
+          &-prev {
+            bottom: 9.7rem;
+            &:after {
+            }
+          }
+          &-next {
+            &:after {
+            }
+          }
+        }
+        &-pagination {
+          &-fraction {
+          }
+          &-current {
+          }
+          &-total {
+          }
+        }
+      }
+      .slide {
+        &__container {
+          &--myjs {
+            .swiper-wrapper {
+            }
+            .swiper-slide {
+              &.on {
+                .title {
+                }
+                .divide-area {
+                }
+                .desc {
+                }
+              }
+            }
+            // .swiper-button-next,
+            // .swiper-button-prev {
+            //   width: auto;
+            //   font-size: 2rem;
+            //   color: $white;
+            // }
+            // .swiper-button-next:after,
+            // .swiper-button-prev:after {
+            //   content: none;
+            // }
+            // .swiper-button-next {
+            //   bottom: 5rem;
+            // }
+          }
+        }
+        &__btn {
+          // position: absolute;
+          // bottom: 0;
+          // display: block;
+          // color: $white;
+          // font-size: 1.8rem;
+          // cursor: pointer;
+          // &--next {
+          //   bottom: 5rem;
+          // }
+          // &--prev {
+          // }
+        }
+      }
+    }
+    &-area {
+      .swiper {
+        .swiper- {
+          &slide {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .#{$contents} {
+    &-wrap {
+      .swiper {
+        &.slide__container {
+          &--api {
+          }
+        }
+
+        &-button {
+          &-prev,
+          &-next {
+            left: auto;
+            right: 0;
+          }
+          &-prev {
+            bottom: 9.7rem;
+            &:after {
+            }
+          }
+          &-next {
+            &:after {
+            }
+          }
+        }
+        &-pagination {
+          &-fraction {
+            left: auto;
+            right: 2rem;
+          }
+          &-current {
+          }
+          &-total {
+          }
+        }
+      }
+      .slide {
+        &__container {
+          &--myjs {
+            .swiper-wrapper {
+            }
+            .swiper-slide {
+              &.on {
+                .title {
+                }
+                .divide-area {
+                }
+                .desc {
+                }
+              }
+            }
+            // .swiper-button-next,
+            // .swiper-button-prev {
+            //   width: auto;
+            //   font-size: 2rem;
+            //   color: $white;
+            // }
+            // .swiper-button-next:after,
+            // .swiper-button-prev:after {
+            //   content: none;
+            // }
+            // .swiper-button-next {
+            //   bottom: 5rem;
+            // }
+          }
+        }
+        &__btn {
+          // position: absolute;
+          // bottom: 0;
+          // display: block;
+          // color: $white;
+          // font-size: 1.8rem;
+          // cursor: pointer;
+          // &--next {
+          //   bottom: 5rem;
+          // }
+          // &--prev {
+          // }
+        }
+      }
+    }
+    &-area {
+      .swiper {
+        .swiper- {
+          &slide {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

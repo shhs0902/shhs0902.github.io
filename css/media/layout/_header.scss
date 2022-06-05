@@ -1,0 +1,63 @@
+@media (max-width: 1159px) {
+  #{$orgHeader} {
+    .#{$header} {
+      &inner {
+        padding: 6.5rem 6.5% 0 6.5%;
+      }
+      &logo {
+      }
+      &btn {
+        span {
+          & + span {
+          }
+        }
+        &:hover {
+          span {
+            &:last-child {
+            }
+          }
+        }
+        &.on {
+          span {
+            &:first-child {
+            }
+            &:last-child {
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  #{$orgHeader} {
+    .#{$header} {
+      &inner {
+        padding: 3.5rem 6.5% 0 6.5%;
+      }
+      &logo {
+      }
+      &btn {
+        span {
+          & + span {
+          }
+        }
+        &:hover {
+          span {
+            &:last-child {
+            }
+          }
+        }
+        &.on {
+          span {
+            &:first-child {
+            }
+            &:last-child {
+            }
+          }
+        }
+      }
+    }
+  }
+}

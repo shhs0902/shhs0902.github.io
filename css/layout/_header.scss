@@ -3,13 +3,31 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 10;
+  z-index: 110;
   .#{$header} {
     &inner {
       @include onFlex(flex-start, space-between);
       padding: 8.5rem 8.4% 0 8.4%;
+      &.on {
+        .header__logo {
+          display: none;
+        }
+        .header__btn {
+          span {
+            background-color: $mainColor;
+            &:first-child {
+              transform: translateY(7px) rotate(-45deg);
+            }
+            &:last-child {
+              margin-left: 0;
+              transform: translateY(-7px) rotate(45deg);
+            }
+          }
+        }
+      }
     }
     &logo {
+      display: block;
       width: 6.9rem;
       height: 3.7rem;
     }
@@ -33,18 +51,6 @@
         span {
           &:last-child {
             margin-left: 0;
-          }
-        }
-      }
-      &.on {
-        span {
-          background-color: $mainColor;
-          &:first-child {
-            transform: translateY(7px) rotate(-45deg);
-          }
-          &:last-child {
-            margin-left: 0;
-            transform: translateY(-7px) rotate(45deg);
           }
         }
       }
