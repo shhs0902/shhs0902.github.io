@@ -160,6 +160,7 @@ html {
   font-weight: 400;
   line-height: 1.2;
   letter-spacing: -0.1rem;
+  -webkit-tap-highlight-color: transparent;
 }
 body {
   width: 100%;
@@ -167,9 +168,17 @@ body {
 }
 
 input,
-select {
+select,
+textarea {
   outline: none;
   border: 0;
+}
+textarea,
+input,
+select,
+label {
+  font-family: 'SUIT', 'Montserrat', sans-serif;
+  font-size: 400;
 }
 
 button {

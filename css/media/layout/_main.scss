@@ -8,7 +8,7 @@
         &-area {
           &__inner {
             .text-area {
-              padding: 3.5rem 6.5% 6.5rem 6.5%;
+              padding: 3.5rem 5rem 6.5rem 5rem;
             }
           }
         }
@@ -46,12 +46,12 @@
           }
         }
         .list-item {
-          @include onFlex(center, flex-start);
+          // @include onFlex(center, flex-start);
 
           li {
-            width: 100%;
-            padding-top: 100%;
-            margin: 3.5rem 0 0 0;
+            // width: 100%;
+            // padding-top: 100%;
+            // margin: 3.5rem 0 0 0;
             a {
               img {
               }
@@ -67,7 +67,7 @@
       }
     }
     &-area {
-      padding: 6.5rem 6.5% 6.5rem 6.5%;
+      padding: 6.5rem 5rem 6.5rem 5rem;
       &__sub {
         &--form {
           .both-side {
@@ -164,6 +164,9 @@
       .visual {
         &-area {
           &__inner {
+            .text-area {
+              padding: 3.5rem 3rem 6.5rem 3rem;
+            }
           }
         }
       }
@@ -185,7 +188,12 @@
           }
         }
         .list-item {
+          @include onFlex(center, flex-start);
+
           li {
+            width: 100%;
+            padding-top: 100%;
+            margin: 3.5rem 0 0 0;
             a {
               img {
               }
@@ -201,7 +209,7 @@
       }
 
       .text-area {
-        padding: 20.2rem 6.5% 8.5rem 6.5%;
+        padding: 20.2rem 3rem 8.5rem 3rem;
 
         &.type {
           &01 {
@@ -247,7 +255,7 @@
       }
     }
     &-area {
-      @include basePad(6.5rem, 6.5%, 6.5rem, 6.5%);
+      @include basePad(6.5rem, 2.5rem, 6.5rem, 2.5rem);
       &__sub {
         &--form {
           .both-side {
@@ -310,6 +318,7 @@
         }
       }
       .dest-list {
+        padding: 2.5rem 2.5rem 0 0;
         &:after {
         }
       }

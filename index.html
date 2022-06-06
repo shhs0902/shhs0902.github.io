@@ -36,14 +36,13 @@
         <div class="contents-wrap">
           <section class="visual-area">
             <div class="visual-area__inner">
-              <div class="swiper slide__container--api slide__container--myjs">
-                <ul class="swiper-wrapper cover-dimmer">
+              <div class="swiper slide__container--api">
+                <ul class="swiper-wrapper">
                   <!-- slide -->
                   <li
-                    class="swiper-slide slide slide01 on"
+                    class="swiper-slide slide slide01 cover-dimmer"
                     data-swiper-parallax="-300"
                   >
-                    <div class="cover"></div>
                     <div class="text-area">
                       <h1 class="title" data-swiper-parallax="-300">
                         <!-- main__text--title -->
@@ -62,10 +61,9 @@
 
                   <!-- slide -->
                   <li
-                    class="swiper-slide slide slide02"
+                    class="swiper-slide slide slide02 cover-dimmer"
                     data-swiper-parallax="-300"
                   >
-                    <div class="cover"></div>
                     <div class="text-area">
                       <h1 class="title" data-swiper-parallax="-300">
                         <!-- main__text--title -->
@@ -84,10 +82,9 @@
 
                   <!-- slide -->
                   <li
-                    class="swiper-slide slide slide03"
+                    class="swiper-slide slide slide03 cover-dimmer"
                     data-swiper-parallax="-300"
                   >
-                    <div class="cover"></div>
                     <div class="text-area">
                       <h1 class="title" data-swiper-parallax="-300">
                         <!-- main__text--title -->
@@ -134,73 +131,57 @@
       const swiperContainer = document.querySelector('.swiper');
       const winW = window.innerWidth;
 
-      if (winW < 1160) {
-        var swiper = new Swiper('.slide__container--api', {
-          direction: 'vertical',
-          speed: 2000,
-          parallax: true,
-          loop: true,
-          // autoplay: {
-          //   delay: 3500,
-          //   disableOnInteraction: false,
-          // },
-          pagination: {
-            el: '.swiper-pagination',
-            type: 'fraction',
-            formatFractionCurrent: function (number) {
-              return ('0' + number).slice(-2);
-            },
-            formatFractionTotal: function (number) {
-              return ('0' + number).slice(-2);
-            },
-            renderFraction: function (currentClass, totalClass) {
-              return (
-                '<span class="' +
-                currentClass +
-                '"></span>' +
-                ' / ' +
-                '<span class="' +
-                totalClass +
-                '"></span>'
-              );
-            },
+      var swiper = new Swiper('.slide__container--api', {
+        direction: 'vertical',
+        speed: 2000,
+        parallax: true,
+        loop: true,
+        // autoplay: {
+        //   delay: 3500,
+        //   disableOnInteraction: false,
+        // },
+        pagination: {
+          el: '.swiper-pagination',
+          type: 'fraction',
+          formatFractionCurrent: function (number) {
+            return ('0' + number).slice(-2);
           },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+          formatFractionTotal: function (number) {
+            return ('0' + number).slice(-2);
           },
-
-          on: {
-            activeIndexChange: function (index) {
-              setTimeout(function () {
-                const cover = document.querySelectorAll('.cover');
-
-                [].forEach.call(cover, function (c, i) {
-                  c.classList.remove('on');
-                });
-
-                if (!cover[index.activeIndex].classList.contains('on')) {
-                  cover[index.activeIndex].classList.add('on');
-                }
-              }, 1000);
-            },
+          renderFraction: function (currentClass, totalClass) {
+            return (
+              '<span class="' +
+              currentClass +
+              '"></span>' +
+              ' / ' +
+              '<span class="' +
+              totalClass +
+              '"></span>'
+            );
           },
-        });
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
 
-        let slides = document.querySelectorAll('.swiper-slide');
-        // for (let i of slides) {
-        //   i.addEventListener('mouseover', function () {
-        //     swiper.autoplay.stop();
-        //   });
-        //   i.addEventListener('mouseout', function () {
-        //     swiper.autoplay.start();
-        //   });
-        // }
+        // on: {
+        //   activeIndexChange: function (index) {
+        //     setTimeout(function () {
+        //       const cover = document.querySelectorAll('.cover');
 
-        swiperContainer.classList.remove('slide__container--myjs');
-      } else {
-        swiperContainer.classList.add('slide__container--myjs');
-      }
+        //       [].forEach.call(cover, function (c, i) {
+        //         c.classList.remove('on');
+        //       });
+
+        //       if (!cover[index.activeIndex].classList.contains('on')) {
+        //         cover[index.activeIndex].classList.add('on');
+        //       }
+        //     }, 1000);
+        //   },
+        // },
+      });
     </script>
   </body>
 </html>

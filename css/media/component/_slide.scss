@@ -10,6 +10,7 @@
         &-button {
           &-prev,
           &-next {
+            left: 5rem;
           }
           &-prev {
             bottom: 9.7rem;
@@ -22,6 +23,7 @@
           }
         }
         &-pagination {
+          left: 8rem;
           &-fraction {
           }
           &-current {
@@ -32,33 +34,6 @@
       }
       .slide {
         &__container {
-          &--myjs {
-            .swiper-wrapper {
-            }
-            .swiper-slide {
-              &.on {
-                .title {
-                }
-                .divide-area {
-                }
-                .desc {
-                }
-              }
-            }
-            // .swiper-button-next,
-            // .swiper-button-prev {
-            //   width: auto;
-            //   font-size: 2rem;
-            //   color: $white;
-            // }
-            // .swiper-button-next:after,
-            // .swiper-button-prev:after {
-            //   content: none;
-            // }
-            // .swiper-button-next {
-            //   bottom: 5rem;
-            // }
-          }
         }
         &__btn {
           // position: absolute;
@@ -72,6 +47,31 @@
           // }
           // &--prev {
           // }
+        }
+      }
+      &#about {
+        .swiper {
+          &-button {
+            &-prev,
+            &-next {
+            }
+            &-prev {
+              &:after {
+              }
+            }
+            &-next {
+              &:after {
+              }
+            }
+          }
+          &-pagination {
+            &-fraction {
+            }
+            &-current {
+            }
+            &-total {
+            }
+          }
         }
       }
     }
@@ -99,11 +99,9 @@
         &-button {
           &-prev,
           &-next {
-            left: auto;
-            right: 0;
+            left: 3rem;
           }
           &-prev {
-            bottom: 9.7rem;
             &:after {
             }
           }
@@ -113,9 +111,8 @@
           }
         }
         &-pagination {
+          left: 6.5rem;
           &-fraction {
-            left: auto;
-            right: 2rem;
           }
           &-current {
           }
@@ -125,33 +122,6 @@
       }
       .slide {
         &__container {
-          &--myjs {
-            .swiper-wrapper {
-            }
-            .swiper-slide {
-              &.on {
-                .title {
-                }
-                .divide-area {
-                }
-                .desc {
-                }
-              }
-            }
-            // .swiper-button-next,
-            // .swiper-button-prev {
-            //   width: auto;
-            //   font-size: 2rem;
-            //   color: $white;
-            // }
-            // .swiper-button-next:after,
-            // .swiper-button-prev:after {
-            //   content: none;
-            // }
-            // .swiper-button-next {
-            //   bottom: 5rem;
-            // }
-          }
         }
         &__btn {
           // position: absolute;
@@ -165,6 +135,41 @@
           // }
           // &--prev {
           // }
+        }
+      }
+      &#about {
+        .swiper {
+          &.slide__container {
+            &--api {
+            }
+          }
+
+          &-button {
+            &-prev,
+            &-next {
+              left: auto;
+              right: 0;
+            }
+            &-prev {
+              bottom: 9.7rem;
+              &:after {
+              }
+            }
+            &-next {
+              &:after {
+              }
+            }
+          }
+          &-pagination {
+            &-fraction {
+              left: auto;
+              right: 2rem;
+            }
+            &-current {
+            }
+            &-total {
+            }
+          }
         }
       }
     }

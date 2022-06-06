@@ -27,31 +27,30 @@
     }
     &#about {
       .visual-area__inner {
-        background: url('../../img/sub_img01.png') no-repeat 0 0 / cover;
+        background: url('../img/sub_img01.png') no-repeat 0 0 / cover;
       }
     }
   }
   &-area {
     .dest-list {
       &:after {
-        background: url('../../img/img_guide.png') no-repeat 0 0 / cover;
+        // background: url('../img/img_guide.png') no-repeat 0 0 / cover;
       }
     }
     .img-area {
-      background: url('../../img/sub_img02.png') no-repeat 0 0 / cover;
+      background: url('../img/sub_img02.png') no-repeat 0 0 / cover;
     }
     input {
       &[type='checkbox'] {
         & + label {
           &::after {
-            background: url('../../img/check.png') no-repeat 0 0 / 100% 100%;
+            background: url('../img/check.png') no-repeat 0 0 / 100% 100%;
           }
         }
         &:checked {
           & + label {
             &::after {
-              background: url('../../img/check_on.png') no-repeat 0 0 / 100%
-                100%;
+              background: url('../img/check_on.png') no-repeat 0 0 / 100% 100%;
             }
           }
         }
