@@ -712,14 +712,27 @@ header .header__btn:hover span:last-child {
 }
 
 .nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 38%;
-  height: 100%;
+  height: 100vh;
   min-width: 36rem;
   background-color: #171717;
-  padding: 33rem 0 9.4rem 11rem;
+  padding-left: 10rem;
   -webkit-transition: right 0.5s cubic-bezier(0.03, -0.02, 1, 1);
   transition: right 0.5s cubic-bezier(0.03, -0.02, 1, 1);
   z-index: 100;
@@ -759,6 +772,7 @@ header .header__btn:hover span:last-child {
 
 .nav__list-item + .nav__list-item {
   margin-top: 15rem;
+  margin-bottom: 9rem;
 }
 
 .nav.on {
@@ -1112,6 +1126,19 @@ footer .footer__title {
 @media (max-width: 799px) {
   header .header__inner {
     padding: 3.5rem 3rem 0 3rem;
+  }
+}
+
+@media (max-width: 1159px) {
+  .nav__list-item li a {
+    padding: 1rem 0;
+  }
+  .nav__list-item--contact li + li {
+    margin-top: 2rem;
+  }
+  .nav__list-item + .nav__list-item {
+    margin-top: 8rem;
+    margin-bottom: 5rem;
   }
 }
 
