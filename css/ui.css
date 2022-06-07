@@ -839,7 +839,6 @@ main {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding-top: 3.5rem;
 }
 
 .contents-wrap#art .list-item li {
@@ -1227,22 +1226,6 @@ footer .footer__title {
   }
   .contents-wrap#art .text-area {
     padding-top: 8.5rem;
-  }
-  .contents-wrap#art .list-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-  }
-  .contents-wrap#art .list-item li {
-    width: 100%;
-    padding-top: 100%;
-    margin: 3.5rem 0 0 0;
   }
   .contents-wrap .text-area {
     padding: 20.2rem 3rem 8.5rem 3rem;

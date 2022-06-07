@@ -52,7 +52,7 @@
       .list-item {
         @include onFlex(flex-start, space-between);
         flex-wrap: wrap;
-        padding-top: 3.5rem;
+        // padding-top: 3.5rem;
 
         li {
           position: relative;
