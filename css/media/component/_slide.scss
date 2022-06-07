@@ -99,7 +99,7 @@
         &-button {
           &-prev,
           &-next {
-            left: 3rem;
+            top: 19rem;
           }
           &-prev {
             &:after {
@@ -111,7 +111,8 @@
           }
         }
         &-pagination {
-          left: 6.5rem;
+          top: 16.6rem;
+
           &-fraction {
           }
           &-current {
