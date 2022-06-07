@@ -104,11 +104,11 @@ section {
 }
 body {
   line-height: 1;
+  // touch-action: none;
 }
 ol,
 ul {
   list-style: none;
-  touch-action: none;
 }
 blockquote,
 q {

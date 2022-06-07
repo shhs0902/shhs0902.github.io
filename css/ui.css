@@ -113,8 +113,6 @@ body {
 ol,
 ul {
   list-style: none;
-  -ms-touch-action: none;
-      touch-action: none;
 }
 
 blockquote,
