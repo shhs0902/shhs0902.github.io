@@ -147,23 +147,26 @@
           &-button {
             &-prev,
             &-next {
-              left: auto;
-              right: 0;
+              left: 0;
+              right: auto;
             }
             &-prev {
-              bottom: 9.7rem;
+              bottom: 62.5rem;
               &:after {
               }
             }
             &-next {
+              left: 9.3rem;
+              bottom: 62.5rem;
               &:after {
               }
             }
           }
           &-pagination {
             &-fraction {
-              left: auto;
-              right: 2rem;
+              left: 2.9rem;
+              right: auto;
+              bottom: 62.4rem;
             }
             &-current {
             }

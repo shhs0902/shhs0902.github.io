@@ -22,6 +22,27 @@ function hbgBtnActive() {
   }
 }
 
+const main = document.querySelector('main');
+const footer = document.querySelector('footer');
+const footerH = footer.offsetHeight;
+const mainTop = main.getBoundingClientRect().top;
+const footerTop = footer.getBoundingClientRect().top;
+
+// function footerScrollHandler() {
+//   let scrT = window.scrollY;
+//   let newTop = mainTop - scrT;
+
+//   main.style.top = newTop + 'px';
+
+//   if (scrT > footerTop) {
+//     main.style.top = -footerH + 'px';
+//   } else {
+//     newTop *= 0;
+//   }
+// }
+
+// window.addEventListener('scroll', footerScrollHandler);
+
 window.addEventListener('DOMContentLoaded', function () {
   hbgBtn.addEventListener('click', hbgBtnActive);
 });

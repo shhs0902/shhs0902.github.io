@@ -1,5 +1,6 @@
 #{$orgMain} {
   position: relative;
+  top: 0;
   z-index: 1;
 }
 
@@ -176,6 +177,7 @@
         }
       }
     }
+
     .dest-list {
       position: relative;
       width: 100%;
