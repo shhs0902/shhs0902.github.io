@@ -1301,6 +1301,9 @@ footer .footer__title {
 }
 
 @media (max-width: 799px) {
+  .contents-wrap .swiper-button-prev, .contents-wrap .swiper-button-next {
+    left: 3rem;
+  }
   .contents-wrap#about .swiper-button-prev, .contents-wrap#about .swiper-button-next {
     top: 19rem;
     left: 0;
