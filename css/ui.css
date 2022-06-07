@@ -1301,13 +1301,8 @@ footer .footer__title {
 }
 
 @media (max-width: 799px) {
-  .contents-wrap .swiper-button-prev, .contents-wrap .swiper-button-next {
-    top: 19rem;
-  }
-  .contents-wrap .swiper-pagination {
-    top: 16.6rem;
-  }
   .contents-wrap#about .swiper-button-prev, .contents-wrap#about .swiper-button-next {
+    top: 19rem;
     left: 0;
     right: auto;
   }
@@ -1319,7 +1314,7 @@ footer .footer__title {
     bottom: 62.5rem;
   }
   .contents-wrap#about .swiper-pagination-fraction {
-    left: 2.9rem;
+    top: 16.6rem;
     right: auto;
     bottom: 62.4rem;
   }

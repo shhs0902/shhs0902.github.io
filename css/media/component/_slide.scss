@@ -36,17 +36,6 @@
         &__container {
         }
         &__btn {
-          // position: absolute;
-          // bottom: 0;
-          // display: block;
-          // color: $white;
-          // font-size: 1.8rem;
-          // cursor: pointer;
-          // &--next {
-          //   bottom: 5rem;
-          // }
-          // &--prev {
-          // }
         }
       }
       &#about {
@@ -99,7 +88,6 @@
         &-button {
           &-prev,
           &-next {
-            top: 19rem;
           }
           &-prev {
             &:after {
@@ -111,8 +99,6 @@
           }
         }
         &-pagination {
-          top: 16.6rem;
-
           &-fraction {
           }
           &-current {
@@ -125,17 +111,6 @@
         &__container {
         }
         &__btn {
-          // position: absolute;
-          // bottom: 0;
-          // display: block;
-          // color: $white;
-          // font-size: 1.8rem;
-          // cursor: pointer;
-          // &--next {
-          //   bottom: 5rem;
-          // }
-          // &--prev {
-          // }
         }
       }
       &#about {
@@ -148,6 +123,8 @@
           &-button {
             &-prev,
             &-next {
+              top: 19rem;
+
               left: 0;
               right: auto;
             }
@@ -165,7 +142,7 @@
           }
           &-pagination {
             &-fraction {
-              left: 2.9rem;
+              top: 16.6rem;
               right: auto;
               bottom: 62.4rem;
             }
