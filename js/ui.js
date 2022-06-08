@@ -24,7 +24,7 @@ function hbgBtnActive() {
 
 const main = document.querySelector('main');
 const footer = document.querySelector('footer');
-const footerH = footer.offsetHeight;
+let footerH = footer.offsetHeight;
 const mainTop = main.getBoundingClientRect().top;
 const footerTop = footer.getBoundingClientRect().top;
 

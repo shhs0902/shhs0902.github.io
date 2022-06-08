@@ -6,10 +6,8 @@
     &-wrap {
       .visual {
         &-area {
-          &__inner {
-            .text-area {
-              padding: 3.5rem 5rem 6.5rem 5rem;
-            }
+          .text-area {
+            padding: 3.5rem 5rem 6.5rem 5rem;
           }
         }
       }
@@ -32,9 +30,7 @@
       &#about {
         .visual-area {
           height: auto;
-          &__inner {
-            padding-top: 15rem;
-          }
+          padding-top: 15rem;
         }
       }
       &#art {
@@ -62,6 +58,13 @@
                 }
               }
             }
+          }
+        }
+      }
+      &#pj-detail {
+        .visual-area {
+          height: 34rem;
+          .title {
           }
         }
       }
@@ -163,10 +166,8 @@
     &-wrap {
       .visual {
         &-area {
-          &__inner {
-            .text-area {
-              padding: 3.5rem 3rem 6.5rem 3rem;
-            }
+          .text-area {
+            padding: 3.5rem 3rem 6.5rem 3rem;
           }
         }
       }
@@ -176,9 +177,7 @@
         }
         .visual-area {
           height: auto;
-          &__inner {
-            padding-top: 10rem;
-          }
+          padding-top: 10rem;
         }
       }
       &#art {
@@ -207,6 +206,13 @@
           }
         }
       }
+      &#pj-detail {
+        .visual-area {
+          height: 24rem;
+          .title {
+          }
+        }
+      }
 
       .text-area {
         padding: 20.2rem 3rem 8.5rem 3rem;
@@ -222,7 +228,7 @@
               padding: 2.5rem 0 2rem;
               line-height: 3.5rem;
               &__sub {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
               }
             }
           }
