@@ -955,7 +955,6 @@ main {
 
 .contents-area .both-side .dest-list {
   width: 60%;
-  padding-left: 10%;
 }
 
 .contents-area .text-area {
@@ -1010,7 +1009,6 @@ main {
 
 .contents-area .dest-list {
   position: relative;
-  right: 3rem;
   width: 100%;
   min-width: 27.9rem;
   padding: 3% 3% 0 0;
@@ -1196,7 +1194,7 @@ footer .footer__title {
     padding-top: 20.5rem;
   }
   .contents-area .text-area.type01 .title {
-    font-size: 4.4rem;
+    font-size: 4rem;
   }
   .contents-area .text-area.type01 .title--fz44 {
     padding: 2.5rem 0 2rem;
@@ -1228,6 +1226,9 @@ footer .footer__title {
 }
 
 @media (max-width: 799px) {
+  .contents-wrap .title {
+    font-size: 4rem;
+  }
   .contents-wrap .visual-area .text-area {
     padding: 3.5rem 3rem 6.5rem 3rem;
   }
@@ -1266,18 +1267,29 @@ footer .footer__title {
     padding-top: 15.5rem;
   }
   .contents-area .both-side {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .contents-area .both-side .text-area {
     width: 100%;
   }
   .contents-area .both-side .dest-list {
     width: 100%;
-    padding-left: 0;
     margin-top: 5rem;
   }
   .contents-area .text-area.type01 .title--fz44 {
-    font-size: 2.5rem;
+    font-size: 4rem;
   }
   .contents-area .text-area__desc {
     padding: 0;
@@ -1331,7 +1343,7 @@ footer .footer__title {
     left: 3rem;
   }
   .contents-wrap#about .swiper-button-prev, .contents-wrap#about .swiper-button-next {
-    top: 19rem;
+    top: 23rem;
     left: 0;
     right: auto;
   }
@@ -1343,9 +1355,8 @@ footer .footer__title {
     bottom: 62.5rem;
   }
   .contents-wrap#about .swiper-pagination-fraction {
-    top: 16.6rem;
+    top: 20.6rem;
     right: auto;
-    bottom: 62.4rem;
   }
   .contents-area .swiper .swiper-slide {
     height: 100%;
