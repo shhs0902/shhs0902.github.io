@@ -27,7 +27,15 @@
     }
     &#about {
       .visual-area {
-        background: url('../img/sub_img01.png') no-repeat 0 0 / cover;
+        background: url('../img/sub_img01.png') #030303 no-repeat 0 0 / cover;
+      }
+    }
+    &#art {
+      .caption {
+        .title {
+          background: url('../img/caption_arrow.png') no-repeat center bottom /
+            5.9rem 1.7rem;
+        }
       }
     }
     &#pj-detail {
@@ -42,8 +50,10 @@
         // background: url('../img/img_guide.png') no-repeat 0 0 / cover;
       }
     }
-    .img-area {
-      background: url('../img/sub_img02.png') no-repeat 0 0 / cover;
+    .img {
+      &-bg {
+        background: url('../img/sub_img02.png') no-repeat 0 0 / cover;
+      }
     }
     input {
       &[type='checkbox'] {

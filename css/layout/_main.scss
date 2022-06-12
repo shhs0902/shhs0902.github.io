@@ -33,10 +33,15 @@
               font-size: 1.8rem;
               font-weight: 700;
               color: $white;
-              line-height: 2.25rem;
+              line-height: 2.6rem;
             }
           }
         }
+      }
+    }
+    &#about {
+      .contents-area {
+        background: linear-gradient(#030303, 23%, #171717, 78%, transparent);
       }
     }
     &#art {
@@ -58,7 +63,6 @@
           margin: 8rem 0 0 0;
           background-color: $txtGray;
           padding-top: 54%;
-
           a {
             position: absolute;
             top: 0;
@@ -85,6 +89,39 @@
               &:after {
                 background-color: rgba(232, 73, 8, 0.8);
               }
+              .caption {
+                opacity: 1;
+              }
+            }
+            .caption {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              opacity: 0;
+              .title {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                font-size: 2.2rem;
+                padding-bottom: 3.2rem;
+                transform: translate(-50%, -50%);
+                z-index: 10;
+              }
+              .type {
+                &-caption {
+                  position: absolute;
+                  left: 5rem;
+                  bottom: 5rem;
+                  font-size: 1.8rem;
+                  color: $white;
+                  z-index: 10;
+                }
+                &-title {
+                  line-height: 2.5rem;
+                }
+              }
             }
           }
         }
@@ -96,6 +133,64 @@
         width: 100%;
         height: 54rem;
         .title {
+        }
+      }
+      .contents- {
+        &area {
+          &__inner {
+            .title {
+              font-size: 3rem;
+              font-weight: 700;
+            }
+            .project-info {
+              @include onFlex(center, flex-start);
+              margin-top: 6rem;
+              li {
+                position: relative;
+                padding-left: 2rem;
+                &:first-child {
+                  padding-left: 0;
+                }
+                span {
+                  display: block;
+                  font-size: 1.5rem;
+                  font-weight: 700;
+                  padding-right: 9rem;
+                  &.item- {
+                    &key {
+                      color: $mainColor;
+                    }
+                    &value {
+                      color: $white;
+                      margin-top: 1.8rem;
+                    }
+                  }
+                }
+                & + li {
+                  &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display: block;
+                    width: 0.1rem;
+                    height: 100%;
+                    background-color: #454545;
+                  }
+                }
+              }
+            }
+            .project-img {
+              width: 100%;
+              height: 98rem;
+              margin-top: 7.5rem;
+              img {
+                height: 100%;
+                object-fit: cover;
+                object-position: 0 0;
+              }
+            }
+          }
         }
       }
     }
@@ -152,6 +247,7 @@
     }
     .text-area {
       position: relative;
+      left: 0.1rem;
       &.type {
         &01 {
           padding: 0;
@@ -187,35 +283,43 @@
 
     .dest-list {
       position: relative;
-      // right: 3rem;
+      right: 3rem;
       width: 100%;
       min-width: 27.9rem;
-      padding: 3% 3% 0 0;
-      &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        right: 0;
-        display: block;
-        width: 33%;
-        height: 0.3rem;
-        background-color: rgba(232, 73, 8, 0.6);
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        top: 0.3rem;
-        right: 0;
-        display: block;
-        width: 0.3rem;
-        height: 33%;
-        background-color: rgba(232, 73, 8, 0.6);
-      }
     }
-    .img-area {
-      width: 100%;
-      padding-top: 60%;
-      margin-bottom: 4.3rem;
+    .img {
+      &-area {
+        position: relative;
+        width: 100%;
+        min-width: 27.9rem;
+        margin-bottom: 4.3rem;
+        padding: 3% 3% 0 3%;
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: block;
+          width: 33%;
+          height: 0.3rem;
+          background-color: rgba(232, 73, 8, 0.6);
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0.3rem;
+          right: 0;
+          display: block;
+          width: 0.3rem;
+          height: 33%;
+          background-color: rgba(232, 73, 8, 0.6);
+        }
+      }
+      &-bg {
+        width: 100%;
+        height: 42.6rem;
+        // padding-top: 60%;
+      }
     }
     &__part {
       & + .contents-area__part {
@@ -223,6 +327,7 @@
       }
       .list-item__row {
         @include onFlex(flext-start, flex-end);
+        margin-left: 4rem;
         li {
           & + li {
             margin-left: 1.6rem;

@@ -13,7 +13,7 @@
         &-prev,
         &-next {
           top: auto;
-          bottom: 0;
+          bottom: 60%;
           left: 16.1%;
           right: auto;
           width: 1.2rem;
@@ -45,10 +45,11 @@
           width: auto;
           font-size: 1.5rem;
           font-weight: 700;
-          color: $white;
+          color: rgba(255, 255, 255, 0.5);
           text-align: left;
         }
         &-current {
+          color: $white;
         }
         &-total {
           font-weight: 400;
@@ -78,19 +79,24 @@
         &-button {
           &-prev,
           &-next {
-            left: 0;
-            bottom: 0;
+            top: auto;
+            bottom: 37rem;
+            // left: 0;
+            // bottom: 0;
             width: 0.9rem;
             height: 1.2rem;
           }
           &-prev {
+            left: 0;
             &:after {
               background: url('../img/slide_left_on.png') no-repeat 0 0 / 100%
                 100%;
             }
           }
           &-next {
-            left: 10rem;
+            right: auto;
+            left: 10.1rem;
+            // left: 10rem;
             &:after {
               background: url('../img/slide_right_on.png') no-repeat 0 0 / 100%
                 100%;
@@ -100,7 +106,9 @@
         &-pagination {
           &-fraction {
             left: 3rem;
-            bottom: 0;
+            bottom: 36.9rem;
+            // left: 3rem;
+            // bottom: 0;
           }
           &-current {
           }

@@ -1,48 +1,82 @@
-'use strict';
+// 'use strict';
+(function (window) {
+  const body = document.querySelector('body');
+  const header = document.querySelector('.header__inner');
+  const hbgBtn = document.querySelector('.header__btn');
+  let boolean = false;
 
-const body = document.querySelector('body');
-const header = document.querySelector('.header__inner');
-const hbgBtn = document.querySelector('.header__btn');
-let boolean = false;
+  const ON_CLASS = 'on';
 
-const ON_CLASS = 'on';
-
-function hbgBtnActive() {
-  const nav = document.querySelector('nav');
-  if (!boolean) {
-    this.parentElement.classList.add(ON_CLASS);
-    nav.classList.add(ON_CLASS);
-    body.style.overflow = 'hidden';
-    boolean = true;
-  } else {
-    this.parentElement.classList.remove(ON_CLASS);
-    nav.classList.remove(ON_CLASS);
-    boolean = false;
-    body.style.overflow = 'auto';
+  function hbgBtnActive() {
+    const nav = document.querySelector('nav');
+    if (!boolean) {
+      this.parentElement.classList.add(ON_CLASS);
+      nav.classList.add(ON_CLASS);
+      body.style.overflow = 'hidden';
+      boolean = true;
+    } else {
+      this.parentElement.classList.remove(ON_CLASS);
+      nav.classList.remove(ON_CLASS);
+      boolean = false;
+      body.style.overflow = 'auto';
+    }
   }
-}
 
-const main = document.querySelector('main');
-const footer = document.querySelector('footer');
-let footerH = footer.offsetHeight;
-const mainTop = main.getBoundingClientRect().top;
-const footerTop = footer.getBoundingClientRect().top;
+  const main = document.querySelector('main');
+  const footer = document.querySelector('footer');
+  let footerH = footer.offsetHeight;
+  const mainTop = main.getBoundingClientRect().top;
+  const footerTop = footer.getBoundingClientRect().top;
 
-// function footerScrollHandler() {
-//   let scrT = window.scrollY;
-//   let newTop = mainTop - scrT;
+  // function loadItems() {
+  //   return fetch("../../data/data/json")
+  //   .then(function(response){
+  //     return response.json();
+  //   })
+  //   .then(function(json){
+  //     return json.items;
+  //   });
+  // }
 
-//   main.style.top = newTop + 'px';
+  // loadItems().then((items) => {
+  //   displayItems(items);
+  // })
 
-//   if (scrT > footerTop) {
-//     main.style.top = -footerH + 'px';
-//   } else {
-//     newTop *= 0;
-//   }
-// }
+  const clickTarget = document.querySelectorAll('#art .list-item li');
 
-// window.addEventListener('scroll', footerScrollHandler);
+  [].forEach.call(clickTarget, function (li) {
+    li.addEventListener('click', function () {
+      $.ajax({
+        url: './project_detail.html',
+        type: 'GET',
+        dataType: 'html',
+        success: function (data) {
+          console.log('페이지가 이동되었습니다.');
+          window.location = './project_detail.html';
+        },
+        error: function (error) {
+          console.log('실패');
+        },
+      });
+    });
+  });
 
-window.addEventListener('DOMContentLoaded', function () {
-  hbgBtn.addEventListener('click', hbgBtnActive);
-});
+  // function footerScrollHandler() {
+  //   let scrT = window.scrollY;
+  //   let newTop = mainTop - scrT;
+
+  //   main.style.top = newTop + 'px';
+
+  //   if (scrT > footerTop) {
+  //     main.style.top = -footerH + 'px';
+  //   } else {
+  //     newTop *= 0;
+  //   }
+  // }
+
+  // window.addEventListener('scroll', footerScrollHandler);
+
+  window.addEventListener('DOMContentLoaded', function () {
+    hbgBtn.addEventListener('click', hbgBtnActive);
+  });
+})(window);

@@ -67,6 +67,40 @@
           .title {
           }
         }
+        .contents- {
+          &area {
+            &__inner {
+              .title {
+                font-size: 3rem;
+                font-weight: 700;
+              }
+              .project-info {
+                li {
+                  &:first-child {
+                  }
+                  span {
+                    &.item- {
+                      &key {
+                      }
+                      &value {
+                      }
+                    }
+                  }
+                  & + li {
+                    &::before {
+                    }
+                  }
+                }
+              }
+              .project-img {
+                height: 58rem;
+                margin-top: 5rem;
+                img {
+                }
+              }
+            }
+          }
+        }
       }
     }
     &-area {
@@ -103,6 +137,8 @@
         }
       }
       .both-side {
+        @include onFlex(center, space-between);
+
         .text-area {
         }
         .dest-list {
@@ -120,7 +156,6 @@
           }
         }
         &__desc {
-          @include onFlex(flex-start, flex-start);
           padding: 3rem 0 2.5rem;
 
           dl {
@@ -139,10 +174,22 @@
         }
       }
       .dest-list {
+        right: 0;
+
         &:after {
         }
       }
-      .img-area {
+      .img {
+        &-area {
+          &::before {
+          }
+          &:after {
+          }
+        }
+        &-bg {
+          height: 40.6rem;
+          // padding-top: 60%;
+        }
       }
       &__part {
         & + .contents-area__part {
@@ -193,16 +240,35 @@
           // @include onFlex(center, flex-start);
 
           li {
-            // width: 100%;
-            // padding-top: 100%;
-            // margin: 3.5rem 0 0 0;
+            width: 100%;
+            padding-top: 100%;
+            margin: 3.5rem 0 0 0;
             a {
               img {
               }
               &:after {
+                background-color: rgba(0, 0, 0, 0.5);
               }
               &:hover {
                 &:after {
+                }
+                .caption {
+                }
+              }
+              .caption {
+                opacity: 1;
+                .title {
+                  display: none;
+                }
+                .type {
+                  &-caption {
+                    left: 2rem;
+                    bottom: 2rem;
+                    font-size: 1.4rem;
+                  }
+                  &-title {
+                    line-height: 2rem;
+                  }
                 }
               }
             }
@@ -213,6 +279,43 @@
         .visual-area {
           height: 24rem;
           .title {
+          }
+        }
+        .contents- {
+          &area {
+            &__inner {
+              .title {
+                font-size: 3rem;
+                font-weight: 700;
+              }
+              .project-info {
+                @include onFlex(center, center);
+                li {
+                  &:first-child {
+                  }
+                  span {
+                    font-size: 1.3rem;
+                    padding-right: 1rem;
+                    &.item- {
+                      &key {
+                      }
+                      &value {
+                      }
+                    }
+                  }
+                  & + li {
+                    &::before {
+                    }
+                  }
+                }
+              }
+              .project-img {
+                height: 38rem;
+                margin-top: 5rem;
+                img {
+                }
+              }
+            }
           }
         }
       }
@@ -289,6 +392,7 @@
           }
         }
         &__desc {
+          @include onFlex(flex-start, flex-start);
           padding: 0;
           dl {
             dt {
@@ -298,23 +402,38 @@
               }
             }
             & + dl {
+              margin-left: 3rem;
             }
           }
         }
       }
-      .dest-list {
-        padding: 2.5rem 2.5rem 0 0;
-        &:after {
+
+      .img {
+        &-area {
+          margin-top: 3rem;
+          padding-left: 0;
+          padding: 2rem 2rem 0 0;
+          &::before {
+          }
+          &:after {
+          }
+        }
+        &-bg {
+          height: 25rem;
         }
       }
-      .img-area {
-        height: 20rem;
+      .dest-list {
+        padding: 2.5rem 0 0 0;
+        &:after {
+        }
       }
       &__part {
         & + .contents-area__part {
         }
         .list-item__row {
-          margin-top: 2rem;
+          margin-top: 3rem;
+          margin-left: 0;
+
           li {
             & + li {
             }

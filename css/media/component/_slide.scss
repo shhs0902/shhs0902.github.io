@@ -13,7 +13,7 @@
             left: 5rem;
           }
           &-prev {
-            bottom: 9.7rem;
+            // bottom: 9.7rem;
             &:after {
             }
           }
@@ -43,18 +43,26 @@
           &-button {
             &-prev,
             &-next {
+              // top: auto;
+              bottom: 28rem;
             }
             &-prev {
+              // left: 0;
+
               &:after {
               }
             }
             &-next {
+              // right: auto;
+              // left: 10.1rem;
               &:after {
               }
             }
           }
           &-pagination {
             &-fraction {
+              // left: 3rem;
+              bottom: 27.9rem;
             }
             &-current {
             }
@@ -88,19 +96,30 @@
         &-button {
           &-prev,
           &-next {
-            left: 3rem;
+            // bottom: 18.6rem;
+            // top: auto;
+            // left: 0;
+            // right: auto;
           }
           &-prev {
+            // left: 0;
+            // bottom: 62.5rem;
             &:after {
             }
           }
           &-next {
+            // left: 10.1rem;
+            // bottom: 62.5rem;
             &:after {
             }
           }
         }
         &-pagination {
           &-fraction {
+            // top: 18.1rem;
+            // right: auto;
+            // left: 3rem;
+            // bottom: 18.4rem;
           }
           &-current {
           }
@@ -124,27 +143,32 @@
           &-button {
             &-prev,
             &-next {
-              top: 23rem;
-              left: 0;
-              right: auto;
+              bottom: 18.6rem;
+
+              // bottom: 18.6rem;
+              // top: auto;
+              // left: 0;
+              // right: auto;
             }
             &-prev {
-              bottom: 62.5rem;
+              // bottom: 62.5rem;
               &:after {
               }
             }
             &-next {
-              left: 9.3rem;
-              bottom: 62.5rem;
+              // left: 10.1rem;
+              // left: 10.1rem;
+              // bottom: 62.5rem;
               &:after {
               }
             }
           }
           &-pagination {
             &-fraction {
-              top: 20.6rem;
-              right: auto;
-              // bottom: 62.4rem;
+              // top: 18.1rem;
+              // right: auto;
+
+              bottom: 18.4rem;
             }
             &-current {
             }
