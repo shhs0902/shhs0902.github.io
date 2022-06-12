@@ -1400,6 +1400,9 @@ footer .footer__title {
   .contents-wrap#art .list-item li a:after {
     background-color: rgba(0, 0, 0, 0.5);
   }
+  .contents-wrap#art .list-item li a:hover:after {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
   .contents-wrap#art .list-item li a .caption {
     opacity: 1;
   }
