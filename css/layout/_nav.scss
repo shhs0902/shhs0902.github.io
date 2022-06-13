@@ -9,7 +9,7 @@
   min-width: 36rem;
   background-color: $bascBg;
   padding-left: 10rem;
-  transition: right 0.5s cubic-bezier(0.03, -0.02, 1, 1);
+  transition: right 0.8s ease-in;
   z-index: 100;
   &__list-item {
     li {

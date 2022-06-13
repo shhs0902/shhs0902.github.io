@@ -290,13 +290,14 @@
                 font-weight: 700;
               }
               .project-info {
-                @include onFlex(center, center);
+                @include onFlex(center, flex-start);
                 li {
+                  width: 100%;
                   &:first-child {
                   }
                   span {
                     font-size: 1.3rem;
-                    padding-right: 1rem;
+                    padding-right: 0;
                     &.item- {
                       &key {
                       }

@@ -1,82 +1,73 @@
 // 'use strict';
 (function (window) {
   const body = document.querySelector('body');
-  const header = document.querySelector('.header__inner');
   const hbgBtn = document.querySelector('.header__btn');
-  let boolean = false;
+  let show = false;
 
   const ON_CLASS = 'on';
 
   function hbgBtnActive() {
     const nav = document.querySelector('nav');
-    if (!boolean) {
+    if (!show) {
       this.parentElement.classList.add(ON_CLASS);
       nav.classList.add(ON_CLASS);
-      body.style.overflow = 'hidden';
-      boolean = true;
+      // body.style.overflow = 'hidden';
+      show = true;
     } else {
       this.parentElement.classList.remove(ON_CLASS);
       nav.classList.remove(ON_CLASS);
-      boolean = false;
-      body.style.overflow = 'auto';
+      show = false;
+      // body.style.overflow = 'auto';
     }
   }
 
-  const main = document.querySelector('main');
-  const footer = document.querySelector('footer');
-  let footerH = footer.offsetHeight;
-  const mainTop = main.getBoundingClientRect().top;
-  const footerTop = footer.getBoundingClientRect().top;
-
-  // function loadItems() {
-  //   return fetch("../../data/data/json")
-  //   .then(function(response){
-  //     return response.json();
-  //   })
-  //   .then(function(json){
-  //     return json.items;
-  //   });
-  // }
-
-  // loadItems().then((items) => {
-  //   displayItems(items);
-  // })
+  function loadItems() {
+    return fetch('../data/data.json')
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (json) {
+        return json.items;
+      });
+  }
 
   const clickTarget = document.querySelectorAll('#art .list-item li');
 
-  [].forEach.call(clickTarget, function (li) {
-    li.addEventListener('click', function () {
-      $.ajax({
-        url: './project_detail.html',
-        type: 'GET',
-        dataType: 'html',
-        success: function (data) {
-          console.log('페이지가 이동되었습니다.');
-          window.location = './project_detail.html';
-        },
-        error: function (error) {
-          console.log('실패');
-        },
+  function listClickLocation() {
+    [].forEach.call(clickTarget, function (li, i) {
+      li.addEventListener('click', function () {
+        const currentIdx = i;
+        loadItems().then((items) => {
+          localStorage.setItem('item', JSON.stringify(items));
+        });
+        location.href = `./project_detail.html?${currentIdx}`;
       });
     });
-  });
+  }
 
-  // function footerScrollHandler() {
-  //   let scrT = window.scrollY;
-  //   let newTop = mainTop - scrT;
+  function dataReceiveHandler() {
+    const receivedData = location.href.split('?')[1];
+    const getItem = JSON.parse(localStorage.getItem('item'));
+    const inner = document.querySelector('#pj-detail .contents-area__inner');
+    if (!inner) {
+      return;
+    }
+    const dataTit = inner.querySelector('.title');
+    const valueDate = inner.querySelector('.item-value__date');
+    const valueClient = inner.querySelector('.item-value__client');
+    const valueType = inner.querySelector('.item-value__type');
+    const prjImg = inner.querySelector('.project-img');
 
-  //   main.style.top = newTop + 'px';
-
-  //   if (scrT > footerTop) {
-  //     main.style.top = -footerH + 'px';
-  //   } else {
-  //     newTop *= 0;
-  //   }
-  // }
-
-  // window.addEventListener('scroll', footerScrollHandler);
+    dataTit.innerText = getItem[receivedData].title;
+    valueDate.innerText = getItem[receivedData].date;
+    valueClient.innerText = getItem[receivedData].client;
+    valueType.innerText = getItem[receivedData].type;
+    prjImg.innerHTML = ` <img src="${getItem[receivedData].image}" alt="" />`;
+  }
 
   window.addEventListener('DOMContentLoaded', function () {
     hbgBtn.addEventListener('click', hbgBtnActive);
+    dataReceiveHandler();
+    listClickLocation();
   });
 })(window);
