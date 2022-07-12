@@ -101,5 +101,15 @@
         }
       }
     }
+    &footer {
+      &__left {
+        @include onFlex(center, flex-start);
+      }
+    }
+    &submit {
+      right: 0;
+      bottom: -7.2rem;
+      width: 100%;
+    }
   }
 }

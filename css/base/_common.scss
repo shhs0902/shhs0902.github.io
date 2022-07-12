@@ -28,6 +28,9 @@ $bascBg: #171717;
 }
 
 // 4. class
+body {
+  background-color: #171717;
+}
 .#{$ly} {
   &-wrap {
     position: relative;
@@ -112,7 +115,7 @@ $bascBg: #171717;
   }
 }
 .both-side {
-  @include onFlex(flex-start, space-between);
+  @include onFlex(center, space-between);
 }
 
 @keyframes fadeIN {
@@ -123,5 +126,13 @@ $bascBg: #171717;
   100% {
     top: 0;
     opacity: 1;
+  }
+}
+
+@media (max-width: 799px) {
+  .#{$ly} {
+    &-wrap {
+      padding-bottom: 10rem;
+    }
   }
 }

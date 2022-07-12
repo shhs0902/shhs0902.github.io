@@ -23,10 +23,10 @@
 
   function loadItems() {
     return fetch('../data/data.json')
-      .then(function (response) {
+      .then((response) => {
         return response.json();
       })
-      .then(function (json) {
+      .then((json) => {
         return json.items;
       });
   }

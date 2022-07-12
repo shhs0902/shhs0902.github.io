@@ -32,6 +32,16 @@
           height: auto;
           padding-top: 15rem;
         }
+        .contents-area {
+          &__part {
+            .text-area {
+              padding: 3.5rem 5rem 0 5rem;
+            }
+          }
+          .inner__list {
+            margin-top: 5rem;
+          }
+        }
       }
       &#art {
         .text-area {
@@ -104,7 +114,7 @@
       }
     }
     &-area {
-      padding: 6.5rem 5rem 6.5rem 5rem;
+      // padding: 6.5rem 5rem 6.5rem 5rem;
       &__sub {
         &--form {
           .both-side {
@@ -137,8 +147,6 @@
         }
       }
       .both-side {
-        @include onFlex(center, space-between);
-
         .text-area {
         }
         .dest-list {
@@ -157,7 +165,6 @@
         }
         &__desc {
           padding: 3rem 0 2.5rem;
-
           dl {
             dt {
               font-size: 1.8rem;
@@ -195,12 +202,9 @@
         & + .contents-area__part {
           margin-top: 10rem;
         }
-        .list-item__row {
-          li {
-            & + li {
-            }
-          }
-        }
+      }
+      &__inner {
+        padding: 6.5rem 5rem 0 5rem;
       }
     }
   }
@@ -223,11 +227,32 @@
       }
       &#about {
         .text-area {
+          text-align: center;
           align-content: flex-start;
         }
         .visual-area {
           height: auto;
           padding-top: 10rem;
+        }
+        .contents-area {
+          &__part {
+            .text-area {
+            }
+            &.both-side {
+              padding: 0;
+            }
+            .list-item {
+              &__row {
+                display: block;
+                li {
+                  & + li {
+                    margin-top: 3rem;
+                    margin-left: 0;
+                  }
+                }
+              }
+            }
+          }
         }
       }
       &#art {
@@ -238,11 +263,10 @@
         }
         .list-item {
           // @include onFlex(center, flex-start);
+          @include basePad(0, 1.5rem, 0, 2.5rem);
 
           li {
-            width: 100%;
-            padding-top: 100%;
-            margin: 3.5rem 0 0 0;
+            margin: 3.5rem 1rem 0 0;
             a {
               img {
               }
@@ -344,9 +368,10 @@
       }
     }
     &-area {
-      @include basePad(6.5rem, 2.5rem, 6.5rem, 2.5rem);
+      @include basePad(6.5rem, 0, 6.5rem, 0);
       &__sub {
         &--form {
+          padding: 0 2.5rem 0 2.5rem;
           .both-side {
             .contents-area__part {
               & + .contents-area__part {
@@ -394,7 +419,7 @@
           }
         }
         &__desc {
-          @include onFlex(flex-start, flex-start);
+          @include onFlex(flex-start, center);
           padding: 0;
           dl {
             dt {
@@ -426,6 +451,8 @@
       }
       .dest-list {
         padding: 2.5rem 0 0 0;
+        margin-left: 0;
+
         &:after {
         }
       }
@@ -435,11 +462,64 @@
         .list-item__row {
           margin-top: 3rem;
           margin-left: 0;
-
-          li {
-            & + li {
+        }
+        .inner {
+          &__text-area {
+          }
+          &__list {
+            li {
+              height: 24rem;
+              padding: 0;
             }
           }
+          &__contents {
+            &.reverse {
+              justify-content: center;
+              .dest-list {
+                margin-right: 0;
+                .text-area__desc {
+                  // justify-content: center;
+                }
+              }
+            }
+          }
+          &__img {
+            img {
+            }
+            &--01 {
+              display: none;
+            }
+            &--02 {
+            }
+            &--03 {
+              display: none;
+            }
+            &--04 {
+              display: none;
+            }
+            &--05 {
+              width: 100%;
+            }
+            &--06 {
+              display: none;
+            }
+            &.w860 {
+              width: 86rem;
+            }
+            &.w538 {
+              width: 53.8rem;
+            }
+          }
+        }
+      }
+      &__inner {
+        padding: 0;
+      }
+      .indicator {
+        text-align: center;
+        padding: 3rem 0;
+        a {
+          font-size: 1.4rem;
         }
       }
     }

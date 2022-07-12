@@ -27,7 +27,7 @@
           .desc {
             font-size: 4.4rem;
             font-weight: 700;
-            padding: 5rem 0 3.5rem;
+            padding: 3rem 0 1.5rem;
             line-height: 5.5rem;
             &__sub {
               font-size: 1.8rem;
@@ -42,6 +42,20 @@
     &#about {
       .contents-area {
         background: linear-gradient(#030303, 23%, #171717, 78%, transparent);
+        &__inner {
+          padding: 0;
+        }
+        &__part {
+          .text-area {
+            padding: 0 9.4% 0 16.1%;
+          }
+          &.both-side {
+            padding: 0 9.4% 0 16.1%;
+            .text-area {
+              padding: 0;
+            }
+          }
+        }
       }
     }
     &#art {
@@ -53,16 +67,15 @@
         }
       }
       .list-item {
-        @include onFlex(flex-start, space-between);
+        @include onFlex(flex-start, flex-start);
         flex-wrap: wrap;
-        // padding-top: 3.5rem;
 
         li {
           position: relative;
-          width: calc(50% - 1rem);
-          margin: 8rem 0 0 0;
+          width: calc(33.33% - 2rem);
+          margin: 8rem 2rem 0 0;
           background-color: $txtGray;
-          padding-top: 54%;
+          padding-top: 40%;
           a {
             position: absolute;
             top: 0;
@@ -197,7 +210,7 @@
     }
   }
   &-area {
-    @include basePad(11.2rem, 16.1%, 33rem, 16.1%);
+    padding: 5rem 0 15rem;
     &__sub {
       &--form {
         height: 100%;
@@ -211,12 +224,11 @@
               margin-top: 0;
             }
             &--left {
-              width: 34rem;
+              width: 40rem;
             }
             &--right {
-              width: calc(100% - 34rem);
-              border-top: 0.4rem solid $white;
-              border-bottom: 0.4rem solid $white;
+              width: calc(100% - 40rem);
+
               margin-left: 8rem;
               .form-area__row {
                 padding: 5.4rem 0;
@@ -229,7 +241,6 @@
         }
       }
     }
-
     &.contents-area__sub--form {
       .both-side {
         .text-area {
@@ -237,31 +248,24 @@
         }
       }
     }
-    .both-side {
-      .text-area {
-        width: 40%;
-      }
-      .dest-list {
-        width: 60%;
-        // padding-left: 10%;
-      }
-    }
     .text-area {
       position: relative;
-      left: 0.1rem;
       &.type {
         &01 {
           padding: 0;
           .title {
             font-size: 4.4rem;
             &--fz44 {
-              padding: 5rem 0 3.5rem;
+              padding: 3rem 0 1.5rem;
             }
           }
         }
       }
+      &.inner__text-area {
+        @include basePad(11.2rem, 16.1%, 33rem, 16.1%);
+      }
       &__desc {
-        @include onFlex(flex-start, flex-end);
+        @include onFlex(flex-start, flex-start);
         dl {
           color: $white;
           dt {
@@ -284,47 +288,15 @@
 
     .dest-list {
       position: relative;
-      right: 3rem;
       width: 100%;
       min-width: 27.9rem;
+      margin-left: 10rem;
     }
-    .img {
-      &-area {
-        position: relative;
-        width: 100%;
-        min-width: 27.9rem;
-        margin-bottom: 4.3rem;
-        padding: 3% 3% 0 3%;
-        &::before {
-          content: '';
-          position: absolute;
-          top: 0;
-          right: 0;
-          display: block;
-          width: 33%;
-          height: 0.3rem;
-          background-color: rgba(232, 73, 8, 0.6);
-        }
-        &:after {
-          content: '';
-          position: absolute;
-          top: 0.3rem;
-          right: 0;
-          display: block;
-          width: 0.3rem;
-          height: 33%;
-          background-color: rgba(232, 73, 8, 0.6);
-        }
-      }
-      &-bg {
-        width: 100%;
-        height: 42.6rem;
-        // padding-top: 60%;
-      }
-    }
+
     &__part {
       & + .contents-area__part {
         margin-top: 21.5rem;
+        // @include basePad(11.2rem, 16.1%, 33rem, 16.1%);
       }
       .list-item__row {
         @include onFlex(flext-start, flex-end);
@@ -332,6 +304,110 @@
         li {
           & + li {
             margin-left: 1.6rem;
+          }
+        }
+      }
+      .inner {
+        &__text-area {
+        }
+        &__list {
+          li {
+            position: relative;
+            max-height: 70rem;
+            padding-top: 35%;
+          }
+        }
+        &__contents {
+          position: absolute;
+          top: 0;
+          left: 0;
+          @include onFlex();
+          width: 100%;
+          height: 100%;
+          &.reverse {
+            justify-content: flex-end;
+            .dest-list {
+              width: auto;
+              margin-right: 10rem;
+              margin-left: 0;
+            }
+          }
+        }
+        &__img {
+          width: 100%;
+
+          height: 100%;
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+          &--01 {
+            flex-shrink: 1;
+            // background: url('../../img/img01.png') no-repeat 0 0 / cover;
+          }
+          &--02 {
+            // background: url('../../img/img02.png') no-repeat 0 0 / cover;
+          }
+          &--03 {
+            // background: url('../../img/img03.png') no-repeat 0 0 / cover;
+          }
+          &--04 {
+            width: 33.33%;
+            // background: url('../../img/img04.png') no-repeat 0 0 / cover;
+          }
+          &--05 {
+            width: 33.33%;
+            // background: url('../../img/img05.png') no-repeat 0 0 / cover;
+          }
+          &--06 {
+            width: 33.33%;
+            // background: url('../../img/img06.png') no-repeat 0 0 / cover;
+          }
+          &.w860 {
+            width: 86rem;
+          }
+          &.w538 {
+            width: 53.8rem;
+          }
+        }
+      }
+    }
+    &__inner {
+      position: relative;
+      padding: 0 8.4%;
+    }
+    .btn-area {
+      position: relative;
+      width: 100%;
+    }
+    .inner__list {
+      margin-top: 10rem;
+    }
+    .indicator {
+      text-align: center;
+      padding: 3rem 0;
+      a {
+        display: inline-block;
+        font-size: 1.6rem;
+        color: $mainColor;
+        & + a {
+          margin-left: 0.6rem;
+        }
+        &.btn {
+          &__indicator {
+            line-height: 2rem;
+            letter-spacing: -0.3rem;
+          }
+          &-prev {
+            margin-right: 1rem;
+
+            &--first {
+            }
+          }
+          &-next {
+            margin-left: 1.2rem;
+            &--last {
+            }
           }
         }
       }
