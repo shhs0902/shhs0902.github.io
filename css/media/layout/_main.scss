@@ -266,6 +266,7 @@
           @include basePad(0, 1.5rem, 0, 2.5rem);
 
           li {
+            width: calc(33.33% - 1rem);
             margin: 3.5rem 1rem 0 0;
             a {
               img {

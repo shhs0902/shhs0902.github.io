@@ -1653,6 +1653,7 @@ footer .footer__title {
     padding: 0 1.5rem 0 2.5rem;
   }
   .contents-wrap#art .list-item li {
+    width: calc(33.33% - 1rem);
     margin: 3.5rem 1rem 0 0;
   }
   .contents-wrap#art .list-item li a:after {
