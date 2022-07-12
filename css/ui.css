@@ -1406,7 +1406,7 @@ main {
 
 .contents-area__inner {
   position: relative;
-  padding: 0 8.4%;
+  padding: 0 7% 0 8.4%;
 }
 
 .contents-area .btn-area {
@@ -1434,8 +1434,14 @@ main {
 }
 
 .contents-area .indicator a.btn__indicator {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 0.1rem solid #e84908;
+  border-radius: 100%;
+  font-size: 1.2rem;
   line-height: 2rem;
   letter-spacing: -0.3rem;
+  padding-right: 0.3rem;
 }
 
 .contents-area .indicator a.btn-prev {
@@ -1443,7 +1449,7 @@ main {
 }
 
 .contents-area .indicator a.btn-next {
-  margin-left: 1.2rem;
+  margin-left: 1.6rem;
 }
 
 footer {
@@ -1650,11 +1656,12 @@ footer .footer__title {
     padding-top: 8.5rem;
   }
   .contents-wrap#art .list-item {
-    padding: 0 1.5rem 0 2.5rem;
+    padding: 0 0.5rem 0 2.5rem;
   }
   .contents-wrap#art .list-item li {
-    width: calc(33.33% - 1rem);
-    margin: 3.5rem 1rem 0 0;
+    width: calc(50% - 2rem);
+    padding-top: 54%;
+    margin: 3.5rem 2rem 0 0;
   }
   .contents-wrap#art .list-item li a:after {
     background-color: rgba(0, 0, 0, 0.5);

@@ -374,7 +374,7 @@
     }
     &__inner {
       position: relative;
-      padding: 0 8.4%;
+      padding: 0 7% 0 8.4%;
     }
     .btn-area {
       position: relative;
@@ -395,8 +395,14 @@
         }
         &.btn {
           &__indicator {
+            width: 2.5rem;
+            height: 2.5rem;
+            border: 0.1rem solid $mainColor;
+            border-radius: 100%;
+            font-size: 1.2rem;
             line-height: 2rem;
             letter-spacing: -0.3rem;
+            padding-right: 0.3rem;
           }
           &-prev {
             margin-right: 1rem;
@@ -405,7 +411,7 @@
             }
           }
           &-next {
-            margin-left: 1.2rem;
+            margin-left: 1.6rem;
             &--last {
             }
           }
