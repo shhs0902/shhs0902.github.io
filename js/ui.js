@@ -94,44 +94,50 @@
     };
   }
 
-  const formSubmit = document.querySelector('.form-submit');
-  formSubmit.addEventListener('click', function () {
-    $.ajax({
-      type: 'GET',
-      url: 'https://script.google.com/macros/s/AKfycbwWNiwooDOx-9v6N7yh0JKj0c57JI_GfYYEXigAjRuHjZQzKm7s2Es3ebwfK-vwFvIq/exec',
-      data: {
-        프로젝트종류: hidden.value,
-        프로젝트: project.value,
-        마감일정: endDate.value,
-        참고사이트: reference.value,
-        상세문의: detail.value,
-        회사명: company.value,
-        담당자명: position.value,
-        담당자연락처: phoneNum.value,
-        홈페이지: homepage.value,
-      },
-      success: function (response) {
-        //값 비워주기
-        hidden.value = '';
-        project.value = '';
-        endDate.value = '';
-        reference.value = '';
-        detail.value = '';
-        company.value = '';
-        position.value = '';
-        phoneNum.value = '';
-        homepage.value = '';
-      },
-      error: function (request) {
-        console.log('error');
-      },
+  function formSubmitData() {
+    const formSubmit = document.querySelector('.form-submit');
+    if (!formSubmit) {
+      return;
+    }
+    formSubmit.addEventListener('click', function () {
+      $.ajax({
+        type: 'GET',
+        url: 'https://script.google.com/macros/s/AKfycbwWNiwooDOx-9v6N7yh0JKj0c57JI_GfYYEXigAjRuHjZQzKm7s2Es3ebwfK-vwFvIq/exec',
+        data: {
+          프로젝트종류: hidden.value,
+          프로젝트: project.value,
+          마감일정: endDate.value,
+          참고사이트: reference.value,
+          상세문의: detail.value,
+          회사명: company.value,
+          담당자명: position.value,
+          담당자연락처: phoneNum.value,
+          홈페이지: homepage.value,
+        },
+        success: function (response) {
+          //값 비워주기
+          hidden.value = '';
+          project.value = '';
+          endDate.value = '';
+          reference.value = '';
+          detail.value = '';
+          company.value = '';
+          position.value = '';
+          phoneNum.value = '';
+          homepage.value = '';
+        },
+        error: function (request) {
+          console.log('error');
+        },
+      });
     });
-  });
+  }
 
   window.addEventListener('DOMContentLoaded', function () {
     hbgBtn.addEventListener('click', hbgBtnActive);
     // dataReceiveHandler();
     // listClickLocation();
     resultChecked();
+    formSubmitData();
   });
 })(window);
