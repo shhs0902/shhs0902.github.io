@@ -102,14 +102,18 @@
       }
     }
     &footer {
+      display: block;
+      margin-top: 0;
       &__left {
         @include onFlex(center, flex-start);
       }
     }
     &submit {
-      right: 0;
-      bottom: -7.2rem;
-      width: 100%;
+      padding: 2rem 0 5rem;
+
+      button {
+        width: 100%;
+      }
     }
   }
 }
